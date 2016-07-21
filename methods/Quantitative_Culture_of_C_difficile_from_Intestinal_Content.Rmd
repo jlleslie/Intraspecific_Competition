@@ -3,7 +3,7 @@
 
 
 ###Background/Purpose  
- *Clostridium difficile* is a Gram-postitive, spore-forming,  anaerobic bacterium which can colonize the gastrointestinal tract. 
+ *Clostridium difficile* is a Gram-postitive, spore-forming,  anaerobic bacterium that can colonize the gastrointestinal tract. 
  The use of selective agar containing the germinant taurocholate enables quantitation of both the vegetative and spore form of *C. difficile* from intestinal content.  
 
 ###Materials 
@@ -16,17 +16,21 @@
 7. [Sterile 96-well plate] (https://www.fishersci.com/shop/products/nunc-microwell-96-well-microplates/12565363)
 8. TCCFA or TCCFA supplemented with erythromycin 
 9. 1.5mL autoclaved eppendorf tube 
-10.Coy anaerobic chamber
+10. Coy anaerobic chamber
 11. 
-      
-###Step 1: Determine the amount of sample in each tube 
-1.	Weight tube with stool, record it 
-2.	Determine how much PBS you need to add 
+   
+###Step 1: Collect feces/intestinal content from mouse 
+1. Grasp mouse firmly in hand to pick up the mouse, collect a fresh fecal pellet into a  pre-labeled sterile 1.7mL eppendorf tube 
+⋅⋅⋅Alternatively collect intestinal content during necropsy.      
 
-...(Tube+ stool) – Tube  = grams of stool 
-...grams of stool * 9000 = ul of PBS to add to the tube 
+###Step 2: Determine the amount of sample in each tube 
+2.	Weight tube with stool, record it 
+3.	Determine how much PBS you need to add 
 
-...3.	Pass the tubes into the chamber along with any other materials you need
+⋅⋅⋅(Tube+ stool) – Tube  = grams of stool 
+⋅⋅⋅grams of stool * 9000 = ul of sterile PBS to add to the tube 
+
+⋅⋅⋅4.	Pass the tubes into the chamber along with any other materials you need
 
 ###Step 2: Dilute sample in PBS  (this is the 10^-1 dilution)
 
