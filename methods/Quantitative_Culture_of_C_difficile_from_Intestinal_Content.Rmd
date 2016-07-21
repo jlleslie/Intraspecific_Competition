@@ -1,6 +1,6 @@
 
-#Quantitative Culture of *Clostridium difficile* from Intestinal Content
-#Jhansi Leslie
+             #Quantitative Culture of *Clostridium difficile* from Intestinal Content
+##Protocol by: Jhansi Leslie
 
 
 ###Background/Purpose  
@@ -11,7 +11,7 @@
 1. [Denville SHARP 200uL barrier tips] (https://www.denvillescientific.com/products/sharp%C2%AE-precision-barrier-tips--for-p-200--200%C2%B5l--960-(10-racks-of-96))
 2. [Rainin 20uL barrier tips] (https://www.shoprainin.com/Pipette-Tips/BioClean-LTS-Tips/Removable-Cover-Racks/Tips-LTS-20-%C2%B5L-Filter-960-10-RT-L10F/p/17002928) 
 3. [Rainin  200uL barrier tips] (https://www.shoprainin.com/Pipette-Tips/BioClean-LTS-Tips/Removable-Cover-Racks/Tips-LTS-200UL-Filter-RT-L200FLR/p/17007961)
-4. [L-shaped cell spreaders] (https://www.fishersci.com/shop/products/fisherbrand-l-shaped-cell-spreaders-2/p-4249846)Gib
+4. [L-shaped cell spreaders] (https://www.fishersci.com/shop/products/fisherbrand-l-shaped-cell-spreaders-2/p-4249846)
 5. Pre-reduced [PBS] (https://www.thermofisher.com/order/catalog/product/10010049)
 6. [Reservoir]
 7. [Sterile 96-well plate]
