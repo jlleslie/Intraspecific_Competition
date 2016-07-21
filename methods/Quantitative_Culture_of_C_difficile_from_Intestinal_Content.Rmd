@@ -1,0 +1,10 @@
+---
+title: "Quantitative Culture of C. difficile from Intestinal Content"
+author: "Jhansi Leslie"
+output: html_document
+---
+
+###Background 
+ Clostridium difficile is a Gram-postitive, spore-forming,  anaerobic bacterium which can colonize the gastrointestinal tract. 
+
+###Purpose 
