@@ -28,8 +28,10 @@
 1.	Weight tube with stool in it, record it 
 2.	Determine how much PBS you need to add 
 
-		```(weight of tube+ stool) – tube  = grams of stool      
-	grams of stool * 9000 = ul of sterile PBS to add to the tube```
+		``` 
+		(weight of tube+ stool) – weight of tube  = grams of stool      
+		grams of stool * 9000 = ul of sterile PBS to add to the tube
+		```
 
 ###Step 3: Dilute sample in PBS  (this is the 10^-1 dilution)
 1.	Pass the tubes into the chamber along with any other materials you need
