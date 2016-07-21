@@ -21,16 +21,15 @@
 12. P-200 multichannel pipette 
    
 ###Step 1: Collect feces/intestinal content from mouse 
-1. Grasp mouse firmly in hand to pick up the mouse, collect a fresh fecal pellet into a pre-labeled sterile 1.7mL eppendorf tube 
+1. Grasp mouse firmly to pick up,  collect a fresh fecal pellet into a pre-weighed sterile 1.7mL eppendorf tube 
 	+ Alternatively collect intestinal content during necropsy.      
 
 ###Step 2: Determine the amount of sample in each tube 
-1.	Weight tube with stool, record it 
+1.	Weight tube with stool in it, record it 
 2.	Determine how much PBS you need to add 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Tube+ stool) – Tube  = grams of stool      
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grams of stool * 9000 = ul of sterile PBS to add to the tube 
+	(Tube+ stool) – Tube  = grams of stool      
+	grams of stool * 9000 = ul of sterile PBS to add to the tube 
 
 ###Step 3: Dilute sample in PBS  (this is the 10^-1 dilution)
 1.	Pass the tubes into the chamber along with any other materials you need
