@@ -21,33 +21,33 @@
 12. P-200 multichannel pipette 
    
 ###Step 1: Collect feces/intestinal content from mouse 
-1. Grasp mouse firmly in hand to pick up the mouse, collect a fresh fecal pellet into a  pre-labeled sterile 1.7mL eppendorf tube 
-⋅⋅⋅Alternatively collect intestinal content during necropsy.      
+1. Grasp mouse firmly in hand to pick up the mouse, collect a fresh fecal pellet into a pre-labeled sterile 1.7mL eppendorf tube 
+	+ Alternatively collect intestinal content during necropsy.      
 
 ###Step 2: Determine the amount of sample in each tube 
-2.	Weight tube with stool, record it 
-3.	Determine how much PBS you need to add 
+1.	Weight tube with stool, record it 
+2.	Determine how much PBS you need to add 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Tube+ stool) – Tube  = grams of stool 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Tube+ stool) – Tube  = grams of stool      
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grams of stool * 9000 = ul of sterile PBS to add to the tube 
 
-4.	Pass the tubes into the chamber along with any other materials you need
-
 ###Step 3: Dilute sample in PBS  (this is the 10^-1 dilution)
-5.	Add the correct volume of PBS to each tube (determined in step1) 
-6.	Mix the PBS and sample by running the tube along a tube rack
+1.	Pass the tubes into the chamber along with any other materials you need
+2.	Add the correct volume of PBS to each tube (determined in step1) 
+3.	Mix the PBS and sample by running the tube along a tube rack
 	+ If the sample is stool and very solid then label your plates after adding PBS to allow time for the sample to loosen up. 
 
 ###Step 4: Set up your dilution plate, make further dilutions 
-7.	Open the reservoir (make sure not to touch it) and add PBS 
-8.	Using the multichannel add 135 uL of PBS to each well, of your 96-well dilution plate.
+1.	Open the reservoir (make sure not to touch it) and add PBS 
+2.	Using the multichannel add 135 uL of PBS to each well, of your 96-well dilution plate.
 	+ Repeat for a total volume of 270uL per well. 
-	+ Label the columns with the dilutions 
+	+ Label the columns with the dilutions   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Starting at 10-2 -> 10-6)
 	+ Label the rows with the sample ID (see template on next page)
-8.	Add your sample to the wells in column 1 or 8. 
+3.	Add your sample to the wells in column 1 or 8. 
 	+ Add 30uL from your tube to the first column  (repeat with each sample, you can load 8 sample per side for a total of 16 samples per plate) 
 		* Once the entire column is filled, use the multichannel to set to 30uL to mix by pipetting up and down.
-		*Then move 30uL into the 2nd column mix and repeat until you get to the 10-6 dilution. 
+		* Then move 30uL into the 2nd column mix and repeat until you get to the 10-6 dilution. 
 
 
