@@ -16,7 +16,7 @@
 7. [Sterile 96-well plate] (https://www.fishersci.com/shop/products/nunc-microwell-96-well-microplates/12565363)
 8.  Pre-reduced TCCFA or TCCFA supplemented with erythromycin 
 9. 1.5mL autoclaved eppendorf tube 
-10. Coy anaerobic chamber
+10. [Anaerobic chamber](http://www.coylab.com/vinyl.htm)
 11. P-1000, 200, and 20 pipettes (our lab uses Rainin brand)
 12. P-200 multichannel pipette 
    
@@ -50,18 +50,25 @@
 3. Add your sample to the wells in column 1 or 8. 
 	+ Add 30uL from your tube to the first column  (repeat with each sample, you can load 8 sample per side for a total of 16 samples per plate) 
 		* Once the entire column is filled, use the multichannel to set to 30uL to mix by pipetting up and down.
-		* Then move 30uL into the 2nd column mix and repeat until you get to the 10-6 dilution. 
+		* Then move 30uL into the 2nd column mix and repeat until you get to the 10^-6 dilution. 
 
 ###Step 5: Label the TCCFA plates   
 1. Write the sample name (e.g. Mouse 1) the dilution and media on each plate 
-	+ TCCFA is selective and limits the growth of some of the other bacteria in feces but not all of them, if you are working with an erythromycin resistant strain (ex. 630 or R20291) you can add 2 ug/mL erythromycin to the plates to limit other bacterial growth 
+	+ TCCFA is a selective media. It limits the growth of some of the other bacteria in feces but not all of them, if you are working with an erythromycin resistant strain (eg. 630 or R20291) you can add 2 ug/mL erythromycin to the plates to limit background bacterial growth 
 
 ###Step 6: Plate sample dilutions
 1. Plate 100uL of your sample on to each plate
 2. Spread the solution around the plate with L-shaped spreader
 	+ For each sample start with the lowest dilution (ie 10^-6) then you can use the same tip to add the next highest dilution 
-	+ In the cefoperazone treated mouse model mice are generally colonized with 1E7-1E8 CFU/g feces by D1, so we plate the following dilutions: 10^-4, 10^-5, 10^-6 
-3. Incubate at 37C for 18-24 hours in the anaerobic chamber, agar side of the plate up.
-	+ *C. difficile* colonies on TCCFA +/- erythromycin are round, fringy, with a ground glass appearance.
+	+ In the cefoperazone treated mouse model, mice are generally colonized with 1E7-1E8 CFU/g feces by 1 day post challenge, so we plate the following dilutions: 10^-4, 10^-5, 10^-6 
+3. Incubate at 37C in the anaerobic chamber, agar side of the plate up.
+	
+###Step 7: Read plates and determine CFU/g feces 
+1. Read plates after 18-24 hours after plating 
+2. *C. difficile* colonies on TCCFA +/- erythromycin are round, fringy, with a ground glass appearance.
+3. Record the number of *C. difficile* colonies on each dilution plate 
+	+ Ideally use the plates with between 30-300 colonies on them to determine CFU/g feces
 
+      For example: if there were 61 colonies on the 10^-5 plates
+      61 X 10^-5 X 10 (plating dilution) = 6.1 x 10^-7 CFU/g feces 
 
