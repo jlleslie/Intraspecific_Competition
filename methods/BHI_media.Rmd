@@ -7,25 +7,29 @@ This recipe  will make 1 liter of media.
 In a 2L flask add 800mL of MilliQ water.  
 
 Measure and add the following:
-+ 52g [Brain Heart Infusion Agar](http://www.bdbiosciences.com/us/cell-culture/media-supplements/media-supplements/ao-animal-origin/porcine/proteose-peptone-no3/p/211693)
++ 52g [Brain Heart Infusion Agar](http://www.bd.com/ds/productCenter/241830.asp)
 
 Bring final volume to 1L
-Autoclave at setting #3 (25min)
-After autoclaving and cooling the media in the water bath, add the cysteine, mix and pour plates
+Autoclave using liquid setting for 25min
+After autoclaving and cooling the media in the water bath, add the following: 
 
 + L-cysteine solution
-* 0.1g of L-cysteine/ 10mL milliQ water (Filter with 0.2um filter)
-* Label plates with 1 pink stripe
-+ If you are making BHI+cys+Taurocholate add Add 10mL of 10% (w/v) taurocholate  (1g in 10mL water, filter sterilize) 
-* Label plates with 1 pink stripe and one blue stripe 
+	* 0.1g of L-cysteine/ 10mL milliQ water (Filter with 0.2um filter)
+	* Label plates with 1 pink stripe
++ If you are making BHI+cys+taurocholate add Add 10mL of 10% (w/v) taurocholate  
+	*(1g in 10mL water, filter sterilize) 
+	* Label plates with 1 pink stripe and one blue stripe 
 
 ###Broth
-a.	Add 37g of Brain Heart Infusion to 1L of water, mix 
-i.	Using a graduated cylinder measure out 500mL and add to a 1L screw cap bottle 
-ii.	Pour the remaining ~500mL into a second screw cap bottle 
-b.	Autoclave at setting #3 (25min)
-i.	Note: Make sure the caps are very loosely screwed on. 
-c.	L-cysteine solution (for each 500mL bottle) add
-i.	0.05 g of L-cysteine in 5 mL milliQ water
-ii.	Filter with 0.2um filter 
-d.	After autoclaving and cooling the media on the bench, add the cysteine. 
+Measure and add the following:
++  37g  [Brain Heart Infusion](http://www.bd.com/ds/productCenter/237500.asp) to 1L of water, mix 
+
+Autoclave using liquid setting for 25min
+After autoclaving and cooling the media in the water bath, add the following:
+Note: Make sure the caps are very loosely screwed on. 
++ L-cysteine solution
+	* 0.1g of L-cysteine/ 10mL milliQ water (Filter with 0.2um filter)
+	* Label plates with 1 pink stripe
++ If you are making BHI+cys+taurocholate add Add 10mL of 10% (w/v) taurocholate  
+	*(1g in 10mL water, filter sterilize) 
+	* Label plates with 1 pink stripe and one blue stripe 
