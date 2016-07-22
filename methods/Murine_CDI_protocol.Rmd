@@ -1,0 +1,75 @@
+# Young Lab *Clostridium difficile* Infection Murine Model Protocol
+##Author: Jhansi Leslie 
+
+## Reference:[Cefoperazone-treated mice as an experimental platform to assess differential virulence of Clostridium difficile strains] (http://www.tandfonline.com/doi/pdf/10.4161/gmic.19142) 
+
+###Background/Purpose  
+ *Clostridium difficile* is a Gram-postitive, spore-forming,  anaerobic bacterium that can colonize the gastrointestinal tract and cause diarrheal disease. 
+This protocol outlines the steps I take when executing the mouse modle of CDI. Please note all animal work must be first approved by your own institution's animal care board. 
+
+### Step 1: Determine the number of mice needed for the experiment 
+1. Ideally the number of mice used should be calculated based on the effect size of your phenotype 
+
+
+### Step 2: Co-housing mice 
+*This step performed if using mice from two different breeding colonies. Co-housing is a less than ideal method to try to homogenize the microbota*
+1. Ear punch mice 
+	+  5 mice max to one cage.		
+	*	0 holes: mouse 1
+	*	1 hole right ear: mouse 2
+	*	2 holes right ear: mouse 3
+	*	1 hole left ear: mouse 4
+	*	2 holes left ear: mouse 5
+
+
+Day 2
+
+1.	Prepare Anx water in Gibco distilled water. Measure each antibiotic out and add to appropriate volume of water. 1 cage of 5 mice would need around 400 ml of Anx water max for 3 days.
+-	Kan (0.4 mg/ml), Gen (0.035 mg/ml), Metro (0.215 mg/ml), Vanco (0.045 mg/ml) and Colistin (850 U/ml, which is 23251 U/ml)
+-	Add antibiotics and shake to get into solution. 
+2.	Bring Anx water and blank over to BSRB
+3.	Weigh mice and record.
+4.	Start antibiotic water.  
+5.	Check animals for the next 3 days.
+
+Day 5
+
+1.	Take animals off of Anx water and replace with regular water.
+2.	Plate out C. difficile from the freezer on TCCFA agar plate and place in the 37C incubator in the anaerobic chamber. 
+Day 6
+
+1.	      Inoculate broth with single colony from TCCFA plate.
+
+Day 7
+
+1.	Make up Clindamycin (1 mg/ml) in saline, mice will get around 230 ul of this depending on their weight. Final dose is 10 mg/kg. 
+2.	Take over 1 ml syringes and 27.5 gauge needles.  Make sure you mock infect your controls with saline if this is what you want to do. 
+3.	Weigh animals before IP injection of Clindamycin.
+4.	Grow up diluted C. difficile culture overnight in BHIS broth. 
+
+Day 8 (subject to change)
+
+1.	Prepare inoculum by getting accurate counts of CFUs going in. Need to be around 105 CFUs of C. difficile per mouse.  
+2.	Need to wash o/n culture in PBS that has been equilibrated. 
+3.	Use a Spec to check the OD600.  Can also use the hemocytometer. Gram-stain to make sure you have a pure culture.
+4.	Plate out on TCCFA plates before you take inoculum out of chamber and after infecting mice, plate out again to see how many cells you lost.
+5.	Fill syringes and make sure you cap them but not with needles. 
+6.	Make a freezer stock of inoculum for –80C.
+7.	Put in ziplock bags and then transfer out of chamber. Out in biohazard box to take over to BSRB for infection. You will need gavage needles.
+8.	Weigh the mice before you gavage them to see if they lose weight on Clindamycin.
+9.	If mock infecting, then use PBS to gavage the control group.
+
+Day 9-13  (Start Vanco to treat)
+	
+1.	Monitor mice 2X a day to check for signs of sickness.
+2.	Weigh them everyday. Sacrifice when they decrease below 20% from the weight the day of infection, not pre-antibiotic treatment.
+3.	Collect feces every day for cytotoxicity assay and to plate out to see if C. difficile will grow.
+4.	If you are looking at vancomycin for treatment purposes, you need to make vanco water (50mg/kg/day).  This comes out to 0.5 mg/ml of vancomycin.
+
+
+Day 13
+1.	Take off of vanco water and put on regular water. 
+2.	Need to monitor and collect poop, and weigh everyday.
+
+When mice get sick, euthanize and follow the rest of the collection protocol for harvesting samples. 
+
