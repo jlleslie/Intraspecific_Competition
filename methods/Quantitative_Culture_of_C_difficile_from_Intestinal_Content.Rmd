@@ -39,7 +39,7 @@
 3. Mix the PBS and sample by running the tube along a tube rack
 	+ If the sample is stool and very solid then label your plates after adding PBS to allow time for the sample to loosen up. 
 
-###Step 4: Set up your dilution plate, make further dilutions 
+###Step 4: Set up the dilution plate, make further dilutions 
 1. Open the reservoir (make sure not to touch it) and add PBS 
 2. Using the multichannel add 135 uL of PBS to each well, of your 96-well dilution plate.
 	+ Repeat for a total volume of 270uL per well. 
@@ -56,15 +56,15 @@
 1. Write the sample name (e.g. Mouse 1) the dilution and media on each plate 
 	+ TCCFA is a selective media. It limits the growth of some of the other bacteria in feces but not all of them, if you are working with an erythromycin resistant strain (eg. 630 or R20291) you can add 2 ug/mL erythromycin to the plates to limit background bacterial growth 
 
-###Step 6: Plate sample dilutions
-1. Plate 100uL of your sample on to each plate
+###Step 6: Add sample dilutions to TCCFA plates
+1. Pipette 100uL of a given dilution on to a plate
 2. Spread the solution around the plate with L-shaped spreader
 	+ For each sample start with the lowest dilution (ie 10^-6) then you can use the same tip to add the next highest dilution 
 	+ In the cefoperazone treated mouse model, mice are generally colonized with 1E7-1E8 CFU/g feces by 1 day post challenge, so we plate the following dilutions: 10^-4, 10^-5, 10^-6 
 3. Incubate at 37C in the anaerobic chamber, agar side of the plate up.
 	
 ###Step 7: Read plates and determine CFU/g feces 
-1. Read plates after 18-24 hours after plating 
+1. Read plates 18-24 hours after plating 
 2. *C. difficile* colonies on TCCFA +/- erythromycin are round, fringy, with a ground glass appearance.
 3. Record the number of *C. difficile* colonies on each dilution plate 
 	+ Ideally use the plates with between 30-300 colonies on them to determine CFU/g feces 
