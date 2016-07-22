@@ -69,24 +69,30 @@ In most cases a 5 days is sufficient, however I started my experiments using a 1
 		* Hunched/scruffy appearance 
 		* Loose stool
 		* Lethargy 
-2. Different strains of *C. difficile* elicit different clinical signs in this modle. 
+2. Different strains of *C. difficile* elicit different clinical signs in this model. 
 3. When mice get sick, euthanize and follow the rest of the collection protocol for harvesting samples. 
 
 ### Step 7: Serum collection (to monitor serum antibodies)   
-1. Serum is collected throughout the experiment via saphenous vein puncture
+1. Serum is collected throughout the experiment via saphenous vein puncture.
 2. Mice are restrained in a 50mL conical with the end cut off for air.
 3. The thigh of the mouse is shaved with a mustache trimmer. 
 3. Vaseline is applied to the thigh, and a small gauge needle is used to puncture the vein.
-4. The drops of blood are collected in [capillary blood collection tubes] https://www.sarstedt.com/en/products/diagnostic/capillary-blood/tubes/product/16444/) 
-5. Following collection the instruction for use provided with the tubes was followed, and serum was saved in the -80C. 
+4. The blood drops  are collected in [capillary blood collection tubes] https://www.sarstedt.com/en/products/diagnostic/capillary-blood/tubes/product/16444/) 
+5. Following collection, the instruction for use provided with the tubes was followed, and serum was saved in the -80C. 
 6. Serum was collected before antibiotics and throughout infection, approximately every 2 weeks. 
 
 ### Step 8: Ip Clindamycin
 1.	In the long-term infection model mice require a secondary antibiotic following six weeks of recovery from cefoperazone [Ref1] [Ref2]
-2. To make mice susepbile again we given them an IP of clindamycin 
-
+2. To make mice susceptible again, we given them an IP of clindamycin 
+	+  Open a sterile saline bottle in a BSC, remove 10nmL
+	+ add 10mg of clindamycin to the bottle, mix ([] = 1mg/mL)
+	+ bring bottle with 1mL syringe to the animal room
+	+ give mice 10mg/kg
+	+ [IP injection resource] (http://www.procedureswithcare.org.uk/intraperitoneal-injection-in-the-mouse/) 
+	
 
 ### Step 9: Necropsy
-1. At the completion of the experiment, mice are humanely euthanized with CO2, using a flow meter to monitor the amount of gas being administered.  
+1. At the completion of the experiment, mice are humanely euthanized with CO2, using a flow meter to monitor the amount of gas being administered.
+2. Following euthanasia   
 
 
