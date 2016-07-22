@@ -1,9 +1,15 @@
 #Protocol for Preparation of Spores
 ##Modified from protocol provided by Dr. Paul Carlson 
 
-##Reference:[Clospore: A Liquid Medium for Producing High Titers of Semi-purified Spores of *Clostridium difficile*](http://www.ingentaconnect.com/content/aoac/jaoac/2011/00000094/00000002/art00031?trendmd-shared=0) 
+###Reference:[Clospore: A Liquid Medium for Producing High Titers of Semi-purified Spores of *Clostridium difficile*](http://www.ingentaconnect.com/content/aoac/jaoac/2011/00000094/00000002/art00031?trendmd-shared=0) 
 + *This paper is behind a paywall*
  
+###Background/Purpose  
+ *Clostridium difficile* is a Gram-postitive, spore-forming,  anaerobic bacterium that can colonize and cause disease in the gastrointestinal tract. 
+It is believed that transmissive form of this bacterium is the [spore] (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3434595/pdf/zii2704.pdf).
+This protocol outlines how to make a semi-purified spore stock that can be used in subsequent animal experiments. Yield varies by strain but lab strains like VPI 10463, and R20291 typically result in stocks that are 1E8 spores/mL while strain 630 has much lower yields and typically requires pooling of multiple tubes.  
+
+
 
 ###Clospore recipe
 
@@ -18,7 +24,7 @@ For 1L:
 
 Autoclave at liquid setting for 25 min
 
-*All growth is in an anaerobic chamber, all broths need to be pre-reduced*  
+*All growth should be done in an anaerobic chamber, all broths need to be pre-reduced*  
 ###Protocol
 1. Sub a single colony into 5mL of [Columbia broth](http://www.bd.com/ds/productCenter/294420.asp)
 	+ As a control for possible contamination of your broth stock always incubate a broth only tube 
