@@ -15,7 +15,7 @@ In most cases a 5 days is sufficient, however I started my experiments using a 1
 
 ** _Carry out step 2 if using mice from two different breeding colonies (such as 2 different genotypes).  Note in our hands co-housing doesn't completely homogenize the microbiota_** 
 ### Step 2: Co-house mice 
-1. Ear punch mice 
+1. Ear punch mice *alternatively, if not co-housing ear hole punch mice when antibiotics are first administered* 
 	+   Maximum of 5 mice to one cage.		
 	*	0 holes: mouse 1
 	*	1 hole right ear: mouse 2
