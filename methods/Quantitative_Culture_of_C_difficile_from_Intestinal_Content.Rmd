@@ -22,11 +22,11 @@
    
 ###Step 1: Collect feces/intestinal content from mouse 
 1. Grasp mouse firmly to pick up,  collect a fresh fecal pellet into a pre-weighed sterile 1.7mL eppendorf tube 
-	+ Alternatively collect intestinal content during necropsy.      
+	+ Alternatively collect intestinal content during necropsy      
 
 ###Step 2: Determine the amount of sample in each tube 
-1.	Weight tube with stool in it, record it 
-2.	Determine how much PBS you need to add 
+1. Weight tube with stool in it, record the weight 
+2. Determine how much PBS you need to add 
 
 	
 		(weight of tube+ stool) – weight of tube  = grams of stool      
@@ -34,22 +34,34 @@
 	
 
 ###Step 3: Dilute sample in PBS  (this is the 10^-1 dilution)
-1.	Pass the tubes into the chamber along with any other materials you need
-2.	Add the correct volume of PBS to each tube (determined in step1) 
-3.	Mix the PBS and sample by running the tube along a tube rack
+1. Pass the tubes into the anaerobic chamber along with any other materials you need
+2. Add the correct volume of PBS to each tube (determined in step 2) 
+3. Mix the PBS and sample by running the tube along a tube rack
 	+ If the sample is stool and very solid then label your plates after adding PBS to allow time for the sample to loosen up. 
 
 ###Step 4: Set up your dilution plate, make further dilutions 
-1.	Open the reservoir (make sure not to touch it) and add PBS 
-2.	Using the multichannel add 135 uL of PBS to each well, of your 96-well dilution plate.
+1. Open the reservoir (make sure not to touch it) and add PBS 
+2. Using the multichannel add 135 uL of PBS to each well, of your 96-well dilution plate.
 	+ Repeat for a total volume of 270uL per well. 
 	+ Label the columns with the dilutions   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Starting at 10-2 -> 10-6)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Starting at 10^-2 -> 10^-6)
 	+ Label the rows with the sample ID (see plate template below)
 	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/dilutions.jpg?token=AJ8FtsMX7KXiL_GyWrat0A2q8aBiEEEbks5XmqXzwA%3D%3D" width="300" height="200" /></div>
-3.	Add your sample to the wells in column 1 or 8. 
+3. Add your sample to the wells in column 1 or 8. 
 	+ Add 30uL from your tube to the first column  (repeat with each sample, you can load 8 sample per side for a total of 16 samples per plate) 
 		* Once the entire column is filled, use the multichannel to set to 30uL to mix by pipetting up and down.
 		* Then move 30uL into the 2nd column mix and repeat until you get to the 10-6 dilution. 
+
+###Step 5: Label the TCCFA plates   
+1. Write the sample name (e.g. Mouse 1) the dilution and media on each plate 
+	+ TCCFA is selective and limits the growth of some of the other bacteria in feces but not all of them, if you are working with an erythromycin resistant strain (ex. 630 or R20291) you can add 2 ug/mL erythromycin to the plates to limit other bacterial growth 
+
+###Step 6: Plate sample dilutions
+1. Plate 100uL of your sample on to each plate
+2. Spread the solution around the plate with L-shaped spreader
+	+ For each sample start with the lowest dilution (ie 10^-6) then you can use the same tip to add the next highest dilution 
+	+ In the cefoperazone treated mouse model mice are generally colonized with 1E7-1E8 CFU/g feces by D1, so we plate the following dilutions: 10^-4, 10^-5, 10^-6 
+3. Incubate at 37C for 18-24 hours in the anaerobic chamber, agar side of the plate up.
+	+ *C. difficile* colonies on TCCFA +/- erythromycin are round, fringy, with a ground glass appearance.
 
 
