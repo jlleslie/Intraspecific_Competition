@@ -71,5 +71,5 @@
 
 	
 		    For example: if there were 61 colonies on Mouse #1's 10^-5 plate
-		    61 X  1/10^-5  (dilution placed on plate) X 10 (plating dilution) = 6.1 x 10^7 CFU/g feces 
+		    61  X  1/10^-5  (dilution placed on plate) X 10 (plating dilution) = 6.1 x 10^7 CFU/g feces 
 
