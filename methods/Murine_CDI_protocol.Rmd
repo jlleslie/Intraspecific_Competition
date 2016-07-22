@@ -70,7 +70,7 @@ In most cases a 5 days is sufficient, however I started my experiments using a 1
 		* Loose stool
 		* Lethargy 
 2. Different strains of *C. difficile* elicit different clinical signs in this model. 
-3. When mice get sick, euthanize and follow the rest of the collection protocol for harvesting samples. 
+3. When mice get too sick (loose >= 20% weight, look very ill), euthanize and follow the rest of the collection protocol for harvesting samples. 
 
 ### Step 7: Serum collection (to monitor serum antibodies)   
 1. Serum is collected throughout the experiment via saphenous vein puncture.
@@ -81,18 +81,20 @@ In most cases a 5 days is sufficient, however I started my experiments using a 1
 5. Following collection, the instruction for use provided with the tubes was followed, and serum was saved in the -80C. 
 6. Serum was collected before antibiotics and throughout infection, approximately every 2 weeks. 
 
-### Step 8: Ip Clindamycin
-1.	In the long-term infection model mice require a secondary antibiotic following six weeks of recovery from cefoperazone [Ref1] [Ref2]
+### Step 8: IP Clindamycin
+1.	In the long-term infection model mice require a secondary antibiotic following six weeks of recovery from cefoperazone [Ref1](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3225775/pdf/gmic0203_0145.pdf) [Ref2] (http://dx.doi.org/10.1038/ncomms4114)
 2. To make mice susceptible again, we given them an IP of clindamycin 
-	+  Open a sterile saline bottle in a BSC, remove 10nmL
+	+ Open a sterile saline bottle in a BSC, remove 10mL
 	+ add 10mg of clindamycin to the bottle, mix ([] = 1mg/mL)
 	+ bring bottle with 1mL syringe to the animal room
 	+ give mice 10mg/kg
 	+ [IP injection resource] (http://www.procedureswithcare.org.uk/intraperitoneal-injection-in-the-mouse/) 
 	
-
 ### Step 9: Necropsy
 1. At the completion of the experiment, mice are humanely euthanized with CO2, using a flow meter to monitor the amount of gas being administered.
-2. Following euthanasia   
+2. Following euthanasia, open up the mouse and remove the cecum and colon. 
+3. Remove the intestinal content from both tissues using a sterile scalpel and save (snap freeze in liquid nitrogen for long-term storage). 
+	+ Quantitative culture requires unfrozen sample  
+	+ Toxin assay should be performed using frozen sample   
 
 
