@@ -13,7 +13,7 @@ In most cases a 5 days is sufficient, however I started my experiments using a 1
 1. Ideally the number of mice used in an experiment should be calculated based on the effect size of your phenotype. 
 	+ [Resource](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3826013/)
 
-** _Carry out step 2 if using mice from two different breeding colonies (such as 2 different genotypes).  Note in our hands co-housing doesn't completely homogenize the microbiota_** 
+**_Carry out step 2 if using mice from two different breeding colonies (such as 2 different genotypes).  Note in our hands co-housing doesn't completely homogenize the microbiota_** 
 ### Step 2: Co-house mice 
 1. Ear punch mice *(alternatively, if you are not co-housing mice, ear hole punch mice when antibiotics are first administered)* 
 	+   Maximum of 5 mice to one cage:		
@@ -46,28 +46,20 @@ In most cases a 5 days is sufficient, however I started my experiments using a 1
 1. On the day of infection, dilute [spores] (https://github.com/jlleslie/Intraspecific_Competition/blob/master/methods/Preparing_Cdifficile_spores.Rmd) to the desired concentration in Gbico water.  
 
 
+### Step 5: Infect mice 
+1. 
+2. 
+### Step 6: Monitor mice 
 
-1.	      Inoculate broth with single colony from TCCFA plate.
+When mice get sick, euthanize and follow the rest of the collection protocol for harvesting samples. 
+### Step 7: Serum collection
 
-Day 7
-
+### Step 8: Ip Clindamycin
 1.	Make up Clindamycin (1 mg/ml) in saline, mice will get around 230 ul of this depending on their weight. Final dose is 10 mg/kg. 
 2.	Take over 1 ml syringes and 27.5 gauge needles.  Make sure you mock infect your controls with saline if this is what you want to do. 
 3.	Weigh animals before IP injection of Clindamycin.
-4.	Grow up diluted C. difficile culture overnight in BHIS broth. 
 
-Day 8 (subject to change)
-
-1.	Prepare inoculum by getting accurate counts of CFUs going in. Need to be around 105 CFUs of C. difficile per mouse.  
-2.	Need to wash o/n culture in PBS that has been equilibrated. 
-3.	Use a Spec to check the OD600.  Can also use the hemocytometer. Gram-stain to make sure you have a pure culture.
-4.	Plate out on TCCFA plates before you take inoculum out of chamber and after infecting mice, plate out again to see how many cells you lost.
-5.	Fill syringes and make sure you cap them but not with needles. 
-6.	Make a freezer stock of inoculum for –80C.
-7.	Put in ziplock bags and then transfer out of chamber. Out in biohazard box to take over to BSRB for infection. You will need gavage needles.
-8.	Weigh the mice before you gavage them to see if they lose weight on Clindamycin.
-9.	If mock infecting, then use PBS to gavage the control group.
+### Step 9: Necropsy
 
 
-When mice get sick, euthanize and follow the rest of the collection protocol for harvesting samples. 
 
