@@ -68,7 +68,8 @@ In most cases a 5 days is sufficient, however I started my experiments using a 1
 		* Weight loss
 		* Hunched/scruffy appearance 
 		* Loose stool
-		* Lethargy 
+		* Lethargy
+3. We also collect stool for [quantitative culture of *C. difficile*] (), toxin activity and 16S rRNA gene 
 2. Different strains of *C. difficile* elicit different clinical signs in this model. 
 3. When mice get too sick (loose >= 20% weight, look very ill), euthanize and follow the rest of the collection protocol for harvesting samples. 
 
