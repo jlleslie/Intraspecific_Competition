@@ -1,30 +1,35 @@
 #Taurocholate Cycloserine Cefoxitin Fructose Agar
 ## Written by: Jhansi Leslie
 
+This will make 1 liter of media. 
+
 In a 2L flask add 800mL of MilliQ water.  
 
-And then add the following:
+Measure and add the following:
 
-40g [Proteose Peptone #3](http://www.bdbiosciences.com/us/cell-culture/media-supplements/media-supplements/ao-animal-origin/porcine/proteose-peptone-no3/p/212220)
-5g	[Na2HPO4  (sodium phosphate dibasic)] (http://www.sigmaaldrich.com/catalog/product/aldrich/255793?lang=en&region=US)
-1g 	[KH2PO4  (potassium phosphate monobasic)] (http://www.sigmaaldrich.com/catalog/product/sigma/p9791?lang=en&region=US)
-2g 	[NaCl] (http://www.sigmaaldrich.com/catalog/product/sigma/s3014?lang=en&region=US)
-0.1g [MgSO4] (http://www.sigmaaldrich.com/catalog/product/sigald/m7506?lang=en&region=US)
-6g 	[Fructose] (http://www.sigmaaldrich.com/catalog/product/sigma/f0127?lang=en&region=US)
+	+ 40g [Proteose Peptone #3](http://www.bdbiosciences.com/us/cell-culture/media-supplements/media-supplements/ao-animal-origin/porcine/proteose-peptone-no3/p/211693)
+	+ 5g [Na2HPO4] (sodium phosphate dibasic)] (http://www.sigmaaldrich.com/catalog/product/sigma/s5136?lang=en&region=US)
+	+ 1g [KH2PO4] (potassium phosphate monobasic)] (http://www.sigmaaldrich.com/catalog/product/sigma/p9791?lang=en&region=US)
+	+ 2g [NaCl] (http://www.sigmaaldrich.com/catalog/product/sigma/s3014?lang=en&region=US)
+	+ 0.1g [MgSO4] (http://www.sigmaaldrich.com/catalog/product/sigald/m7506?lang=en&region=US)
+	+ 6g [Fructose] (https://www.fishersci.com/shop/products/d-fructose-crystalline-certified-fisher-chemical-poly-bottle-500g/l95500)
 
 Bring final volume to 1L
  
-*If making agar add 20g bacto agar to the media  (I use select agar not bacto) 
+	+ If making agar add 20g [select agar] (https://www.thermofisher.com/order/catalog/product/30391023) to the media  
 
-Autoclave for 25min at liquid setting~
+Autoclave for 25min at liquid setting
 
 After the media has been autoclaved and cooled a bit, add the following: 
 
-Add 10mL of 10% (w/v) taurocholate  (1g in 10mL water, filter sterilize) 
+	+ Add 10mL of 10% (w/v) [taurocholate] (http://www.sigmaaldrich.com/catalog/product/sigma/t4009?lang=en&region=US)
+	* 1g in 10mL water, filter sterilize using a 0.2 micron filter 
 
-Add 25mL D-cycloserine (10mg/mL, filter sterilize)
+	+ Add 25mL [D-cycloserine](http://www.sigmaaldrich.com/catalog/product/sigma/c6880?lang=en&region=US) 
+	* 10mg/mL, filter sterilize using a 0.2 micron filter
 	
-Add  1.6 mL cefoxitin (10mg/mL, filter sterilize) 
+	+ Add  1.6 mL [cefoxitin] (http://www.sigmaaldrich.com/catalog/product/sial/c4786?lang=en&region=US) 
+	* 10mg/mL, filter sterilize using a 0.2 micron filter 
 
 
 
