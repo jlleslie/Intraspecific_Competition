@@ -1,4 +1,4 @@
-<center> #Quantitative Culture of *Clostridium difficile* from Intestinal Content </center>
+<center>#Quantitative Culture of *Clostridium difficile* from Intestinal Content</center>
 ##Protocol by: Jhansi Leslie
 
 
