@@ -10,7 +10,9 @@ Measure and add the following:
 + 52g [Brain Heart Infusion Agar](http://www.bd.com/ds/productCenter/241830.asp)
 
 Bring final volume to 1L
-Autoclave using liquid setting for 25min
+
+Autoclave using liquid setting for 25min. 
+
 After autoclaving and cooling the media in the water bath, add the following: 
 
 + L-cysteine solution
