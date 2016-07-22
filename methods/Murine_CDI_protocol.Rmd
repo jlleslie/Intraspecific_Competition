@@ -1,7 +1,7 @@
 #Murine Model of *Clostridium difficile* Infection Protocol
 ##Author: Jhansi Leslie 
 
-## Reference:[Cefoperazone-treated mice as an experimental platform to assess differential virulence of Clostridium difficile strains] (http://www.tandfonline.com/doi/pdf/10.4161/gmic.19142) 
+### Reference:[Cefoperazone-treated mice as an experimental platform to assess differential virulence of Clostridium difficile strains] (http://www.tandfonline.com/doi/pdf/10.4161/gmic.19142) 
 
 ###Background/Purpose  
  *Clostridium difficile* is a Gram-postitive, spore-forming,  anaerobic bacterium that can colonize the gastrointestinal tract and cause diarrheal disease. 
@@ -29,20 +29,19 @@ In most cases a 5 days is sufficient, however I started my experiments using a 1
 
 
 ### Step 3: Administer Antibiotics 
-1.	Add 0.5g of cefoperzone 
-2.	Bring Anx water and blank over to BSRB
-3.	Weigh mice and record.
-4.	Start antibiotic water.  
-5.	Check animals for the next 3 days.
-
-Day 5
-
-1.	Take animals off of Anx water and replace with regular water.
-2.	Plate out C. difficile from the freezer on TCCFA agar plate and place in the 37C incubator in the anaerobic chamber. 
+1. Add 0.5g of[cefoperazone] (http://www.mpbio.com/product.php?pid=02199695) into 1 L of [Gibco distilled water](https://www.thermofisher.com/order/catalog/product/15230001)
+2. Shake bottle to get into solution
+	+ 1L of water should be enough for 5 cages of mice (200mL per cage)
+3. In a laminar flow hood at the mouse facility: remove lixits (make sure there are no leaks from the socket), pour antibiotic water into a sterile water bottle and give water to mice
+<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/lixit.jpg?token=AJ8Ftn-dm0NMB6te8PYtPT8Ouo4gVo8sks5Xm416wA%3D%3D" width="200" height="100" /></div> 
+4. Add signage to cage signaling chemical hazard as appropriate.  
+5. Replace water every other day. 
+6. After 10 days of antibiotic water, place mice on plain Gibco distilled water
+7. Following 2 days off the antibiotic mice are ready for infection. 
 
 ### Step 4: Prepare inoculum
 
-### Step 5: Pre-pare inoculum  
+
 
 1.	      Inoculate broth with single colony from TCCFA plate.
 
@@ -65,17 +64,6 @@ Day 8 (subject to change)
 8.	Weigh the mice before you gavage them to see if they lose weight on Clindamycin.
 9.	If mock infecting, then use PBS to gavage the control group.
 
-Day 9-13  (Start Vanco to treat)
-	
-1.	Monitor mice 2X a day to check for signs of sickness.
-2.	Weigh them everyday. Sacrifice when they decrease below 20% from the weight the day of infection, not pre-antibiotic treatment.
-3.	Collect feces every day for cytotoxicity assay and to plate out to see if C. difficile will grow.
-4.	If you are looking at vancomycin for treatment purposes, you need to make vanco water (50mg/kg/day).  This comes out to 0.5 mg/ml of vancomycin.
-
-
-Day 13
-1.	Take off of vanco water and put on regular water. 
-2.	Need to monitor and collect poop, and weigh everyday.
 
 When mice get sick, euthanize and follow the rest of the collection protocol for harvesting samples. 
 
