@@ -69,6 +69,6 @@
 3. Record the number of *C. difficile* colonies on each dilution plate 
 	+ Ideally use the plates with between 30-300 colonies on them to determine CFU/g feces
 
-      For example: if there were 61 colonies on the 10^-5 plates
-      61 X 10^-5 X 10 (plating dilution) = 6.1 x 10^-7 CFU/g feces 
+		For example: if there were 61 colonies on the 10^-5 plates
+		61 X 10^-5 X 10 (plating dilution) = 6.1 x 10^-7 CFU/g feces 
 
