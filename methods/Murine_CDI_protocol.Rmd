@@ -12,7 +12,7 @@ This protocol outlines the steps I take when executing the mouse modle of CDI. P
 
 
 ### Step 2: Co-housing mice 
-*This step performed if using mice from two different breeding colonies. Co-housing is a less than ideal method to try to homogenize the microbota*
+>This step performed if using mice from two different breeding colonies. Co-housing is a less than ideal method to try to homogenize the microbota*
 1. Ear punch mice 
 	+  5 mice max to one cage.		
 	*	0 holes: mouse 1
