@@ -5,7 +5,7 @@
 ###Background/Purpose  
  *Clostridium difficile* is a Gram-postitive, spore-forming,  anaerobic bacterium that can colonize the gastrointestinal tract. 
  The use of selective agar containing the germinant taurocholate enables quantitation of both the vegetative and spore form of *C. difficile* from intestinal content.    
----
+
 ###Materials 
 1. [Denville SHARP 200uL barrier tips] (https://www.denvillescientific.com/products/sharp%C2%AE-precision-barrier-tips--for-p-200--200%C2%B5l--960-(10-racks-of-96))
 2. [Rainin 20uL barrier tips] (https://www.shoprainin.com/Pipette-Tips/BioClean-LTS-Tips/Removable-Cover-Racks/Tips-LTS-20-%C2%B5L-Filter-960-10-RT-L10F/p/17002928) 
@@ -19,7 +19,7 @@
 10. [Anaerobic chamber](http://www.coylab.com/vinyl.htm)
 11. P-1000, 200, and 20 pipettes (our lab uses Rainin brand)
 12. P-200 multichannel pipette   
----   
+  
 ###Step 1: Collect feces/intestinal content from mouse 
 1. Grasp mouse firmly to pick up,  collect a fresh fecal pellet into a pre-weighed sterile 1.7mL eppendorf tube 
 	+ Alternatively collect intestinal content during necropsy      
