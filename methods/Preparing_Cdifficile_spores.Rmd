@@ -18,8 +18,8 @@ For 1L:
 
 Autoclave at liquid setting for 25 min
 
+*All growth is in an anaerobic chamber, all broths need to be pre-reduced*  
 ###Protocol
-*All growth is in an anaerobic chamber, all broths need to be pre-reduced*
 1. Sub a single colony into 5mL of [Columbia broth](http://www.bd.com/ds/productCenter/294420.asp)
 	+ As a control for possible contamination of your broth stock always incubate a broth only tube 
 2. Incubate overnight at 37C in the chamber 
