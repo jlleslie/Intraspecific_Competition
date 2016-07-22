@@ -46,7 +46,7 @@
 	+ Label the columns with the dilutions   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Starting at 10-2 -> 10-6)
 	+ Label the rows with the sample ID (see plate template below)
-	<div style="text-align:center"><img src ="http://jlleslie.github.io/images/dilutions.jpg" width="400" height="200" /></div>
+	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/dilutions.jpg?token=AJ8FtsMX7KXiL_GyWrat0A2q8aBiEEEbks5XmqXzwA%3D%3D" width="400" height="200" /></div>
 3.	Add your sample to the wells in column 1 or 8. 
 	+ Add 30uL from your tube to the first column  (repeat with each sample, you can load 8 sample per side for a total of 16 samples per plate) 
 		* Once the entire column is filled, use the multichannel to set to 30uL to mix by pipetting up and down.
