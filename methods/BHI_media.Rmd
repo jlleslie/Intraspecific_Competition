@@ -25,11 +25,10 @@ Measure and add the following:
 +  37g  [Brain Heart Infusion](http://www.bd.com/ds/productCenter/237500.asp) to 1L of water, mix 
 
 Autoclave using liquid setting for 25min
-After autoclaving and cooling the media in the water bath, add the following:
-Note: Make sure the caps are very loosely screwed on. 
+Note: Make sure the botte cap is very loosely screwed on.
+
+
+After autoclaving and cooling in a water bath, add the following:
 + L-cysteine solution
 	* 0.1g of L-cysteine/ 10mL milliQ water (Filter with 0.2um filter)
-	* Label plates with 1 pink stripe
-+ If you are making BHI+cys+taurocholate add Add 10mL of 10% (w/v) taurocholate  
-	*(1g in 10mL water, filter sterilize) 
-	* Label plates with 1 pink stripe and one blue stripe 
++ 1ml of 0.01% resazurin per L of BHI broth 
