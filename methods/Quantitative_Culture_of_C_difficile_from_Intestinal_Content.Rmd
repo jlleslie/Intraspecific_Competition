@@ -14,14 +14,17 @@
 5. Pre-reduced [PBS] (https://www.thermofisher.com/order/catalog/product/10010049)
 6. [Sterile Reservoir](http://www.argos-tech.com/pipetting-reservoirs.html)
 7. [Sterile 96-well plate] (https://www.fishersci.com/shop/products/nunc-microwell-96-well-microplates/12565363)
-8.  Pre-reduced TCCFA or TCCFA supplemented with erythromycin 
+8.  Pre-reduced [TCCFA or TCCFA supplemented with erythromycin] (https://github.com/jlleslie/Intraspecific_Competition/blob/master/methods/TCCFA_media.Rmd)
 9. 1.5mL autoclaved eppendorf tube 
 10. [Anaerobic chamber](http://www.coylab.com/vinyl.htm)
 11. P-1000, 200, and 20 pipettes (our lab uses Rainin brand)
 12. P-200 multichannel pipette   
   
+
+Notes: All plates/media should be passed into the chamber at least 8 hours in advance to reduce. PBS should be reduced for at least 24 hours or alternatively autoclaved and then reduced for 8 hours. 
+  
 ###Step 1: Collect feces/intestinal content from mouse 
-1. Grasp mouse firmly to pick up,  collect a fresh fecal pellet into a pre-weighed sterile 1.7mL eppendorf tube 
+1. Grasp mouse firmly & pick up, collect a fresh fecal pellet into a pre-weighed sterile 1.7mL eppendorf tube 
 	+ Alternatively collect intestinal content during necropsy      
 
 ###Step 2: Determine the amount of sample in each tube 

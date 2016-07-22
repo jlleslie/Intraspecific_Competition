@@ -1,7 +1,7 @@
 #Taurocholate Cycloserine Cefoxitin Fructose Agar (TCCFA)
 ## Written by: Jhansi Leslie
 
-### Reference:[Use of Sodium Taurocholate to Enhance Spore Recovery on a Medium Selective for *Clostridium difficile* ] (http://jcm.asm.org/content/15/3/443.full.pdf)
+### Reference: [Use of Sodium Taurocholate to Enhance Spore Recovery on a Medium Selective for *Clostridium difficile* ] (http://jcm.asm.org/content/15/3/443.full.pdf)
 
 
 This recipe  will make 1 liter of media. 
@@ -35,6 +35,9 @@ If making plates with erythromycin:
 
 + Add 2000 ug of erythromycin to 1 mL of 100% ethanol, add to liter of media
 
+OR 
+
++ Add 6000 ug of erythromycin to 1 mL of 100% ethanol, add to liter of media
 
 Stir briefly and pour plates (1L of media should make about 45 plates). 
 
