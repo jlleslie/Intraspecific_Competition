@@ -1,5 +1,5 @@
 #Brain Heart Infusion (BHI)
-## Written by: Jhansi Leslie 
+## Author: Jhansi Leslie 
 
 This recipe  will make 1 liter of media. 
 

@@ -1,0 +1,29 @@
+#Protocol for Preparation of Spores
+##Modified from protocol provided by Dr. Paul Carlson 
+
+##Reference:[Clospore: A Liquid Medium for Producing High Titers of Semi-purified Spores of *Clostridium difficile*](http://www.ingentaconnect.com/content/aoac/jaoac/2011/00000094/00000002/art00031?trendmd-shared=0) 
++ *This paper is behind a paywall*
+ 
+
+###Clospore recipe
+
+For 1L:
+
++10g [Special Peptone Mix] (http://www.oxoid.com/UK/blue/prod_detail/prod_detail.asp?pr=LP0072)
++ 10g [Yeast Extract] (http://www.sigmaaldrich.com/catalog/product/sigma/y1625?lang=en&region=US&gclid=CjwKEAjwiMe8BRD0ts3Vtv-ohWgSJAAZurk16RzuJBvQ8P9bmxPxM-fCh0W_yKBLqdZV1z3E4u3isBoCxVXw_wcB)
++ 0.6g [(NH4)2SO4] (http://www.sigmaaldrich.com/catalog/product/sigma/a4418?lang=en&region=US)
++ 0.12g  [MgSO4 7H2O] (http://www.sigmaaldrich.com/catalog/product/sigald/230391?lang=en&region=US)
++ 3.48g [K2CO3] (http://www.sigmaaldrich.com/catalog/product/sigald/p5833?lang=en&region=US)
++ 2.6g [KH2PO4] (http://www.sigmaaldrich.com/catalog/product/usp/1551139?lang=en&region=US)
+
+Autoclave at liquid setting for 25 min
+
+###Protocol
+*All growth is in an anaerobic chamber, all broths need to be pre-reduced*
+1. Sub a single colony into 5mL of [Columbia broth](http://www.bd.com/ds/productCenter/294420.asp)
+	+ As a control for possible contamination of your broth stock always incubate a broth only tube 
+2. Incubate overnight at 37C in the chamber 
+3. Inoculate 40mL of Clospore with the entire 5mL overnight culture
+4. Allow to grow for >5 days, use a ~10uL to check for small phase bright particles (spores)
+5. Centrifuge 
+
