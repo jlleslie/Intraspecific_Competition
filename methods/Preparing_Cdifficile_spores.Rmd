@@ -9,7 +9,7 @@
 
 For 1L:
 
-+10g [Special Peptone Mix] (http://www.oxoid.com/UK/blue/prod_detail/prod_detail.asp?pr=LP0072)
++ 10g [Special Peptone Mix] (http://www.oxoid.com/UK/blue/prod_detail/prod_detail.asp?pr=LP0072)
 + 10g [Yeast Extract] (http://www.sigmaaldrich.com/catalog/product/sigma/y1625?lang=en&region=US&gclid=CjwKEAjwiMe8BRD0ts3Vtv-ohWgSJAAZurk16RzuJBvQ8P9bmxPxM-fCh0W_yKBLqdZV1z3E4u3isBoCxVXw_wcB)
 + 0.6g [(NH4)2SO4] (http://www.sigmaaldrich.com/catalog/product/sigma/a4418?lang=en&region=US)
 + 0.12g  [MgSO4 7H2O] (http://www.sigmaaldrich.com/catalog/product/sigald/230391?lang=en&region=US)
@@ -25,5 +25,15 @@ Autoclave at liquid setting for 25 min
 2. Incubate overnight at 37C in the chamber 
 3. Inoculate 40mL of Clospore with the entire 5mL overnight culture
 4. Allow to grow for >5 days, use a ~10uL to check for small phase bright particles (spores)
-5. Centrifuge 
+5. Remove tube from the chamber 
+6. Centrifuge at 3200 rpm for 20 min at 4C
+7. Discard supernatant in to 10% bleach solution (to disinfect) 
+8. Add cold water with 0.05% Tween 20 and vortex to free any spores that have stuck to the tube during the growth. 
+9. Repeat steps 6-7 at least 3 more times using  cold sterile water to wash  pellet rather than Tween water
+10. After 4 washes in the big tube, transfer the pellet into a [1.5mL orange cap tube](https://catalog2.corning.com/LifeSciences/en-US/Shopping/ProductDetails.aspx?productid=430909(Lifesciences))
+11. Wash 2 more times in this smaller tube 
+12. Re-suspend pellet in 1.0mL sterile water, spores can be stored at room temperature short-term or at 4C for long-term storage. 
+
+
+Notes: Vegetative *C. difficile* can be stored in glycerol stocks at -80C or spores can be stored in water at 4C 
 
