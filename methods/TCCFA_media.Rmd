@@ -1,0 +1,33 @@
+#Taurocholate Cycloserine Cefoxitin Fructose Agar
+## Written by: Jhansi Leslie
+
+In a 2L flask add 800mL of MilliQ water.  
+
+And then add the following:
+
+40g [Proteose Peptone #3](http://www.bdbiosciences.com/us/cell-culture/media-supplements/media-supplements/ao-animal-origin/porcine/proteose-peptone-no3/p/212220)
+5g	[Na2HPO4  (sodium phosphate dibasic)] (http://www.sigmaaldrich.com/catalog/product/aldrich/255793?lang=en&region=US)
+1g 	[KH2PO4  (potassium phosphate monobasic)] (http://www.sigmaaldrich.com/catalog/product/sigma/p9791?lang=en&region=US)
+2g 	[NaCl] (http://www.sigmaaldrich.com/catalog/product/sigma/s3014?lang=en&region=US)
+0.1g [MgSO4] (http://www.sigmaaldrich.com/catalog/product/sigald/m7506?lang=en&region=US)
+6g 	[Fructose] (http://www.sigmaaldrich.com/catalog/product/sigma/f0127?lang=en&region=US)
+
+Bring final volume to 1L
+ 
+*If making agar add 20g bacto agar to the media  (I use select agar not bacto) 
+
+Autoclave for 25min at liquid setting~
+
+After the media has been autoclaved and cooled a bit, add the following: 
+
+Add 10mL of 10% (w/v) taurocholate  (1g in 10mL water, filter sterilize) 
+
+Add 25mL D-cycloserine (10mg/mL, filter sterilize)
+	
+Add  1.6 mL cefoxitin (10mg/mL, filter sterilize) 
+
+
+
+Stir briefly and pour plates (1L of media should make about 45 plates). 
+
+Note:  To cool media: place in a water bath set at 50C. 
