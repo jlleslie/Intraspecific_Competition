@@ -1,5 +1,5 @@
 #Protocol for Preparation of Spores
-##Modified from protocol provided by Dr. Paul Carlson 
+##Modified from protocol provided by [Dr. Paul Carlson] (https://www.linkedin.com/in/paul-carlson-3849b59b) 
 
 ###Reference:[Clospore: A Liquid Medium for Producing High Titers of Semi-purified Spores of *Clostridium difficile*](http://www.ingentaconnect.com/content/aoac/jaoac/2011/00000094/00000002/art00031?trendmd-shared=0) 
 + *This paper is behind a paywall*
