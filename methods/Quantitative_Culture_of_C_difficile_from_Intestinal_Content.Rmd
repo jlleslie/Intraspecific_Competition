@@ -1,6 +1,7 @@
-<center>#Quantitative Culture of *Clostridium difficile* from Intestinal Content</center>
+#Quantitative Culture of *Clostridium difficile* from Intestinal Content
+***
 ##Protocol by: Jhansi Leslie
-
+---
 
 ###Background/Purpose  
  *Clostridium difficile* is a Gram-postitive, spore-forming,  anaerobic bacterium that can colonize the gastrointestinal tract. 
