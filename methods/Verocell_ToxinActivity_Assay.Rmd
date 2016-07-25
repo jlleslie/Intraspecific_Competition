@@ -6,18 +6,19 @@
 1. Preheat media in 37°C water bath
 	* [DMEM] (https://www.thermofisher.com/order/catalog/product/11965092) supplemented with 10% [FBS] (https://www.thermofisher.com/order/catalog/product/10438026) & 1% [Pen/Strep] (https://www.thermofisher.com/order/catalog/product/15140122)
 	* [0.25% Trypsin-EDTA] (https://www.thermofisher.com/order/catalog/product/25200056)
-2. Removed media from T‐75 flask 
-3. Add 1mL Trypsin t theo flask. Let sit on bench until cells begin to come off (this is visible to naked eye).
+2. Removed old DMEM from T‐75 flask 
+3. Wash the flask with sterile PBS, remove.
+3. Add 1mL Trypsin to the flask. Let sit on bench until cells begin to come off (this is visible to naked eye).
 4. Hit sides of flasks to loosen cells. 
-5. Add 4mL DMEM and wash cells off the back of the flask, move the cells into a sterile conical.
+5. Add 4mL supplemented DMEM and wash cells off the back of the flask, move the cells into a sterile conical.
 5. Spin 5min @ 1000 RPM @ 25°C
 5. Decant supernatant.
-6. Resuspend the cells in 3mL of fresh DMEM
+6. Resuspend the cells in 3mL of fresh supplemented DMEM
 
 #### Counting cells
-1.	Add 100uL cell suspension to 100uL Trypan Blue.
-2.	Add 10uL of this mixture to each chamber of hemocytometer
-3.	Count number of viable cells
+1.	Add 100uL cell suspension to 100uL [trypan blue](https://www.thermofisher.com/order/catalog/product/15250061).
+2.	Add 10uL of this mixture to each chamber of a hemocytometer
+3.	Count number of viable cells (cells that are not blue)
 4.	Average number of viable cells
 5.	Multiply by dilution factor *dilution factor is 2 since have 100uL cells in 200uL liquid (cells + trypan blue)*
 6.	Multiply by correction factor to give cells/mL, the correction factor is always 10^4
