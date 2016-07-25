@@ -2,13 +2,13 @@
 ## Modified from a protocol written by [Cassie Schumacher] (https://www.linkedin.com/in/cassie-schumacher-2542595)
 
 ###Day 1 Seeding Cells
-#### Splitting cells
+#### Harvest cells
 1. Preheat media in 37°C water bath
 	* [DMEM] (https://www.thermofisher.com/order/catalog/product/11965092) supplemented with 10% [FBS] (https://www.thermofisher.com/order/catalog/product/10438026) & 1% [Pen/Strep] (https://www.thermofisher.com/order/catalog/product/15140122)
 	* [0.25% Trypsin-EDTA] (https://www.thermofisher.com/order/catalog/product/25200056)
-2. Removed old DMEM from T‐75 flask 
-3. Wash the flask with sterile PBS, remove.
-3. Add 1mL Trypsin to the flask. Let sit on bench until cells begin to come off (this is visible to naked eye).
+2. Removed old DMEM from  the T‐75 flask 
+3. Wash the flask with sterile [PBS](https://www.thermofisher.com/order/catalog/product/10010023), remove.
+3. Add 1mL trypsin to the flask. Let sit on bench until cells begin to come off (this is visible to naked eye).
 4. Hit sides of flasks to loosen cells. 
 5. Add 4mL supplemented DMEM and wash cells off the back of the flask, move the cells into a sterile conical.
 5. Spin 5min @ 1000 RPM @ 25°C
@@ -31,3 +31,54 @@ Want ~100000 (105) cells per well.
 2.	Determine how much volume you need to fill the number of wells desired 
 *Add in extra to account for pipetting error!*
 3.	Dilute cells in DMEM to get the number of mL required 
+
+
+Cytotoxicity Assay using Vero Cells - Day 2
+
+Create stock solutions from samples
+1)	Find the content weight (8)
+2)	Convert grams to mg to uL (9)
+3)	Find total number of uL solution needed (10)
+4)	Find total amount of PBS to add (11):
+5)	Add uL PBS to cecal content. Vortex and spin.
+6)	Sterilize content /PBS into an eppendorf tube by putting content in syringe and passing through 0.22um filter. Place on ice
+**This is the 10-­‐1 stock that is used with the dilution plate.**
+
+Create Dilution plate #1 (DP#1)
+1)	One lane for each sample; 6 wells
+2)	One lane for the positive control; 6 wells
+3)	Label wells with their dilutions (10-­‐1  to 10-­‐6)
+4)	Add appropriate amount of PBS to each well
+*no PBS to 10-­‐1  wells for samples
+*900uL PBS to 10-­‐2  to 10-­‐6  samples
+*90uL PBS to 10-­‐1  well for positive control
+5)	Add appropriate amount of sample to each well
+*100uL 10-­‐1  sample  stock to 10-­‐1  wells
+*10uL 10-­‐1  sample  stock to  10-­‐2  wells; etc
+*10uL positive control stock to 10-­‐1  positive control well
+*10uL from 10-­‐1  positive control well to 10-­‐2  positive control well; etc.
+6)	Place dilution on ice.
+
+Create Dilution plate #2 (DP#2)
+1)	Need 2 lanes of 6 wells each for each sample.
+*12 wells
+2)	Label all wells with their dilution (10-­‐1  to 10-­‐6)
+3)	Alternate rows are used for samples and anti-­‐toxins.
+4)	Label wells with correct amount of stock solution and PBS.
+*20uL diluted toxin (from DP#1), 20uL PBS for 'sample' rows
+*20uL diluted toxin (from DP#1), 20uL anti-­‐toxin for 'anti-­‐toxin' rows
+6)	Calculate how much anti-­‐toxin is needed (12)
+7)	Add 20uL PBS to all 'sample' rows.
+Add 20uL anti-­‐toxin to all 'anti-­‐toxin 'rows
+8)	Transfer 20uL from appropriate sample/wells on DP#1 to appropriate wells  on DP#2.
+**ALLOW 40 MIN INCUBATION SO ANTI-­‐TOXIN CAN BIND/INACTIVATE TOXIN**
+9)	Add 10uL of mixture from DP#2 to appropriate Vero cell wells.
+10)	Incubate Vero cells at 37°C overnight.
+
+Analyze Vero cells using the light microscope
+1)	Remember, the dilution factor changes by a factor of 10 when added to Vero cells (10-­‐3  -­‐> 10-­‐4)
+2)	Anti-­‐toxin wells should show little to no cell rounding.
+3)	Sample wells: Choose well that is last to have 100% cell rounding.
+4)	Positive control: Choose well that is 100% cell rounding (in theory, should be least diluted)
+5)	Cell rounding: log [final dilution factor]/ per gram of cecal content.
+*use reciprocal of final dilution factor: ex/ 10-­‐5   -­‐>  105  = log[105] = 5
