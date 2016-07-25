@@ -1,0 +1,13 @@
+#Vero Cell Toxin Activity Assay 
+## Modified from a protocol written by [Cassie Schumacher] (https://www.linkedin.com/in/cassie-schumacher-2542595)
+
+###Day 1 Seeding Cells
+### Splitting cells
+1. Preheat media in 37°C water bath
+	* DMEM (w/ 10%FBS & 1% Pen/Strep)
+	* 0.25% Trypsin-­‐EDTA
+2. Decant media from T-­‐75 into waste.
+3. Add 1mL Trypsin to flask. Let sit on bench until cells begin to come off (this is visible to naked eye).
+4.	Hit sides of flasks to loosen cells. Add 4mL DMEM and wash cells off the back of the flask. Add mixture to 15mL conical. Spin 5min @ 1000 RPM @ 25°C
+5. Decant supernatant.
+6. Resuspend the cells in 3mL DMEM
