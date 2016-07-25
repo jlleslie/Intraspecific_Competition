@@ -47,12 +47,12 @@ In most cases a 5 days is sufficient, however I started my experiments using a 1
 2. After infecting mice, bring inoculum back to lab. 
 3. Serially dilute and spread dilutions on plates containing taurocholate (like [TCCFA] (https://github.com/jlleslie/Intraspecific_Competition/blob/master/methods/TCCFA_media.Rmd)). 
 4. The next day, count colonies to determine the number of spores given to each animal. 
-	+ Note the inoculum needs to plated soon after being administered to animals as the spors will stick to the tube lowering the observed dose. 
+	+ Note the inoculum needs to plated soon after being administered to animals as the spores will stick to the tube, lowering the observed dose. 
 
 ### Step 5: Infect mice 
 1. Mice are given spores by oral gavage.
 	+ As with all animal work, great care and skill needs to be used in order to minimize harm to our animals. 
-	+ Great resource for [how to gavage] (http://www.procedureswithcare.org.uk/oral-gavage-in-the-mouse/)
+	+ See this resource for [how to gavage] (http://www.procedureswithcare.org.uk/oral-gavage-in-the-mouse/)
 2. Typically mice are given between 10^3 to 10^5 spores in a total volume of 50-100uL depending on the experiment.
 3. Mock infected mice are given an equal volume of plain water. 
 4. Mice are weighted at time of infection to determine baseline weight. 
@@ -75,15 +75,16 @@ In most cases a 5 days is sufficient, however I started my experiments using a 1
 
 ### Step 7: Serum collection (to monitor serum antibodies)   
 1. Serum is collected throughout the experiment via saphenous vein puncture.
-2. Mice are restrained in a 50mL conical with the end cut off for air.
+2. Mice are restrained in a 50mL conical with the end cut off to allow air for the animal.
 3. The thigh of the mouse is shaved with a mustache trimmer. 
 3. Vaseline is applied to the thigh, and a small gauge needle is used to puncture the vein.
-4. The blood drops  are collected in [capillary blood collection tubes] https://www.sarstedt.com/en/products/diagnostic/capillary-blood/tubes/product/16444/) 
-5. Following collection, the instruction for use provided with the tubes was followed, and serum was saved in the -80C. 
-6. Serum was collected before antibiotics and throughout infection, approximately every 2 weeks. 
+4. The blood drops  are collected in [capillary blood collection tubes] (https://www.sarstedt.com/en/products/diagnostic/capillary-blood/tubes/product/16444/) 
+5. Following collection, follow the instruction for use provided with the tubes.
+6. The serum  was aliquoted and saved in the -80C. 
+7. Serum was collected before antibiotics and throughout infection, approximately every 2 weeks. 
 
 ### Step 8: IP Clindamycin
-1.	In the long-term infection model mice require a secondary antibiotic following six weeks of recovery from cefoperazone [Ref1](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3225775/pdf/gmic0203_0145.pdf) [Ref2] (http://dx.doi.org/10.1038/ncomms4114)
+1.	In the long-term infection model mice require a secondary antibiotic following six weeks of recovery from cefoperazone [Ref1],(http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3225775/pdf/gmic0203_0145.pdf) [Ref2] (http://dx.doi.org/10.1038/ncomms4114)
 2. To make mice susceptible again, we given them an IP of clindamycin 
 	+ Open a sterile saline bottle in a BSC, remove 10mL
 	+ add 10mg of clindamycin to the bottle, mix ([] = 1mg/mL)
