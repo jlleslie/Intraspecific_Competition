@@ -9,28 +9,38 @@
 	* [0.25% Trypsin-EDTA] (https://www.thermofisher.com/order/catalog/product/25200056)
 2. Removed old DMEM from  the T‐75 flask 
 3. Wash the flask with sterile [PBS](https://www.thermofisher.com/order/catalog/product/10010023), remove.
-3. Add 1mL trypsin to the flask. Let sit on bench until cells begin to come off (this is visible to naked eye).
+3. Add 1-2mL trypsin to the flask. Let sit on bench until cells begin to come off (this is visible to naked eye).
 4. Hit sides of flasks to loosen cells. 
 5. Add 4mL supplemented DMEM and wash cells off the back of the flask, move the cells into a sterile conical.
-5. Spin 5min @ 1000 RPM @ 25°C
+5. Spin 5min @ 1000 RPM @ 25°C (room temp).
 5. Decant supernatant.
 6. Resuspend the cells in 3mL of fresh supplemented DMEM
+	+ As a rule you need 3mL fresh media per 
 
 #### Count cells
 1.	Add 100uL cell suspension to 100uL [trypan blue](https://www.thermofisher.com/order/catalog/product/15250061).
 2.	Add 10uL of this mixture to each chamber of a hemocytometer.
-3. Count the number of viable cells (not blue) in the corners of the hemocytometer hi-lighted in yellow
-<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/hemocytometer%20.jpg?token=AJ8FtmENFoUvGmGF60p-ObMPR70sglj9ks5XoJiRwA%3D%3D" width="50" height="50" /></div> 
+3. Count the number of viable cells (not blue) in the corners of the hemocytometer hi-lighted in yellow, remember to count cells on the line for the top and right sides of the square only 
+<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/hemocytometer%20.jpg?token=AJ8FtmENFoUvGmGF60p-ObMPR70sglj9ks5XoJiRwA%3D%3D" width="100" height="100" /></div> 
 4.	Average number of viable cells
-5.	Multiply by dilution factor *dilution factor is 2 since have 100uL cells in 200uL liquid (cells + trypan blue)*
-6.	Multiply by correction factor to give cells/mL, the correction factor is always 10^4
-7.	Multiply by total volume to give total # of cells
+5.	Multiply by dilution factor 
+	+ dilution factor is 2 since 100uL cells was added to 100uL trypan (for a total volume of 200uL)
+6.	Multiply by correction factor to give cells/mL, the correction factor for the part we count is always 10^4
+7.	Multiply by total volume to give total number of cells
 
 #### Re-suspend cells to desired concentration and seed plate 
 1. The concentration of cells in each well will be 10^5 cells/0.09mL 
-2. Determine how many wells you can fill with a given 
-3.	Determine how much volume you need to fill the number of wells desired 
-*Add in extra to account for pipetting error!*
+2. Determine how many wells you need  to complete your assay (ideally you would have done this before so you have enough cells)
+	+ we usually run each sample in duplicate with anti-toxin antibody controls for a total of 24 wells/sample
+3.	Determine how much to dilute your cells by 
+ 	+ Add in extra to account for pipetting error!
+ 	
+ 	     Formula for determining how much to dilute your cell stock: 
+ 		 x (mL of stock cells from step 6 of Harvest cells) = (number of cells/mL) / (10^5 cells/0.09mL) * # mL required to complete the assay 
+         For example: If you are running one 96-well plate, you would need  100mL of cells at a concentration of 10^5 cells/0.09mL 
+        if the the concentration of the cells you harvested from your flask are 1.7x10^6 cells/mL then you would need to add 
+ 	
+ 	
 3.	Dilute cells in DMEM to get the number of mL required 
 
 
