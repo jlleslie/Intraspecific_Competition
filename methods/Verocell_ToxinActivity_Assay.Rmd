@@ -2,6 +2,7 @@
 ## Modified from a protocol written by [Cassie Schumacher] (https://www.linkedin.com/in/cassie-schumacher-2542595)
 
 ###Day 1 Seeding Cells
+
 #### Harvest cells
 1. Preheat media in 37°C water bath
 	* [DMEM] (https://www.thermofisher.com/order/catalog/product/11965092) supplemented with 10% [FBS] (https://www.thermofisher.com/order/catalog/product/10438026) & 1% [Pen/Strep] (https://www.thermofisher.com/order/catalog/product/15140122)
@@ -15,27 +16,27 @@
 5. Decant supernatant.
 6. Resuspend the cells in 3mL of fresh supplemented DMEM
 
-#### Counting cells
+#### Count cells
 1.	Add 100uL cell suspension to 100uL [trypan blue](https://www.thermofisher.com/order/catalog/product/15250061).
-2.	Add 10uL of this mixture to each chamber of a hemocytometer
-3.	Count number of viable cells (cells that are not blue)
+2.	Add 10uL of this mixture to each chamber of a hemocytometer.
+3. Count the number of viable cells (not blue) in the corners of the hemocytometer hi-lighted in yellow
+<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/hemocytometer%20.jpg?token=AJ8FtmENFoUvGmGF60p-ObMPR70sglj9ks5XoJiRwA%3D%3D" width="50" height="50" /></div> 
 4.	Average number of viable cells
 5.	Multiply by dilution factor *dilution factor is 2 since have 100uL cells in 200uL liquid (cells + trypan blue)*
 6.	Multiply by correction factor to give cells/mL, the correction factor is always 10^4
 7.	Multiply by total volume to give total # of cells
 
-#### Determine how many wells can be utilized
-*one sample needs 24 wells
-Want ~100000 (105) cells per well.
-1.	Determine how many wells you can fill with amount you have 
-2.	Determine how much volume you need to fill the number of wells desired 
+#### Re-suspend cells to desired concentration and seed plate 
+1. The concentration of cells in each well will be 10^5 cells/0.09mL 
+2. Determine how many wells you can fill with a given 
+3.	Determine how much volume you need to fill the number of wells desired 
 *Add in extra to account for pipetting error!*
 3.	Dilute cells in DMEM to get the number of mL required 
 
 
-Cytotoxicity Assay using Vero Cells - Day 2
+###Day 2 Adding Sample to Cells 
 
-Create stock solutions from samples
+### Dilute intestinal content 
 1)	Find the content weight (8)
 2)	Convert grams to mg to uL (9)
 3)	Find total number of uL solution needed (10)
