@@ -33,7 +33,8 @@
 2. Determine how many wells you need  to complete your assay (ideally you would have done this before so you have enough cells)
 	+ we usually run each sample in duplicate with anti-toxin antibody controls for a total of 24 wells/sample
 3.	Determine how much to dilute your cells by 
- 	+ Add in extra to account for pipetting error!
+ 	+ Add in extra to account for pipetting error! 
+ 	
  	
  	     Formula for determining how much to dilute your cell stock: 
  		 x (mL of stock cells from step 6 of Harvest cells) = (number of cells/mL) / (10^5 cells/0.09mL) * # mL required to complete the assay 
