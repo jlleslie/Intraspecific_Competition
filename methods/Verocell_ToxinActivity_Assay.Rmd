@@ -35,11 +35,10 @@
 3.	Determine how much to dilute your cells by 
  	+ Add in extra to account for pipetting error! 
  	
- 	
- 	     Formula for determining how much to dilute your cell stock: 
- 		 x (mL of stock cells from step 6 of Harvest cells) = (number of cells/mL) / (10^5 cells/0.09mL) * # mL required to complete the assay 
-         For example: If you are running one 96-well plate, you would need  100mL of cells at a concentration of 10^5 cells/0.09mL 
-        if the the concentration of the cells you harvested from your flask are 1.7x10^6 cells/mL then you would need to add 
+	Formula for determining how much to dilute your cell stock: 
+	x (mL of stock cells from step 6 of Harvest cells) = (number of cells/mL) / (10^5 cells/0.09mL) * # mL required to complete the assay 
+	For example: If you are running one 96-well plate, you would need  100mL of cells at a concentration of 10^5 cells/0.09mL 
+	if the the concentration of the cells you harvested from your flask are 1.7x10^6 cells/mL then you would need to add 
  	
  	
 3.	Dilute cells in DMEM to get the number of mL required 
