@@ -76,9 +76,10 @@
 3.	Alternate rows on the plate are  loaded with PBS or anti-toxin antibodies 
 	+ In rows A, C, E, and G add 20uL of PBS  across all wells
 	+ In rows B, D, F, and H add 20uL of diluted anti-toxin sera 
-4. Transfer 20uL from appropriate sample/wells on dilution plate 1 to appropriate wells on this plate 
+4. Transfer 20uL from appropriate sample/wells on dilution plate 1 to appropriate wells on this plate  (this is a further 1:2 dilution)
+<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/Toxinassay_dilutionplate2.jpg?token=AJ8FtvPHBDrolGx8x9zQtNHFmEui1v1sks5XoeOAwA%3D%3D" width="500" height="300" /></div> 
 5. Once all samples have been added incubate for 40 min so anti-toxin antibodies in sera can bind/inactivate the toxin. 
-6. Add 10uL of mixture from  dilution plate 2 to appropriate Vero cell wells.
+6. Add 10uL of mixture from  dilution plate 2 to wells of Vero cells (this is a further 1/10 dilution).
 7. Incubate cells at 37C in a 5% CO2 humidified incubator over night.
 
 ###Day 2:  Reading the Plate 
@@ -90,6 +91,14 @@
 4.	Positive control: Wells with higher concentrations of toxin s diluted in PBS should be round while the counterpart wells added to the anti-toxin sera should have no rounding 
 	+ This allows you to know that any cell rounding is due to the toxin and not other things in the sample 
 5. 	Toxin activity:  log [reciprocal of the final dilution factor]/ per gram of cecal content.
+
 	```
-		Toxin activity for 
+		Toxin activity calculation: 
+		Say the last well with 80% or more of the cells round  for mouse #1 was A4 and A10 (see plate maps above).
+		This corresponds to the 10^-4 dilution in both replicate A and B. 
+		If replicate A and B were discordant then we would take the average value. 
+		Total dilution of mouse #1 sample = 10^-4 * 1/2 (addition of sample to PBS, dilution plate 2) * 1/10 (addition of sample to vero cells) 
+		Total dilution of mouse #1 sample = 5 x 10^-6 
+		Toxin activity = Log10 (1/(5x 10^-6) =5.3 
+		The limit of detection on this assay is 2.3 
  	```
