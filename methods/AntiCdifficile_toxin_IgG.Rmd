@@ -53,6 +53,8 @@ a.	Row A should have 200uL per well
 30.	Measure absorbance at 410nm
 
 #####Results
- 
+	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/ToxinA_resultscheckerboard.jpg?token=AJ8FttXY-oZfsSy8XgVGneMC5TpDpRd4ks5XofyWwA%3D%3D" width="600" height="400" /></div>
+ 	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/ToxinB_resultscheckerboard.jpg?token=AJ8Ftjg-sRfr6lYmFf08jB9QRnNqZNoLks5Xof0HwA%3D%3D" width="600" height=400" /></div>
+
 
 
