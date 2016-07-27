@@ -98,9 +98,9 @@ colhist_df.14.15a<-colhist_df.14.15[colhist_df.14.15$Colonization_stat!="cleared
 #remove the samples from mice that cleared in 2014 experiment 
 
 
-##### Ploting colon data from 2013 experiment 
+##### Ploting colon data from experiment
 #edema 
-co.plot13_edema.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=edema, fill=Treatment_Grp, colour=Treatment_Grp)) +
+co.plot_edema.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=edema, fill=Treatment_Grp, colour=Treatment_Grp)) +
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 1) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.85, color="black") +
   scale_color_manual(values = col_B, limits = c("630_Mock", "Naive_VPI")) +
@@ -120,11 +120,11 @@ co.plot13_edema.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=edema, fil
     ,axis.title=element_text(size=15)
     ,strip.background = element_blank()
   )
-edema<-co.plot13_edema.dot + facet_wrap(~Genotype)
+edema<-co.plot_edema.dot + facet_wrap(~Genotype)
 edema
 
 ##inflammation
-co.plot13_inflammation.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=inflammation, fill=Treatment_Grp, colour=Treatment_Grp)) +
+co.plot_inflammation.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=inflammation, fill=Treatment_Grp, colour=Treatment_Grp)) +
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1) +
   scale_color_manual(values = col_B, limits = c("630_Mock", "Naive_VPI")) +
   scale_fill_manual(values = col_B, limits = c("630_Mock", "Naive_VPI")) +
@@ -145,11 +145,11 @@ co.plot13_inflammation.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=inf
     ,axis.title=element_text(size=15)
     ,strip.background = element_blank()
   )
-inflammation<-co.plot13_inflammation.dot + facet_wrap(~Genotype)
+inflammation<-co.plot_inflammation.dot + facet_wrap(~Genotype)
 inflammation
 
 ##epithelial_damage
-co.plot13_epithelial_damage.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=epithelial_damage,  fill=Treatment_Grp, colour=Treatment_Grp)) +
+co.plot_epithelial_damage.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=epithelial_damage,  fill=Treatment_Grp, colour=Treatment_Grp)) +
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1) +
   scale_color_manual(values = col_B, limits = c("630_Mock", "Naive_VPI")) +
   scale_fill_manual(values = col_B, limits = c("630_Mock", "Naive_VPI")) +
@@ -170,11 +170,11 @@ co.plot13_epithelial_damage.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, 
     ,axis.title=element_text(size=15)
     ,strip.background = element_blank()
   )
-epithelial_damage<-co.plot13_epithelial_damage.dot + facet_wrap(~Genotype)
+epithelial_damage<-co.plot_epithelial_damage.dot + facet_wrap(~Genotype)
 epithelial_damage
 
 #This plot shows the sumary score for the colon of the mice at time of harvest. 
-co.plot13_sum.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=summary_score, fill=Treatment_Grp, colour=Treatment_Grp))+
+co.plot_sum.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=summary_score, fill=Treatment_Grp, colour=Treatment_Grp))+
   geom_dotplot(binaxis = "y", stackdir = "center") +
   scale_color_manual(values = col_B, limits = c("630_Mock", "Naive_VPI"))  +
   scale_fill_manual(values = col_B, limits = c("630_Mock", "Naive_VPI")) +
@@ -195,7 +195,7 @@ co.plot13_sum.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=summary_scor
     ,axis.title=element_text(size=15)
     ,strip.background = element_blank()
   )
-sum.score<-co.plot13_sum.dot+ facet_wrap(~Genotype)
+sum.score<-co.plot_sum.dot+ facet_wrap(~Genotype)
 sum.score
 #http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_(ggplot2)
 # Multiple plot function
