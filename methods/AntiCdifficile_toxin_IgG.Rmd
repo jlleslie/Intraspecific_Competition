@@ -52,14 +52,14 @@ Toxin is stored 3ul at 1ug/ul – so I need 7 aliquots. Add  297 ul of carbonate
 
 #####Results
 1. Plot of absorbance vs toxin concentration 
-	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/ToxinA_resultscheckerboard.jpg?token=AJ8FttXY-oZfsSy8XgVGneMC5TpDpRd4ks5XofyWwA%3D%3D" width="600" height="400" /></div>
- 	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/ToxinB_resultscheckerboard.jpg?token=AJ8Ftjg-sRfr6lYmFf08jB9QRnNqZNoLks5Xof0HwA%3D%3D" width="600" height=400" /></div>
-
+	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/ToxinA_resultscheckerboard.jpg?token=AJ8FttXY-oZfsSy8XgVGneMC5TpDpRd4ks5XofyWwA%3D%3D" width="400" height="200" /></div>
+ 	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/ToxinB_resultscheckerboard.jpg?token=AJ8Ftjg-sRfr6lYmFf08jB9QRnNqZNoLks5Xof0HwA%3D%3D" width="400" height=200" /></div>
 
 ###Final ELISA Protocol 
+	+ I only looked at Anti-toxin A IgG response 
 ####Step 1: Make up antigen solution/Coat plates (Protocol Day 1)
-1.	Antigen = 100ug of toxin A or B (lyophilized from List)
-	+	10 plates coated with A or B will be needed for each assay, thus 100ug of toxin will be needed 
+1.	Antigen = 100ug of toxin A 
+	+	10 plates coated with A will be needed for each assay, thus 100ug of toxin will be needed 
 2.	Make up 100mL of Bicarbonate-Carbonate buffer using tablets
 3.	Filter sterilize
 4.	Add 1mL of Bicarb buffer to each vial of 100ug of toxin 
