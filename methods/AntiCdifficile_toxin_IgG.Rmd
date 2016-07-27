@@ -4,7 +4,7 @@
 
 ###Background/Purpose  
 
-Serum from mice (2013,2014, 2015 long term infection) infected with 630 and then re-challenged with VPI will be tested for levels of anti-toxin A &  B antibodies (IgG). 
+Serum from mice (2013,2014, 2015 long term infection) infected with 630 and then re-challenged with VPI will be tested for levels of anti-toxin A antibodies (IgG). 
 
 ###Materials 
 + [Carbonate-bicarbonate buffer capsules] (http://www.sigmaaldrich.com/catalog/product/sigma/c3041?lang=en&region=US)
