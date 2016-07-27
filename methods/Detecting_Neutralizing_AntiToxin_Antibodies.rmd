@@ -34,7 +34,7 @@ Negative control= Toxin + PBS plates , Toxin + D-2 Serum (pre-immune serum)
 Positive control = Toxin + Alere Anti-Serum  
 
 
-###Part 1 (Day 1): 	Determine the CTU100 (minimum dose of toxin required to induce rounding of 100% of cells) for both toxin A and toxin B
+###Part 1: 	Determine the CTU100 (minimum dose of toxin required to induce rounding of 100% of cells) for both toxin A and toxin B
 1. Run a Vero cell toxin assay (see [ Vero Cell Toxin Activity Assay] (https://github.com/jlleslie/Intraspecific_Competition/blob/master/methods/Verocell_ToxinActivity_Assay.Rmd)  for a protocol.
 2. Run  2 fold dilutions of purified toxin A and toxin B to determine the lowest concentration of each that results in 100% cell rounding.
 	+ In my experience I see different lots of toxin have different CTU100 so do this step with each new lot  
@@ -46,7 +46,7 @@ Positive control = Toxin + Alere Anti-Serum
 		*	Toxin A = 32ng/mL
 2. 	Make the toxin up 2x more concentrated than 4CTU100 because there is another 1:2 dilution when the serum/extract is added to the toxin  
 
-###Part 2 (Day2)
+###Part 2: Perform Assay 
 
 Will need 10 plates of cells to test all serum samples for A and B 
 10 plates = 10 flasks
@@ -113,7 +113,7 @@ Will need 10 plates of cells to test all serum samples for A and B
 	+	Note if you add 2x (ex 8ng/mL) toxin to the first plate then you will end up with 1ng/mL of toxin added to the cells (which was the CTU100, see Part 1). 
 2.	Incubate cells 37C in a 5% CO2 humidified incubator 
 
-###Day 2:
+###Part 3: Read Plates 
 1.	Read plates at 24 hrs  cell rounding 
 	+	Cytotoxicity inhibition titer is defined as the reciprocal of the highest serum dilution that inhibited >50% cell rounding. 
 
