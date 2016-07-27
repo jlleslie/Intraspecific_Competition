@@ -6,6 +6,25 @@
 
 Serum from mice (2013,2014, 2015 long term infection) infected with 630 and then re-challenged with VPI will be tested for levels of anti-toxin A &  B antibodies (IgG). 
 
+###Materials 
++ [Carbonate-bicarbonate buffer capsules] (http://www.sigmaaldrich.com/catalog/product/sigma/c3041?lang=en&region=US)
++ [96-well EIA/RIA plates] (https://www.fishersci.com/shop/products/costar-96-well-eia-ria-plates-8/0720039)
++ [PBS] (https://www.thermofisher.com/order/catalog/product/10010049)
++ [Tween20] (https://www.fishersci.com/shop/products/tween-20-fisher-bioreagents-2/bp337100)
++ [BSA]  (http://www.sigmaaldrich.com/catalog/product/sigma/a4503?lang=en&region=US)
+	* Blocking buffer = 2% BSA in PBS + 0.05% Tween20 
++ Multichannel pipet 
++ [*C. difficile* Toxin A] (https://www.listlabs.com/products/buy-toxin-a-from-clostridium-difficile) 
++ [*C. difficile* Toxin B] (https://www.listlabs.com/products/buy-toxin-b-from-clostridium-difficile)
++ [Sterile reservoirs](http://www.argos-tech.com/pipetting-reservoirs.html)
++ Sera from mice
++ Secondary Antibody: [Goat Anti-mouse IgG HRP] (https://southernbiotech.com/PolyclonalDetails.aspx?catno=1030-05&ttl=Goat+Anti-Mouse+IgG%2c+Human+ads-HRP)
++ Postive control: [Mouse Anti-Toxin A IgG, cat# ABIN335169, TGC2] (https://www.antibodies-online.com/antibody/335169/anti-Toxin+A+TcdA/)
++ Substrate: [ABTS] (http://www.thermofisher.com/order/catalog/product/37615?gclid=Cj0KEQjwt-G8BRDktsvwpPTn1PkBEiQA-MRsBdcMf-SXIOqU4AVqMHMaV236TTY8SbpiTytlOLkr7uUaAkwG8P8HAQ&s_kwcid=AL!3652!3!85589465054!b!!g!!_inurl:_feed_label:protein%20analysis&ef_id=Vw0MngAAAUZr-IxP:20160727153803:s)
++ [VersaMax plate reader] (https://www.moleculardevices.com/systems/microplate-readers/absorbance-readers/versamax-elisa-microplate-reader)
++ 1% SDS stop solution 
+
+
 ###Validation of ELISA Protocol 
 #### Checkerboard with positive and negative sera against antigen: determining optimal antigen coating concentration. Titrate antigen across plate against titration of mouse sera (positive).  Conjugate Ab is held constant. 
 ####Day 1: Coat Plate 
@@ -28,9 +47,9 @@ Toxin is stored 3ul at 1ug/ul – so I need 7 aliquots. Add  297 ul of carbonate
 
 
 ####Day 2: Run Assay 
-1.	Wash the plate 3x with PBST (PBS + 0.05% tween) followed by 3x with PSB
+1.	Wash the plate 3x with PBST (PBS + 0.05% tween20) followed by 3x with PSB
 2.	Block – add 100uL of 2% BSA(w/v) in PBST (blocking buffer) to each well,  Incubate for 1hr at 37C
-3.	Wash the plate 3x with PBST (PBS + 0.05% tween) followed by 3x with PSB
+3.	Wash the plate 3x with PBST (PBS + 0.05% tween20) followed by 3x with PSB
 4.	Fill plate with 100uL of blocking buffer per well 
 5.	Dilute the positive mouse sera (sera from infected mice) in blocking buffer to 1:12.5 
 6.	Add 100μl of  1:12.5  diluted serum to wells in row A 1-12 - mix thoroughly by pipetting up and down  
@@ -75,7 +94,7 @@ Toxin is stored 3ul at 1ug/ul – so I need 7 aliquots. Add  297 ul of carbonate
  Samples: Day -2, 44 Serum from mice from 2013, 2014, 2015 experiments 
  Number of Plates: 10
  Negative control= coated wells + detection Ab & substrate (8 wells per each plate).  
- Positive control = starting dilution 1/5000 of mouse anti-toxin A IgG 
+ Positive control = starting dilution 1/5000 of mouse anti-toxin A IgG monoclonal anitbody  
  Notes: Dilute the sera to 1:400 (this is what was done on 2/24/13, and seems reasonable based on preliminary work done Nov 2013). Plates are coated with 1ug/mL toxin A from List biological labs. 
 ```
 1.	Wash plate 3x with PBST (PBS + 0.05% Tween20) followed by 3x with PBS
