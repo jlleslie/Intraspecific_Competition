@@ -5,59 +5,115 @@
 ### Reference: Adapted from [Serum Antitoxin Antibodies Mediate Systemic and Mucosal Protection from Clostridium difficileDisease in Hamsters] (http://iai.asm.org/cgi/pmidlookup?view=long&pmid=9916055)
 
 ### Background
-Add constant amount of toxin that is known to cause cytopathic effect.  Make dilutions of sera and add it to toxin—if sera contain neutralizing antibodies then you will see protection of cells. The titter will be determined by comparing which dilutions were able to provide protective effect. 
+Add constant amount of toxin that is known to cause cytopathic effect.  Make dilutions of sera and add it to toxin.
+If sera contain neutralizing antibodies then you will see protection of cells. The titter will be defined as the last dilution of sera that protected >50% cells in the well from rounding. 
+I usually preform this assay at the same time I am doing 
+
+### Materials
++ [DMEM] (https://www.thermofisher.com/order/catalog/product/11965092) supplemented with 10% [FBS] (https://www.thermofisher.com/order/catalog/product/10438026) & 1% [Pen/Strep] (https://www.thermofisher.com/order/catalog/product/15140122)
++ [0.25% Trypsin-EDTA] (https://www.thermofisher.com/order/catalog/product/25200056)
++ [Vero cells] (https://www.google.com/search?q=atcc+vero+cells&oq=ATCC+Vero+cells&aqs=chrome.0.0l5.4030j0j4&sourceid=chrome&ie=UTF-8#q=atcc+ccl-81)
++ Serum from infected mice 
++ [PBS] (https://www.thermofisher.com/order/catalog/product/10010049)
++ Multichannel pipet 
++ [*C. difficile* Toxin A] (https://www.listlabs.com/products/buy-toxin-a-from-clostridium-difficile) 
++ [*C. difficile* Toxin B] (https://www.listlabs.com/products/buy-toxin-b-from-clostridium-difficile)
++ [Sterile reservoirs](http://www.argos-tech.com/pipetting-reservoirs.html)
++ 5% CO2 humidified incubator 
++ Light microscope 
++ [Alere's goat anti-toxin A&B sera] (https://www.fishersci.com/shop/products/alere-c-difficile-toxin-antitoxin-kit-c-difficile-toxin-antitoxin-kit/23046761)
+
+
 
 Use Vero cells grown in DMEM with 1% pen/strep and 10% fetal calf serum.  
 
 Samples: Day -2,40 Serum/Fecal Extract from mice 712- 715 
-Negative control= Toxin + PBS plates , Toxin + D-2 Serum 
-Positive control = Toxin + Techlab Anti-Serum  
+Negative control= Toxin + PBS plates , Toxin + D-2 Serum (pre-immune serum)
+Positive control = Toxin + Alere Anti-Serum  
 
 
-###Day 1 
-#### Seed 10^5 cells in 0.75mL into a 96-well plate
-	+	Will need 10 plates of cells to test all serum samples for A and B 
-		*	10 plates = 10 flasks
-	+	Allow 3 hours for cells to adhere to the wells 
-1. 	Determine the CTU100 (minimum dose of toxin required to induce rounding of 100% of cells) for both toxin A and toxin B
-	+	Use 4 times the CTU100
-	+	The last well with 100% cell rounding is
+###Part 1 (Day 1): 	Determine the CTU100 (minimum dose of toxin required to induce rounding of 100% of cells) for both toxin A and toxin B
+1. Run a Vero cell toxin assay (see [ Vero Cell Toxin Activity Assay] (https://github.com/jlleslie/Intraspecific_Competition/blob/master/methods/Verocell_ToxinActivity_Assay.Rmd)  for a protocol.
+2. Run  2 fold dilutions of purified toxin A and toxin B to determine the lowest concentration of each that results in 100% cell rounding.
+	+ In my experience I see different lots of toxin have different CTU100 so do this step with each new lot  
+	+	The concentration of toxin that gave 100% cell rounding is
 		* toxin B = 1 ng/mL ~ 1
 		* toxin A =7.8125ng/mL  ~8
-	
-	```
-	4  X CTU100 
-	1.	Toxin B  = 4 ng/mL
-	2.	Toxin A = 32ng/mL
-	```	
+	+ 4  X CTU100 
+		*	Toxin B  = 4 ng/mL
+		*	Toxin A = 32ng/mL
+2. 	Make the toxin up 2x more concentrated than 4CTU100 because there is another 1:2 dilution when the serum/extract is added to the toxin  
 
-3. 	Make the toxin up 2x more concentrated than 4CTU100 because there is another 1:2 dilution when the serum/extract is added to the toxin  
-4.	Dilution Plate 1: Sera 
-	+	Dilute sera in PBS
+###Part 2 (Day2)
+
+Will need 10 plates of cells to test all serum samples for A and B 
+10 plates = 10 flasks
+
+#### Harvest cells
+1. Preheat media in 37°C water bath
+	* DMEM supplemented with 10% FBS & 1% Pen/Strep 
+	* 0.25% Trypsin-EDTA 
+2. Removed old DMEM from  the T‐75 flask  of Vero cells 
+3. Add 1-2mL trypsin to the flask. Let sit on bench until cells begin to come off (this is visible to naked eye).
+4. Hit sides of flasks to loosen cells. 
+5. Add 4mL supplemented DMEM and wash cells off the back of the flask, move the cells into a sterile conical.
+5. Spin 5min @ 1000 RPM @ 25°C (room temp).
+5. Decant supernatant.
+6. Resuspend the cells in 3mL of fresh supplemented DMEM
+	+ As a rule you need 3mL fresh media per 
+
+#### Count cells
+1.	Add 100uL cell suspension to 100uL [trypan blue](https://www.thermofisher.com/order/catalog/product/15250061).
+2.	Add 10uL of this mixture to each chamber of a hemocytometer.
+3. Count the number of viable cells (not blue) in the corners of the hemocytometer hi-lighted in yellow, remember to count cells on the line for the top and right sides of the square only 
+<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/hemocytometer%20.jpg?token=AJ8FtmENFoUvGmGF60p-ObMPR70sglj9ks5XoJiRwA%3D%3D" width="100" height="100" /></div> 
+4.	Average number of viable cells
+5.	Multiply by dilution factor 
+	+ dilution factor is 2 since 100uL cells was added to 100uL trypan (for a total volume of 200uL)
+6.	Multiply by correction factor to give cells/mL, the correction factor for the part we count is always 10^4
+7.	Multiply by total volume to give total number of cells
+
+#### Re-suspend cells to desired concentration and seed plate 
+1. Seed 10^5 cells in 0.075mL into a 96-well plate
+2. Determine how many wells you need  to complete your assay (ideally you would have done this before so you have enough cells)
+3. Determine how much to dilute your cells by 
+ 	+ Add in extra to account for pipetting error! 
+ 	+ See [Vero Cell Toxin Activity Assay] (https://github.com/jlleslie/Intraspecific_Competition/blob/master/methods/Verocell_ToxinActivity_Assay.Rmd) for formula 
+4. Dilute cells in supplemented DMEM to get the number of mL required 
+5. Add 75uL (0.075mL)of the correctly diluted cells to each well of a sterile cell culture treated plate
+6.  Place plates in a 37C in a 5% CO2 humidified incubator
+	+ The cells need to incubated on the plate for at least 4 hours to allow cells to stick to the plate  
+
+####  Dilution Plate 1: Sera 
+1.	Dilute sera in PBS
 	+	Note each row of serum will be used to seed both the toxin A and toxin B wells on the toxin plate 
-	+	First dilution will be 1/10
-		*	Add 15uL of serum to 135uL PBS in columns 1 and 7, mix 
-	+	Further dilutions will be 1:2
-		*	Ex: Take 70uL from column 1 and add to 70ul of PBS in column 2
-5.	Dilute anti-toxin Ab 1/25 to be added to Dilution plate B
-6.	Dilution Plate 2 Toxin 
-	+	Dilute the toxin in PBS
-7.	Dilute saved toxin 1:10, followed by a 1:100 dilution = 1000ng/mL toxin
-8.	Dilute further depending on concentration and volume desired 
-	+	Add 30ul of toxin solution to all the wells of the plate you
-9.	Toxin + Sera (Plate 2)
-	+	Add 30uL of serum  (from plate 1) to 30uL of toxin incubate for 1hr at 37C
-		*	This is a further 1:2 dilution 
-	+	Incubate 1hr at 37C 
+2. First dilution will be 1/10
+	+	Add 15uL of serum to 135uL PBS in columns 1 and 7, mix 
+3.	Further dilutions will be 1:2
+	+	Ex: Take 70uL from column 1 and add to 70ul of PBS in column 2
+4.	Dilute anti-toxin Ab [Alere's goat anti-toxin A&B sera] (https://www.fishersci.com/shop/products/alere-c-difficile-toxin-antitoxin-kit-c-difficile-toxin-antitoxin-kit/23046761)  1/25 to be added to Dilution plate 2
 
-6.	Cell Plates
-a.	Add 25uL of toxin + serum solution to cells  (cells will be in 75uL of Media)
-i.	Note if you add 2x (ex 8ng/mL) toxin to the first plate then you will end up with 1ng/mL of toxin added to the cells. 
-7.	Incubate cells 37C o/n
-Day 2 ( Protocol Day 2):
-1.	Read plates 
-a.	At 24 hrs read plate for cell rounding 
-b.	Cytotoxicity inhibition titer is defined as the reciprocal of the highest serum dilution that inhibited >50% cell rounding. 
+#### Dilution Plate 2: Toxin 
+1. Dilute the toxin in PBS
+2. Dilute saved toxin 1:10, followed by a 1:100 dilution = 1000ng/mL toxin
+3. Dilute further depending on concentration and volume desired 
+	+	Toxin B  = 8 ng/mL
+	+	Toxin A = 64 ng/mL
+	+	Add 30ul of toxin solution to all the wells of the plate
+	 
+#### Add Sera to Toxin 
+1. Add 30uL of serum  (from plate 1) to the 30uL of toxin in plate 2. 
+2. Incubate for 1hr at 37C
+	+	This is a further 1:2 dilution 
+
+####  Add Toxin/Sera to	Vero Cells
+1.	Add 25uL of toxin + serum solution to cells  (cells will be in 75uL of media)
+	+	Note if you add 2x (ex 8ng/mL) toxin to the first plate then you will end up with 1ng/mL of toxin added to the cells (which was the CTU100, see Part 1). 
+2.	Incubate cells 37C in a 5% CO2 humidified incubator 
+
+###Day 2:
+1.	Read plates at 24 hrs  cell rounding 
+	+	Cytotoxicity inhibition titer is defined as the reciprocal of the highest serum dilution that inhibited >50% cell rounding. 
 
 
 
