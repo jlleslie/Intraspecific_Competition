@@ -87,8 +87,8 @@
 ####Analyze Vero cells using the light microscope
 1.	Remember, the dilution factor changes by a factor of 10 when added to Vero cells (10^‐3  -­‐> 10^‐4)
 2.	Anti-toxin wells should show no cell rounding.
-3.	Sample wells: Choose well that is last well to have >= 80% cell rounding use the dilution of this well to calculate  toxin activity 
-4.	Positive control: Wells with higher concentrations of toxin s diluted in PBS should be round while the counterpart wells added to the anti-toxin sera should have no rounding 
+3.	Sample wells: Choose well that is last well to have >= 80% cell rounding & use the dilution of this well to calculate  toxin activity 
+4.	Positive control: Wells with higher concentrations of toxin  diluted in PBS should be round while the counterpart wells added to the anti-toxin sera should have no rounding. 
 	+ This allows you to know that any cell rounding is due to the toxin and not other things in the sample 
 5. 	Toxin activity:  log [reciprocal of the final dilution factor]/ per gram of cecal content.
 
