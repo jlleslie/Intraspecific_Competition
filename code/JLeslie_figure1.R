@@ -170,4 +170,4 @@ toxin_plot.13<-ggplot(data=toxin_NO714_infected, aes(x=Sample_Day, y=Toxin_Activ
 c = toxin_plot.13 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=1) + labs(x = "Day Post Challenge", y = expression(atop("Toxin Acitvity  ", paste(Log[10], " reciprocal dilution of feces"))))
 c
 
-
+###Note I clean up R output in illustrator to generate my final figures 
