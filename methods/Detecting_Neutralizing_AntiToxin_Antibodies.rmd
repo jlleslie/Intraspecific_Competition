@@ -2,7 +2,7 @@
 ## Author: Jhansi Leslie 
 
 
-### Reference: Adapted from [Serum Antitoxin Antibodies Mediate Systemic and Mucosal Protection from Clostridium difficileDisease in Hamsters] (http://iai.asm.org/cgi/pmidlookup?view=long&pmid=9916055)
+### Protocol adapted from: [Serum Antitoxin Antibodies Mediate Systemic and Mucosal Protection from Clostridium difficileDisease in Hamsters] (http://iai.asm.org/cgi/pmidlookup?view=long&pmid=9916055)
 
 ### Background
 The premise of this assay is that you add sera from infected mice to a constant amount of toxin that is known to cause cytopathic effect. 
@@ -87,7 +87,7 @@ Will need 10 plates of cells to test all serum samples for A and B
 6.  Place plates in a 37C in a 5% CO2 humidified incubator
 	+ The cells need to incubated on the plate for at least 4 hours to allow cells to stick to the plate  
 
-####  Dilution Plate 1: Sera 
+####  Dilute Serum (Dilution Plate 1)
 1.	Dilute sera in PBS
 	+	Note each row of serum will be used to seed both the toxin A and toxin B wells on the toxin plate 
 2. First dilution will be 1/10
@@ -96,7 +96,7 @@ Will need 10 plates of cells to test all serum samples for A and B
 	+	Ex: Take 70uL from column 1 and add to 70ul of PBS in column 2
 4.	Dilute anti-toxin Ab [Alere's goat anti-toxin A&B sera] (https://www.fishersci.com/shop/products/alere-c-difficile-toxin-antitoxin-kit-c-difficile-toxin-antitoxin-kit/23046761)  1/25 to be added to Dilution plate 2
 
-#### Dilution Plate 2: Toxin 
+#### Add Diluted Toxin (Dilution Plate 2) 
 1. Dilute the toxin in PBS
 2. Dilute saved toxin 1:10, followed by a 1:100 dilution = 1000ng/mL toxin
 3. Dilute further depending on concentration and volume desired 
