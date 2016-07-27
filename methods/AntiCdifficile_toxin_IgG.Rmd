@@ -3,9 +3,8 @@
 
 
 ###Background/Purpose  
- *Clostridium difficile* is a Gram-postitive, spore-forming,  anaerobic bacterium that can colonize the gastrointestinal tract and cause diarrheal disease. 
-This protocol outlines the steps I take when running an ELISA detecting anti-toxin A IgG from infected mice. 
-This protocol is based on many assays reported in the literature. 
+
+Serum from mice (2013,2014, 2015 long term infection) infected with 630 and then re-challenged with VPI will be tested for levels of anti-toxin A &  B antibodies (IgG). 
 
 ###Validation of ELISA Protocol 
 #### Checkerboard with positive and negative sera against antigen: determining optimal antigen coating concentration. Titrate antigen across plate against titration of mouse sera (positive).  Conjugate Ab is held constant. 
@@ -55,6 +54,47 @@ Toxin is stored 3ul at 1ug/ul – so I need 7 aliquots. Add  297 ul of carbonate
 1. Plot of absorbance vs toxin concentration 
 	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/ToxinA_resultscheckerboard.jpg?token=AJ8FttXY-oZfsSy8XgVGneMC5TpDpRd4ks5XofyWwA%3D%3D" width="600" height="400" /></div>
  	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/ToxinB_resultscheckerboard.jpg?token=AJ8Ftjg-sRfr6lYmFf08jB9QRnNqZNoLks5Xof0HwA%3D%3D" width="600" height=400" /></div>
+
+
+###Final ELISA Protocol 
+####Step 1: Make up antigen solution/Coat plates (Protocol Day 1)
+1.	Antigen = 100ug of toxin A or B (lyophilized from List)
+	+	10 plates coated with A or B will be needed for each assay, thus 100ug of toxin will be needed 
+2.	Make up 100mL of Bicarbonate-Carbonate buffer using tablets
+3.	Filter sterilize
+4.	Add 1mL of Bicarb buffer to each vial of 100ug of toxin 
+	+	Invert to mix (don’t vortex)
+5.	Combine the 1mL of toxin in Bicarb into a 250mL (autoclaved) glass bottle, then add 99mL of  Bicarb buffer
+	+	= 100 mL of 1ug/mL toxin solution
+6.	Pour the solution into a sterile reservoir; use a multichannel pipette to add 100uL of antigen solution into each well 
+	+	Cover with parafilm and incubate o/n at 4C 
+7.	Make all the toxin A plates at one time 
+#### Step 2: Measuring Serum IgG Anti-toxin A and B Antibodies  (Protocol Day 2)
+#####Samples: Day -2, 44 Serum from mice from 2013, 2014, 2015 experiments 
+#####Number of Plates: 10
+#####Negative control= coated wells + detection Ab & substrate (8 wells per each plate).  
+#####Positive control = starting dilution 1/5000 of mouse anti-toxin A IgG 
+#####Notes: Dilute the sera to 1:400 (this is what was done on 2/24/13, and seems reasonable based on preliminary work done Nov 2013). Plates are coated with 1ug/mL toxin A from List biological labs. 
+1.	Wash plate 3x with PBST (PBS + 0.05% Tween) followed by 3x with PBS
+2.	Block- add 200ul of 2% BSA (w/v) in PBST  (blocking buffer) to each well, incubate for 1hr at 37C
+3.	Meanwhile, dilute sera in blocking buffer 
+	+	Serum was saved in 10uL aliquots (so for 1:400 dilution add 2 ul of sera into 798 uL of blocking buffer)
+	+	This gives you more than enough (need 400ul)
+	+	Add 150uL of this into row A, remove 50uL add to 100uL of blocking buffer in row B – repeat until row G (1: dilutions).
+4.	Wash plate 3x with PBST followed by 3x with PBS
+5.	Add 100ul of diluted sera to wells of the plate 
+6.	Incubate 1hr at 37C
+7.	Meanwhile, dilute 2ndary Ab (Goat anti-mouse IgG-HRP) 1/500 in blocking buffer  (Cat# SouthernBiotech 1030-05)
+8.	Wash the plate 3x with PBST followed by 3x with PBS
+9.	Add 100uL of  2ndary Ab  to each well 
+10.	Incubate 1hr at 37C
+11.	Wash the plate 3x with PBST followed by 3x with PBS
+12.	Add 150uL of substrate ABTS to each well
+13.	Incubate at room temp for 30min
+14.	Add 100ul of stop solution (1% SDS)
+15.	Measure absorbance at 410nm
+16.	Take background reading at 650nm
+17.	The anti-toxin A IgG titer is defined as  the last dilution with an OD410 greater than mean absorbance of all negative wells on the plate plus 3 times the standard deviation from that mean.
 
 
 
