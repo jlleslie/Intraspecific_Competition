@@ -7,7 +7,7 @@
 1. Preheat media in 37°C water bath
 	* [DMEM] (https://www.thermofisher.com/order/catalog/product/11965092) supplemented with 10% [FBS] (https://www.thermofisher.com/order/catalog/product/10438026) & 1% [Pen/Strep] (https://www.thermofisher.com/order/catalog/product/15140122)
 	* [0.25% Trypsin-EDTA] (https://www.thermofisher.com/order/catalog/product/25200056)
-2. Removed old DMEM from  the T‐75 flask 
+2. Removed old DMEM from  the T‐75 flask  of [Vero cells] (https://www.google.com/search?q=atcc+vero+cells&oq=ATCC+Vero+cells&aqs=chrome.0.0l5.4030j0j4&sourceid=chrome&ie=UTF-8#q=atcc+ccl-81)
 3. Wash the flask with sterile [PBS](https://www.thermofisher.com/order/catalog/product/10010023), remove.
 3. Add 1-2mL trypsin to the flask. Let sit on bench until cells begin to come off (this is visible to naked eye).
 4. Hit sides of flasks to loosen cells. 
@@ -63,31 +63,33 @@
 ####Create Dilution plate #1 (this plate will be all of the serial dilutions needed for each sample) 
 1. Use a sterile 96-well plate
 2. Load 100uL of each filter sterilized sample in wells 1 or 7 in rows A-H, include pure toxin or culture supernatant as a postive control and PBS as a negative control 
-3. Add appropriate  90uL of PBS to the rest of the wells on the plate
-4. Serially dilute across the plate (see plate map bellow) 
+3. Add 90uL of PBS to the rest of the wells on the plate
+4. Make 1:10 serial dilutions across the plate (see plate map bellow) 
 <div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/Toxinassay_dilutionplate1.jpg?token=AJ8FttV8I_nyofPvY2ZXNHS3PrAU5R_cks5XoPgewA%3D%3D" width="500" height="300" /></div> 
 
 
 ####Create Dilution plate #2 (this plate is for the addition of  anti-toxin Ab to the sample)
-1.	Need 2 lanes of 6 wells each for each sample.
-2.	Label all wells with their dilution (10^‐1  to 10^‐6)
-3  Remove an aliquot of [Alere's goat anti-toxin A&B sera] (https://www.fishersci.com/shop/products/alere-c-difficile-toxin-antitoxin-kit-c-difficile-toxin-antitoxin-kit/23046761) from the -20C.
-4. Dilute the sample 1:25 in sterile PBS 
-5.	Alternate rows on the plate  are used for samples and anti-toxin antibodies 
+1. Label all wells with their dilution (10^‐1  to 10^‐6)
+  	+  Need 2 lanes of 6 wells each for each sample.
+2.  Remove an aliquot of [Alere's goat anti-toxin A&B sera] (https://www.fishersci.com/shop/products/alere-c-difficile-toxin-antitoxin-kit-c-difficile-toxin-antitoxin-kit/23046761) from the -20C.
+	+  Dilute the sera 1:25 in sterile PBS 
+3.	Alternate rows on the plate are  loaded with PBS or anti-toxin antibodies 
 	+ In rows A, C, E, and G add 20uL of PBS  across all wells
 	+ In rows B, D, F, and H add 20uL of diluted anti-toxin sera 
-6. 	Transfer 20uL from appropriate sample/wells on dilution plate 1 to appropriate wells on this plate 
-7. Once all samples have been added incubate for 40 min so anti-toxin antibodies in sera can bind/inactivate the toxin. 
-8. Add 10uL of mixture from  dilution plate 2 to appropriate Vero cell wells.
-9. Incubate cells at 37C in a 5% CO2 humidified incubator
+4. Transfer 20uL from appropriate sample/wells on dilution plate 1 to appropriate wells on this plate 
+5. Once all samples have been added incubate for 40 min so anti-toxin antibodies in sera can bind/inactivate the toxin. 
+6. Add 10uL of mixture from  dilution plate 2 to appropriate Vero cell wells.
+7. Incubate cells at 37C in a 5% CO2 humidified incubator over night.
 
 ###Day 2:  Reading the Plate 
 
 ####Analyze Vero cells using the light microscope
 1.	Remember, the dilution factor changes by a factor of 10 when added to Vero cells (10^‐3  -­‐> 10^‐4)
 2.	Anti-toxin wells should show no cell rounding.
-3.	Sample wells: Choose well that is last to have >= 80% cell rounding.
+3.	Sample wells: Choose well that is last well to have >= 80% cell rounding use the dilution of this well to calculate  toxin activity 
 4.	Positive control: Wells with higher concentrations of toxin s diluted in PBS should be round while the counterpart wells added to the anti-toxin sera should have no rounding 
 	+ This allows you to know that any cell rounding is due to the toxin and not other things in the sample 
-5. 	Cell rounding is defined as:  log [final dilution factor]/ per gram of cecal content.
-	* use reciprocal of final dilution factor: ex/ 10-­‐5   -­‐>  105  = log[105] = 5
+5. 	Toxin activity:  log [reciprocal of the final dilution factor]/ per gram of cecal content.
+	```
+		Toxin activity for 
+ 	```
