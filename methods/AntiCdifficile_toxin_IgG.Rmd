@@ -68,13 +68,16 @@ Toxin is stored 3ul at 1ug/ul – so I need 7 aliquots. Add  297 ul of carbonate
 	+	= 100 mL of 1ug/mL toxin solution
 6.	Pour the solution into a sterile reservoir; use a multichannel pipette to add 100uL of antigen solution into each well 
 	+	Cover with parafilm and incubate o/n at 4C 
-7.	Make all the toxin A plates at one time 
+7.	Make all the toxin A plates at one time
+ 
 #### Step 2: Measuring Serum IgG Anti-toxin A and B Antibodies  (Protocol Day 2)
-+ Samples: Day -2, 44 Serum from mice from 2013, 2014, 2015 experiments 
-+ Number of Plates: 10
-+ Negative control= coated wells + detection Ab & substrate (8 wells per each plate).  
-+ Positive control = starting dilution 1/5000 of mouse anti-toxin A IgG 
-+ Notes: Dilute the sera to 1:400 (this is what was done on 2/24/13, and seems reasonable based on preliminary work done Nov 2013). Plates are coated with 1ug/mL toxin A from List biological labs. 
+```
+ Samples: Day -2, 44 Serum from mice from 2013, 2014, 2015 experiments 
+ Number of Plates: 10
+ Negative control= coated wells + detection Ab & substrate (8 wells per each plate).  
+ Positive control = starting dilution 1/5000 of mouse anti-toxin A IgG 
+ Notes: Dilute the sera to 1:400 (this is what was done on 2/24/13, and seems reasonable based on preliminary work done Nov 2013). Plates are coated with 1ug/mL toxin A from List biological labs. 
+```
 1.	Wash plate 3x with PBST (PBS + 0.05% Tween) followed by 3x with PBS
 2.	Block- add 200ul of 2% BSA (w/v) in PBST  (blocking buffer) to each well, incubate for 1hr at 37C
 3.	Meanwhile, dilute sera in blocking buffer 
