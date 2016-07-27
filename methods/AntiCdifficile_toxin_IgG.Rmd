@@ -29,30 +29,30 @@ Toxin is stored 3ul at 1ug/ul – so I need 7 aliquots. Add  297 ul of carbonate
 
 
 ####Day 2: Run Assay 
+1.	Wash the plate 3x with PBST (PBS + 0.05% tween) followed by 3x with PSB
+2.	Block – add 100uL of 2% BSA(w/v) in PBST (blocking buffer) to each well,  Incubate for 1hr at 37C
+3.	Wash the plate 3x with PBST (PBS + 0.05% tween) followed by 3x with PSB
+4.	Fill plate with 100uL of blocking buffer per well 
+5.	Dilute the positive mouse sera (sera from infected mice) in blocking buffer to 1:12.5 
+6.	Add 100μl of  1:12.5  diluted serum to wells in row A 1-12 - mix thoroughly by pipetting up and down  
+	+	Row A should have 200uL per well
+7.	Take 100uL from the wells in row A and move to row B- mix thoroughly by pipetting up and down  
+8.	Repeat till you fill column G – after mixing row G, discard the extra 100uL in each  well
+9.	Row H should be blocking buffer alone
+10.	Incubate for 1hr at 37C
 11.	Wash the plate 3x with PBST (PBS + 0.05% tween) followed by 3x with PSB
-12.	Block – add 100uL of 2% BSA(w/v) in PBST (blocking buffer) to each well,  Incubate for 1hr at 37C
-a.	Total blocking buffer 30mL
-13.	Wash the plate 3x with PBST (PBS + 0.05% tween) followed by 3x with PSB
-14.	Fill plate with 100uL of blocking buffer per well 
-15.	Dilute the positive mouse sera (sera from infected mice) in blocking buffer to 1:12.5 
-16.	Add 100μl of  1:12.5  diluted serum to wells in row A 1-12 - mix thoroughly by pipetting up and down  
-a.	Row A should have 200uL per well
-17.	Take 100uL from the wells in row A and move to row B- mix thoroughly by pipetting up and down  
-18.	Repeat till you fill column G – after mixing row G, discard the extra 100uL in each  well
-19.	Row H should be blocking buffer alone
-20.	Incubate for 1hr at 37C
-21.	Wash the plate 3x with PBST (PBS + 0.05% tween) followed by 3x with PSB
-22.	Dilute conjugate Ab to1 /500
-23.	Add 100uL of conjugate Ab per well
-24.	Incubate for 1hr at 37C
-25.	Remove substrate from fridge and let an aliquot equilibrate to room temp
-26.	Wash the plate 3x with PBST (PBS + 0.05% tween) followed by 3x with PSB 
-27.	Add 150 μL of substrate ABTS to each well
-28.	Incubate at room temperature for 30min
-29.	Add 100 μL of Stop solution (1% SDS)
-30.	Measure absorbance at 410nm
+12.	Dilute conjugate Ab to1 /500
+13.	Add 100uL of conjugate Ab per well
+14.	Incubate for 1hr at 37C
+15.	Remove substrate from fridge and let an aliquot equilibrate to room temp
+16.	Wash the plate 3x with PBST (PBS + 0.05% tween) followed by 3x with PSB 
+17.	Add 150 μL of substrate ABTS to each well
+18.	Incubate at room temperature for 30min
+19.	Add 100 μL of Stop solution (1% SDS)
+20.	Measure absorbance at 410nm, measure background at 650nm
 
 #####Results
+1. Plot of absorbance vs toxin concentration 
 	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/ToxinA_resultscheckerboard.jpg?token=AJ8FttXY-oZfsSy8XgVGneMC5TpDpRd4ks5XofyWwA%3D%3D" width="600" height="400" /></div>
  	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/ToxinB_resultscheckerboard.jpg?token=AJ8Ftjg-sRfr6lYmFf08jB9QRnNqZNoLks5Xof0HwA%3D%3D" width="600" height=400" /></div>
 
