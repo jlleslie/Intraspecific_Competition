@@ -8,11 +8,10 @@ This protocol outlines the steps I take when running an ELISA detecting anti-tox
 This protocol is based on many assays reported in the literature. 
 
 ###Validation of ELISA Protocol 
-#### Checkerboard with positive and negative sera against antigen: determining optimal antigen coating concentration.
-##### Titrate antigen across plate against titration of mouse sera (positive).  Conjugate Ab is held constant. 
+#### Checkerboard with positive and negative sera against antigen: determining optimal antigen coating concentration. Titrate antigen across plate against titration of mouse sera (positive).  Conjugate Ab is held constant. 
 ####Day 1: Coat Plate 
 1.	Fill plate with 100uL of carbonate buffer per well (except columns 1 and 6)
-2.	Use frozen aliquots of toxin A 
+2.	Use frozen aliquots of [toxin A] (https://www.listlabs.com/products/buy-toxin-a-from-clostridium-difficile) or [toxin B] (https://www.listlabs.com/products/buy-toxin-b-from-clostridium-difficile)
 3.	Dilute toxin to desired concentration in carbonate buffer 
 
 ```
@@ -26,7 +25,7 @@ Toxin is stored 3ul at 1ug/ul – so I need 7 aliquots. Add  297 ul of carbonate
 8.	Column 12 should be carbonate buffer alone
 9.	For column 6 add 100ul of  separately diluted toxin 0.5ug/ml to each well 
 10.	Incubate  overnight at 4C
-	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/AntitoxinAIgG_checkerboard.jpg?token=AJ8Ftjgo2Fq9eH-E54ib9X0AZ6guUc52ks5XoflVwA%3D%3D" width="300" height="200" /></div>
+	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/AntitoxinAIgG_checkerboard.jpg?token=AJ8Ftjgo2Fq9eH-E54ib9X0AZ6guUc52ks5XoflVwA%3D%3D" width="500" height="300" /></div>
 
 
 ####Day 2: Run Assay 
@@ -52,5 +51,8 @@ a.	Row A should have 200uL per well
 28.	Incubate at room temperature for 30min
 29.	Add 100 μL of Stop solution (1% SDS)
 30.	Measure absorbance at 410nm
-#####Results 
+
+#####Results
+ 
+
 
