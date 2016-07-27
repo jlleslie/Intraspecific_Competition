@@ -5,9 +5,9 @@
 ### Reference: Adapted from [Serum Antitoxin Antibodies Mediate Systemic and Mucosal Protection from Clostridium difficileDisease in Hamsters] (http://iai.asm.org/cgi/pmidlookup?view=long&pmid=9916055)
 
 ### Background
-Add constant amount of toxin that is known to cause cytopathic effect.  Make dilutions of sera and add it to toxin.
+The premise of this assay is that you add sera from infected mice to a constant amount of toxin that is known to cause cytopathic effect. 
 If sera contain neutralizing antibodies then you will see protection of cells. The titter will be defined as the last dilution of sera that protected >50% cells in the well from rounding. 
-I usually preform this assay at the same time I am doing 
+I usually do this assay at the same time I am doing the toxin activity assay. 
 
 ### Materials
 + [DMEM] (https://www.thermofisher.com/order/catalog/product/11965092) supplemented with 10% [FBS] (https://www.thermofisher.com/order/catalog/product/10438026) & 1% [Pen/Strep] (https://www.thermofisher.com/order/catalog/product/15140122)
@@ -27,8 +27,10 @@ I usually preform this assay at the same time I am doing
 
 Use Vero cells grown in DMEM with 1% pen/strep and 10% fetal calf serum.  
 
-Samples: Day -2,40 Serum/Fecal Extract from mice 712- 715 
+Samples: Day -2,40 Serum/Fecal Extract from mice 712- 715
+ 
 Negative control= Toxin + PBS plates , Toxin + D-2 Serum (pre-immune serum)
+
 Positive control = Toxin + Alere Anti-Serum  
 
 
