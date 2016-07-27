@@ -35,7 +35,7 @@ Positive control = Toxin + Alere Anti-Serum
 
 
 ###Part 1: 	Determine the CTU100 (minimum dose of toxin required to induce rounding of 100% of cells) for both toxin A and toxin B
-1. Run a Vero cell toxin assay (see [ Vero Cell Toxin Activity Assay] (https://github.com/jlleslie/Intraspecific_Competition/blob/master/methods/Verocell_ToxinActivity_Assay.Rmd)  for a protocol.
+1. Run a Vero cell toxin assay (see [ Vero Cell Toxin Activity Assay] (https://github.com/jlleslie/Intraspecific_Competition/blob/master/methods/Verocell_ToxinActivity_Assay.Rmd))  for protocol.
 2. Run  2 fold dilutions of purified toxin A and toxin B to determine the lowest concentration of each that results in 100% cell rounding.
 	+ In my experience I see different lots of toxin have different CTU100 so do this step with each new lot  
 	+	The concentration of toxin that gave 100% cell rounding is
@@ -49,6 +49,7 @@ Positive control = Toxin + Alere Anti-Serum
 ###Part 2: Perform Assay 
 
 Will need 10 plates of cells to test all serum samples for A and B 
+
 10 plates = 10 flasks
 
 #### Harvest cells
