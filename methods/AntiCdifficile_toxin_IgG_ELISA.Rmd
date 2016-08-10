@@ -119,4 +119,5 @@ Toxin is stored 3ul at 1ug/ul – so I need 7 aliquots. Add  297 ul of carbonate
 17.	The anti-toxin A IgG titer is defined as  the last dilution with an OD410 greater than mean absorbance of all negative wells on the plate plus 3 times the standard deviation from that mean.
 
 
+TEST
 
