@@ -35,7 +35,7 @@ In most cases a 5 days is sufficient, however I started my experiments using a 1
 	+ 1L of water should be enough for 5 cages of mice (200mL per cage)
 3. At the mouse facility: 
 	+ Remove lixits (make sure there are no leaks from the socket) 
-<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/lixit.jpg?token=AJ8Ftn-dm0NMB6te8PYtPT8Ouo4gVo8sks5Xm416wA%3D%3D" width="150" height="100" /></div> 
+<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/lixit.jpg?token=AJ8FtvNyHEhWf-wDTdUG0Sf6K1p0RjNVks5XtMDKwA%3D%3D" width="150" height="100" /></div> 
 	+ In a laminar flow hood pour antibiotic water into a sterile water bottle, then give the bottles to the mice
 4. Add signage to cage signaling chemical hazard as appropriate.  
 5. Replace water every other day (otherwise the antibiotic breaks down and smells bad, potentially preventing the mice from drinking it) 
