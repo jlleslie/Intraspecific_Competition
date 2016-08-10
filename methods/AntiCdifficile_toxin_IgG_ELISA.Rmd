@@ -43,7 +43,7 @@ Toxin is stored 3ul at 1ug/ul – so I need 7 aliquots. Add  297 ul of carbonate
 8.	Column 12 should be carbonate buffer alone
 9.	For column 6 add 100ul of  separately diluted toxin 0.5ug/ml to each well 
 10.	Incubate  overnight at 4C
-	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/AntitoxinAIgG_checkerboard.jpg?token=AJ8Ftjgo2Fq9eH-E54ib9X0AZ6guUc52ks5XoflVwA%3D%3D" width="700" height="400" /></div>
+	<div style="text-align:center"><img src ="https://cloud.githubusercontent.com/assets/10421686/17569361/d988744a-5f15-11e6-8783-ba5928ea2011.jpg" width="700" height="400" /></div>
 
 
 ####Day 2: Run Assay 
@@ -71,8 +71,8 @@ Toxin is stored 3ul at 1ug/ul – so I need 7 aliquots. Add  297 ul of carbonate
 
 #####Results
 1. Plot of absorbance vs toxin concentration 
-	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/ToxinA_resultscheckerboard.jpg?token=AJ8FttXY-oZfsSy8XgVGneMC5TpDpRd4ks5XofyWwA%3D%3D" width="400" height="200" /></div>
- 	<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/ToxinB_resultscheckerboard.jpg?token=AJ8Ftjg-sRfr6lYmFf08jB9QRnNqZNoLks5Xof0HwA%3D%3D" width="400" height=200" /></div>
+	<div style="text-align:center"><img src ="https://cloud.githubusercontent.com/assets/10421686/17569366/de188de2-5f15-11e6-9882-97be89be8ae8.jpg" width="400" height="200" /></div>
+ 	<div style="text-align:center"><img src ="https://cloud.githubusercontent.com/assets/10421686/17569371/e58bd674-5f15-11e6-957c-75f75c0196d8.jpg" width="400" height=200" /></div>
 
 ###Final ELISA Protocol 
 	+ I only looked at Anti-toxin A IgG response 
