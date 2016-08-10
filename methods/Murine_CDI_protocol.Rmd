@@ -25,7 +25,7 @@ In most cases a 5 days is sufficient, however I started my experiments using a 1
 2. Keeping in mind the age and gender of the mice, combine # 1-3 from genotype A with mice 4-5 from genotype B  and vice versa 
 3. Co-house for 33 days from ~3 weeks of age, through antibiotic administration
 4. Separate on day of infection
-<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/cohouse_diagram.jpg?token=AJ8FttL540Bm0cr2KCsxRVaUjoxvOfAwks5Xm5USwA%3D%3D" width="300" height="350" /></div> 
+<div style="text-align:center"><img src ="https://cloud.githubusercontent.com/assets/10421686/17569505/98541244-5f16-11e6-8a8d-88118421ba69.jpg" width="300" height="350" /></div> 
 5. At completion of experiment use ear snips to [genotype  mice] (https://www2.jax.org/protocolsdb/f?p=116:5:0::NO:5:P5_MASTER_PROTOCOL_ID,P5_JRS_CODE:15966,002216)
 
 
@@ -35,7 +35,7 @@ In most cases a 5 days is sufficient, however I started my experiments using a 1
 	+ 1L of water should be enough for 5 cages of mice (200mL per cage)
 3. At the mouse facility: 
 	+ Remove lixits (make sure there are no leaks from the socket) 
-<div style="text-align:center"><img src ="https://raw.githubusercontent.com/jlleslie/Intraspecific_Competition/master/images/lixit.jpg?token=AJ8FtvNyHEhWf-wDTdUG0Sf6K1p0RjNVks5XtMDKwA%3D%3D" width="150" height="100" /></div> 
+<div style="text-align:center"><img src ="https://cloud.githubusercontent.com/assets/10421686/17569523/9eea8db8-5f16-11e6-9d1e-667019ecc373.jpg" width="150" height="100" /></div> 
 	+ In a laminar flow hood pour antibiotic water into a sterile water bottle, then give the bottles to the mice
 4. Add signage to cage signaling chemical hazard as appropriate.  
 5. Replace water every other day (otherwise the antibiotic breaks down and smells bad, potentially preventing the mice from drinking it) 
