@@ -21,31 +21,35 @@
 + Pipette Tips (20 uL, 200 uL)
 + Handheld Spec
 
-###  Create a standard curve of genomic *C. difficile* DNA 
-1.	A growth curve of *Clostridium difficile* strains 630 and VPI was preformed. 
-	+ Each strain was grown in BHI over night 
-	+ The next morning each culture was back diluted 1:10 and allowed to grow for 2 hours.  
-	+ After 2 hours growth, the cultures were subbed into 15mL of fresh broth at a starting OD600 of ~0.05.
-	+ The CFU/mL of each culture at 6 hours was determined by quantitative plating. 
-	+ The volume of the culture was recorded and the cultures were removed from the anaerobic chamber.
-	+  The tubes were spun down to pellet the cells and the pellet was washed once in PBS and stored in 4C over night. 
+###  Grow  *C. difficile* measure OD600
+1.	A preformed growth curve for  *Clostridium difficile* strains 630 and VPI. 
+	+ Grow each strain in BHI over night 
+	+ The next morning  back diluted  each culture 1:10 in fresh BHI. Measure OD600
+	+ Allow tubes  to grow for 2 hours.  
+	+ After 2 hours growth, take the OD6300. 
+	+ Based on the OD600 determine how much of the culture needs to be added into 15mL of fresh broth to reach an OD600 ~0.05.
+	+ Inoculate tubes based on the number determined in the pervious step. 
+	+ Measure the CFU/mL of each culture at 6 hours  by quantitative plating. 
+	+ Record the volume of the each culture and remove the tubes from the anaerobic chamber.
+	+ Spin the tubes  to pellet the cells, then wash the pellet once in PBS.
+	+ Re-suspend in PBS as store at 4C over night. 
 2. DNA Extraction 
-	+ The DNA was extracted using the  PowerSoil DNA isolation kit following manufacture instructions except for the following modifications
-		* A  Mini-Beadbeater 8  was used to bead beat the cells to open them up 
-3. The concentration of DNA recovered was determined by Nanodrop and by Qubit 
+	+ Extract genomic DNA using the  PowerSoil DNA isolation kit following manufacture instructions except for the following modifications
+		* A  Mini-Beadbeater 8  was used to bead beat the cells
+3. The concentration of DNA recovered was determined by Nanodrop and by Qubit. 
 
 ### Test primer efficiency 
 1. Serial  10-fold dilutions of the DNA generated in the pervious step were made.
 2. Each dilution was run in triplicate with each primer set being validated, in addition to NTC wells
 3. Primers that were postive for VPI DNA but negative with 630 DNA were picked for further use. 
-4. 
 
 
 ### Testing mouse cecal DNA 
-1. Since the primers differentiated between 630 and VPI 10463 but still picked up other bacteria in the GI tract 
-2.	Extract mouse cecal mouse DNA with PowerSoil DNA isolation kit 
-+ Follow the kit instructions 
-3.	Measure  DNA concentrations with Nano Drop and Qubit
+1. Since the primers differentiated between 630 and VPI 10463 but also picked up other bacteria in the GI tract, the VPI specific primer was used in the context of gnotobiotic mice. 
+2. Mouse cecal content was extracted using PowerSoil DNA isolation kit following manufacture instructions except for the following modifications
+	+ A  Mini-Beadbeater 8  was used to bead beat the cells to open them up 
+
+3.	 The concetration of DNA in each sample was measured using both the Nano Drop and Qubit
 4.	Dilute VPI and 630 DNA samples
 5.	Perform qPCR with 630, VPI, and mouse cecal DNA.
 
