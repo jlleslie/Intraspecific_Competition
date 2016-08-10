@@ -71,8 +71,8 @@ Toxin is stored 3ul at 1ug/ul – so I need 7 aliquots. Add  297 ul of carbonate
 
 #####Results
 1. Plot of absorbance vs toxin concentration 
-	<div style="text-align:center"><img src ="https://cloud.githubusercontent.com/assets/10421686/17569366/de188de2-5f15-11e6-9882-97be89be8ae8.jpg" width="400" height="200" /></div>
- 	<div style="text-align:center"><img src ="https://cloud.githubusercontent.com/assets/10421686/17569371/e58bd674-5f15-11e6-957c-75f75c0196d8.jpg" width="400" height=200" /></div>
+	<div style="text-align:center"><img src ="https://cloud.githubusercontent.com/assets/10421686/17569366/de188de2-5f15-11e6-9882-97be89be8ae8.jpg" width="500" height="400" /></div>
+ 	<div style="text-align:center"><img src ="https://cloud.githubusercontent.com/assets/10421686/17569371/e58bd674-5f15-11e6-957c-75f75c0196d8.jpg" width="500" height=400" /></div>
 
 ###Final ELISA Protocol 
 	+ I only looked at Anti-toxin A IgG response 
