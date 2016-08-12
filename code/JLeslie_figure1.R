@@ -42,7 +42,7 @@ library(scales)
 ###Plotting weights following mock or strain 630 infection
 ###2013 Exeperiment Plots, WT mice only
 
-weighttime_data<-read.table(file='/Users/Jhansi/Box Sync/Allonginfect/Data_sheets/Weights_2013_630Infection.txt', header=TRUE)
+weighttime_data<-read.table(file='/Users/Jhansi1/Desktop/Intraspecific_Competition/data/Weights_2013_630Infection.txt', header=TRUE)
 #read in the data table 
 
 weighttime_data$Cage<-as.factor(weighttime_data$Cage)
@@ -61,14 +61,17 @@ weight_plot<-ggplot(weight, aes(x=Day, y= Percent_weightD0 , colour= factor(Trea
   geom_point (size=5)+
   scale_color_manual(values = cols, limits = c("mock", "630"),labels=c("mock infected", "infected")) 
 #theme with white background
-a = weight_plot+ theme_bw() + ylim(85, 120)+
+a = weight_plot + ylim(85, 120)+
   #eliminates background, gridlines and key border
   theme(
-    plot.background = element_blank()
-    ,panel.grid.major = element_blank()
+     panel.background = element_rect(fill = "white", color = "grey80", size = 2)
+    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,panel.background = element_rect(colour = "black")
+    ,axis.ticks = element_line(size = 0.6, colour = "grey10")
+    ,axis.ticks.length = unit(0.2, "cm")
     ,legend.title=element_blank()
+    ,legend.background = element_blank ()
     ,legend.key = element_blank ()
     ,legend.position="bottom"
     ,legend.margin= unit(.01, "mm")
@@ -76,7 +79,7 @@ a = weight_plot+ theme_bw() + ylim(85, 120)+
     ,axis.text=element_text(size=15)
     ,axis.title=element_text(size=15)
   )
-a1 = a + labs(x = "Day Post Challenge", y = expression("% Weight from Day of Challenge")) + geom_hline(aes(yintercept=100), colour = "gray10", size = 1, linetype=3)
+a1 = a + labs(x = "Day Post Challenge", y = expression("% of Baseline Weight")) + geom_hline(aes(yintercept=100), colour = "gray10", size = 1, linetype=3)
 a1
 
 
@@ -87,7 +90,7 @@ a1
 ###Plotting levels of colonization over the course of the infection
 
 ###Read in the data for all experiments 
-cfutime_data<-read.table(file='/Users/Jhansi/Box Sync/Allonginfect/Data_sheets/Colonization_Overtime_630_Allexperiments.txt', header=TRUE)
+cfutime_data<-read.table(file='/Users/Jhansi1/Desktop/Intraspecific_Competition/data/Colonization_Overtime_630_Allexperiments.txt', header=TRUE)
 #Note the data is reported such that if no colonies were seen on the 10^-2 plate, that sample was reported as having 100 CFU/g feces ie the LOD 
 
 ##2013 Exeperiment data, only WT mice
@@ -117,22 +120,25 @@ cfu2013_treat_No714.plot<-ggplot(cfu2013_treat_No714, aes(x=Day, y= CFU_g , colo
   scale_color_manual(values = cols, limits = c("mock", "630"),labels=c("mock infected", "infected")) 
 
 #theme with white background
-b = cfu2013_treat_No714.plot+ theme_bw() +
+b = cfu2013_treat_No714.plot+ 
   #eliminates background, gridlines and key border
   theme(
-    plot.background = element_blank()
-    ,panel.grid.major = element_blank()
+    panel.background = element_rect(fill = "white", color = "grey80", size = 2)
+    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,panel.background = element_rect(colour = "black")
+    ,axis.ticks = element_line(size = 0.6, colour = "grey10")
+    ,axis.ticks.length = unit(0.2, "cm")
     ,legend.title=element_blank()
+    ,legend.background = element_blank ()
     ,legend.key = element_blank ()
     ,legend.position="bottom"
-    ,legend.margin= unit(.1, "mm")
+    ,legend.margin= unit(.01, "mm")
     ,legend.text=element_text(size=13)
     ,axis.text=element_text(size=15)
     ,axis.title=element_text(size=15)
   )
-b1 = b+ labs(x = "Day Post Challenge", y = expression(paste(Log[10], " CFU", italic(" C. difficile"), " Strain 630 per Gram Feces")))
+b1 = b+ labs(x = "Day Post Challenge", y = expression(paste(Log[10], " CFU", " str.630 per Gram Feces")))
 b2 = b1+ geom_hline(aes(yintercept=100), colour = "gray10", size = 1, linetype=2)
 b3 = b2 + scale_y_log10(breaks = trans_breaks("log10", function(x) 10^x),labels = trans_format("log10", math_format(10^.x)))
 
@@ -140,7 +146,7 @@ b3
 
 #####Panel C 
 ### Analysis of Toxin Actvity (vero cell assay) over the course of the infection. 
-toxin<-read.table(file="/Users/Jhansi/Box Sync/Allonginfect/Data_sheets/2013_ToxinActivity_overtime.txt",  header=TRUE)
+toxin<-read.table(file="/Users/Jhansi1/Desktop/Intraspecific_Competition/data/2013_ToxinActivity_overtime.txt",  header=TRUE)
 toxin_cage714<-grep("714",toxin$Cage, value=F)
 toxin_NO714<-toxin[-c(toxin_cage714),  ]
 #removes data from cage 714, the cage that cleared
@@ -148,21 +154,22 @@ toxin_NO714_infected<-toxin_NO714[toxin_NO714$Treatment_1 == 630,]
 toxin_NO714_mock<-toxin_NO714[toxin_NO714$Treatment_1 == "mock",]
 
 cols<-c("mock"="grey50",  "630" ="dodgerblue")
-toxin_plot.13<-ggplot(data=toxin_NO714_infected, aes(x=Sample_Day, y=Toxin_Activity, colour= factor(Treatment_1)))+geom_jitter(width = 2, height = 0, size=4, shape=17) + stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 3, color="black", size=.5) +
-  geom_jitter(data=toxin_NO714_mock, width = 2, height = 0, size=4, shape=17) +
+toxin_plot.13<-ggplot(data=toxin_NO714_infected, aes(x=Sample_Day, y=Toxin_Activity, colour= factor(Treatment_1)))+geom_jitter(width = 2, height = 0, size=4, shape=19) + stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 3, color="black", size=.5) +
+  geom_jitter(data=toxin_NO714_mock, width = 2, height = 0, size=4, shape=19) +
   scale_y_continuous(breaks= c(2,3,4,5),  limits = c(2, 5)) +
   scale_color_manual(values = cols, limits = c("mock", "630"),labels=c("mock infected", "infected")) +
-  theme_bw() +
-  #eliminates background, gridlines and key border
   theme(
-    plot.background = element_blank()
-    ,panel.grid.major = element_blank()
+    panel.background = element_rect(fill = "white", color = "grey80", size = 2)
+    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,panel.background = element_rect(colour = "black")
+    ,axis.ticks = element_line(size = 0.6, colour = "grey10")
+    ,axis.ticks.length = unit(0.2, "cm")
     ,legend.title=element_blank()
+    ,legend.background = element_blank ()
     ,legend.key = element_blank ()
     ,legend.position="bottom"
-    ,legend.margin= unit(.1, "mm")
+    ,legend.margin= unit(.01, "mm")
     ,legend.text=element_text(size=13)
     ,axis.text=element_text(size=15)
     ,axis.title=element_text(size=15)
