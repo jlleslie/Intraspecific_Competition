@@ -8,7 +8,9 @@ library(ggplot2)
 library(grid)
 library(scales)
 
-col_A<-c("630_Mock"="dodgerblue","630_VPI"="purple","Naive_Mock"="grey50", "Naive_VPI"="red1")
+#col_A<-c("630_Mock"="dodgerblue","630_VPI"="purple","Naive_Mock"="grey50", "Naive_VPI"="red1")
+
+col_A<-c("630_Mock"="#5BBCD6","630_VPI"= "#F2AD00","Naive_Mock"="#C7B19C", "Naive_VPI"= "#FF0000")
 #colors used for these figues 
 
 
@@ -19,7 +21,7 @@ col_A<-c("630_Mock"="dodgerblue","630_VPI"="purple","Naive_Mock"="grey50", "Naiv
 ####Panel B
 ###Plotting weights following mock or strain VPI 10463 challenge 
 ###2013 Exeperiment Plots, WT mice only
-weight_data<-read.table(file="/Users/Jhansi/Box Sync/Allonginfect/Data_sheets/Weights_harvest_Allexperiments.txt", header=TRUE)
+weight_data<-read.table(file="/Users/Jhansi1/Desktop/Intraspecific_Competition/data/Weights_harvest_Allexperiments.txt", header=TRUE)
 #read in the data 
 
 weight_df<-as.data.frame(weight_data)
@@ -43,22 +45,30 @@ weight_df.2013.Noc714<-weight_df.2013[-c(weight_df.2013.c714), ]
 
 ####Plotting the data
 ###jitter plot 
-weight.harv.plot<-ggplot(weight_df.2013.Noc714, aes(x=Treatment_Grp, y=percent_of_baseline_weight, colour= factor(Treatment_Grp)))+
-  geom_jitter(size=5, position=position_jitter(0.09)) +
-  scale_color_manual(values = col_A, limits = c("630_Mock", "Naive_VPI"))  +
+weight.harv.plot<-ggplot(weight_df.2013.Noc714, aes(x=Treatment_Grp, y=percent_of_baseline_weight, fill=Treatment_Grp))+
+  geom_point(size=5, shape=21, position=position_jitterdodge(dodge.width=0.9))  +
+  scale_fill_manual(values=col_A) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.4, color="black") +
-  geom_hline(aes(yintercept=100), colour = "grey10", size = 1, linetype=3) + theme_bw() +
-  #eliminates background, gridlines and key border
+  scale_y_continuous( limits = c(78, 110)) +
+  geom_hline(aes(yintercept=100), colour = "grey10", size = 1, linetype=3) +
   theme(
-    plot.background = element_blank()
-    ,panel.grid.major = element_blank()
+    panel.background = element_rect(fill = "white", color = "grey75", size = 2)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,panel.background = element_rect(colour = "black")
+    ,axis.ticks = element_line(size = 0.6, colour = "grey75")
+    ,axis.ticks.length = unit(0.2, "cm")
+    ,axis.ticks.x=element_blank()
+    ,legend.title=element_blank()
+    ,legend.background = element_blank ()
+    ,legend.key = element_blank ()
     ,legend.position="none"
+    ,legend.margin= unit(.01, "mm")
+    ,legend.text=element_text(size=13)
     ,axis.text=element_text(size=15)
     ,axis.title=element_text(size=15)
   )
-b = weight.harv.plot +labs(x = "Colonization Status", y = expression("% Weight from Day of Challenge"))
+b = weight.harv.plot +labs(x = "Colonization Status", y = expression("% Weight from Baseline"))
 b
 
 ##Determing if the differences are sginficantly different
@@ -76,7 +86,7 @@ wilcox.test(weight_2013.630.VPI.1,weight_2013.naive.VPI.1)
 
 ####Panel C
 ###Plotting toxin activity following mock or strain VPI 10463 challenge 
-tox_data<-read.table(file='/Users/Jhansi/Box Sync/Allonginfect/Data_sheets/ToxinActivity_Harvest_2013_2014_2015.txt', header=TRUE)
+tox_data<-read.table(file='/Users/Jhansi1/Desktop/Intraspecific_Competition/data/ToxinActivity_Harvest_2013_2014_2015.txt', header=TRUE)
 
 toxin.2013<-tox_data[tox_data$Experiment=="2013", ]
 #pulls out 2013 data 
@@ -86,23 +96,33 @@ toxin.2013_NO714<-toxin.2013[-c(toxin.2013_cage714),  ]
 
 toxin_plot.13<-ggplot(data=toxin.2013_NO714, aes(x=Treatment_Grp, y=Toxin_Activity, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 1) +
-  scale_color_manual(values = col_A, limits = c("630_Mock", "Naive_VPI"))  +
+  scale_color_manual(values = rep("black",4))  +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.6, color="black", size=0.5) +
   scale_y_continuous(breaks= c(2,3,4,5,6),  limits = c(2, 6)) +
-  theme_bw() +
-  #eliminates background, gridlines and key border
-  theme(plot.background = element_blank()
-        ,panel.grid.major = element_blank()
-        ,panel.grid.minor =element_blank()
-        ,panel.background = element_rect(colour = "black")
-        ,legend.position="none"
-        #gets rid of the legend 
-        ,axis.text=element_text(size=15)
-        ,axis.title=element_text(size=15)
+  theme(
+    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
+    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    ,panel.grid.major.x = element_blank()
+    ,panel.grid.minor = element_blank()
+    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks.length = unit(0.2, "cm")
+    ,axis.ticks.x=element_blank()
+    ,legend.title=element_blank()
+    ,legend.background = element_blank ()
+    ,legend.key = element_blank ()
+    ,legend.position="none"
+    ,legend.margin= unit(.01, "mm")
+    ,legend.text=element_text(size=13)
+    ,axis.text=element_text(size=15)
+    ,axis.title=element_text(size=15)
   )
-c <- toxin_plot.13 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=1) + labs(x = "Colonization Status", y = expression(atop("Toxin Acitvity  ", paste(Log[10], " reciprocal dilution of content"))))
+
+c <- toxin_plot.13 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=0.9) + labs(x = "Day Post Challenge", y = expression("Toxin Acitvity"))
 c
+#c <- toxin_plot.13 + geom_hline(aes(yintercept=2.3), color = "black", linetype=2,  size=1) + labs(x = "Colonization Status", y = expression(atop("Toxin Acitvity  ", paste(Log[10], " reciprocal dilution of content"))))
+#This allows for a two part y lable
+
 
 ###Wilcox test
 six30_VPI<-toxin.2013_NO714[toxin.2013_NO714$Treatment_Grp== '630_VPI', ]
@@ -118,7 +138,7 @@ wilcox.test(naive_VPI.tox,six30_VPI.tox)
 
 ####Panel D
 ###Colon Histopatholgy data
-colhist<-read.table(file='Colon_histo_harvest_2013_14_15.txt', header=TRUE)
+colhist<-read.table(file='/Users/Jhansi1/Desktop/Intraspecific_Competition/data/Colon_histo_harvest_2013_14_15.txt', header=TRUE)
 #########  Colon Data
 colhist$Cage<-as.factor(colhist$Cage)
 colhist_data.exp13<-colhist[grep("71.",colhist$Cage, value =F),]
