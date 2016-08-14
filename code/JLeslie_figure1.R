@@ -160,7 +160,7 @@ toxin_NO714_mock<-toxin_NO714[toxin_NO714$Treatment_1 == "mock",]
 toxin_plot.13<-ggplot(data=toxin_NO714_infected, aes(x=Sample_Day, y=Toxin_Activity, colour= factor(Treatment_1)))+geom_jitter(width = 2, height = 0, size=3, shape=19) + stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 3, color="black", size=.5) +
   geom_jitter(data=toxin_NO714_mock, width = 2, height = 0, size=3, shape=19) +
   scale_y_continuous(breaks= c(2,3,4,5),  limits = c(2, 5), labels = c(" 2 ", " 3 ", " 4 ", " 5 ")) +
-  #scale_x_continuous(limits = c(0, 42))+ #thows an error because there are no data at t=0 or t=42
+  scale_x_continuous(limits = c(0, 42))+ #thows an error because there are no data at t=0 or t=42
   scale_color_manual(values = cols, limits = c("mock", "630"),labels=c("mock infected", "infected")) +
   theme(
     panel.background = element_rect(fill = "white", color = "grey80", size = 1.5)
@@ -180,7 +180,7 @@ toxin_plot.13<-ggplot(data=toxin_NO714_infected, aes(x=Sample_Day, y=Toxin_Activ
    ,axis.title.x=element_text(size=13)
    ,axis.text.x=element_text(size=11)
   )
-c = toxin_plot.13 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=0.9) + labs(x = "Day Post Challenge", y = expression("Toxin Acitvity"))
+c = toxin_plot.13 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=0.9) + labs(x = "Day Post Challenge", y = expression(paste("Toxin Titer ", Log[10])))
 c
 ############Plotting as a multipannel figures 
 library("gridExtra")

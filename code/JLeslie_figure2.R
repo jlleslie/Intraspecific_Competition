@@ -46,11 +46,11 @@ weight_df.2013.Noc714<-weight_df.2013[-c(weight_df.2013.c714), ]
 ####Plotting the data
 ###jitter plot 
 weight.harv.plot<-ggplot(weight_df.2013.Noc714, aes(x=Treatment_Grp, y=percent_of_baseline_weight, fill=Treatment_Grp))+
-  geom_point(size=5, shape=21, position=position_jitterdodge(dodge.width=0.9))  +
+  geom_point(size=6, shape=21, position=position_jitterdodge(dodge.width=0.9))  +
   scale_fill_manual(values=col_A) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.4, color="black") +
   scale_y_continuous( limits = c(78, 110)) +
-  geom_hline(aes(yintercept=100), colour = "grey10", size = 1, linetype=3) +
+  geom_hline(aes(yintercept=100), colour = "grey10", size = 0.9, linetype=3) +
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 2)
     ,panel.grid.major = element_line(color = "gray80", size = 0.6)
@@ -95,7 +95,7 @@ toxin.2013_NO714<-toxin.2013[-c(toxin.2013_cage714),  ]
 #removes data from cage 714, the cage that cleared
 
 toxin_plot.13<-ggplot(data=toxin.2013_NO714, aes(x=Treatment_Grp, y=Toxin_Activity, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
-  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 1) +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 1.9) +
   scale_color_manual(values = rep("black",4))  +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.6, color="black", size=0.5) +
@@ -118,7 +118,7 @@ toxin_plot.13<-ggplot(data=toxin.2013_NO714, aes(x=Treatment_Grp, y=Toxin_Activi
     ,axis.title=element_text(size=15)
   )
 
-c <- toxin_plot.13 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=0.9) + labs(x = "Day Post Challenge", y = expression("Toxin Acitvity"))
+c <- toxin_plot.13 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=0.9) + labs(x = "Day Post Challenge", y = expression(paste("Toxin Titer ", Log[10])))
 c
 #c <- toxin_plot.13 + geom_hline(aes(yintercept=2.3), color = "black", linetype=2,  size=1) + labs(x = "Colonization Status", y = expression(atop("Toxin Acitvity  ", paste(Log[10], " reciprocal dilution of content"))))
 #This allows for a two part y lable
@@ -150,20 +150,26 @@ colhist_dataNO714<-colhist_data.exp13[-c(colhist_cage714),  ]
 #edema for 2013 Mice
 co.plot13_edema.dot<-ggplot(colhist_dataNO714, aes(x=Treatment_Grp, y=edema, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 1) +
-  scale_color_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
+  scale_color_manual(values = rep("black",4))+
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.7, color="black") +
   scale_y_continuous(breaks= c(0, 1, 2, 3, 4),  limits = c(0, 4))+
-  theme_bw() +
   ylab("Edema")+ 
   xlab("Colonization Status")+
   theme(
-    plot.background = element_blank()
-    ,panel.grid.major = element_blank()
+    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
+    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,panel.background = element_rect(colour = "black")
+    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks.length = unit(0.2, "cm")
+    ,axis.ticks.x=element_blank()
+    ,legend.title=element_blank()
+    ,legend.background = element_blank ()
+    ,legend.key = element_blank ()
     ,legend.position="none"
-    #gets rid of the legend 
+    ,legend.margin= unit(.01, "mm")
+    ,legend.text=element_text(size=13)
     ,axis.text=element_text(size=15)
     ,axis.title=element_text(size=15)
   )
@@ -172,21 +178,26 @@ co.plot13_edema.dot
 ##inflammation
 co.plot13_inflammation.dot<-ggplot(colhist_dataNO714, aes(x=Treatment_Grp, y=inflammation, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1) +
-  scale_color_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
+  scale_color_manual(values = rep("black",4)) +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.4, color="black") +
   scale_y_continuous(breaks= c(0, 1, 2, 3, 4),  limits = c(0, 4)) +
-  theme_bw() +
   ylab("Inflammation")+ 
   xlab("Colonization Status")+
-  #eliminates background, gridlines and key border
   theme(
-    plot.background = element_blank()
-    ,panel.grid.major = element_blank()
+    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
+    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,panel.background = element_rect(colour = "black")
+    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks.length = unit(0.2, "cm")
+    ,axis.ticks.x=element_blank()
+    ,legend.title=element_blank()
+    ,legend.background = element_blank ()
+    ,legend.key = element_blank ()
     ,legend.position="none"
-    #gets rid of the legend 
+    ,legend.margin= unit(.01, "mm")
+    ,legend.text=element_text(size=13)
     ,axis.text=element_text(size=15)
     ,axis.title=element_text(size=15)
   )
@@ -195,43 +206,53 @@ co.plot13_inflammation.dot
 ##epithelial_damage
 co.plot13_epithelial_damage.dot<-ggplot(colhist_dataNO714, aes(x=Treatment_Grp, y=epithelial_damage, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1) +
-  scale_color_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
+  scale_color_manual(values = rep("black",4)) +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.4, color="black") +
   scale_y_continuous(breaks= c(0, 1, 2, 3, 4),  limits = c(0, 4)) +
   ylab("Epithelial Damage")+ 
   xlab("Colonization Status")+
-  theme_bw() +
-  #eliminates background, gridlines and key border
   theme(
-    plot.background = element_blank()
-    ,panel.grid.major = element_blank()
+    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
+    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,panel.background = element_rect(colour = "black")
+    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks.length = unit(0.2, "cm")
+    ,axis.ticks.x=element_blank()
+    ,legend.title=element_blank()
+    ,legend.background = element_blank ()
+    ,legend.key = element_blank ()
     ,legend.position="none"
-    #gets rid of the legend 
+    ,legend.margin= unit(.01, "mm")
+    ,legend.text=element_text(size=13)
     ,axis.text=element_text(size=15)
     ,axis.title=element_text(size=15)
   )
 co.plot13_epithelial_damage.dot
 #This plot shows the sumary score for the colon of the 2013 Wildtype mice at time of harvest. 
 co.plot13_sum.dot<-ggplot(colhist_dataNO714, aes(x=Treatment_Grp, y=summary_score, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
-  geom_dotplot(binaxis = "y", stackdir = "center") +
-  scale_color_manual(values = col_A, limits = c("630_Mock", "Naive_VPI"))  +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.9) +
+  scale_color_manual(values = rep("black",4)) +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.7, color="black") +
   scale_y_continuous(breaks= c(0, 2, 4, 6, 8, 10, 12),  limits = c(0, 12)) +
   ylab("Summary Score")+ 
   xlab("Colonization Status")+
-  theme_bw() +
-  #eliminates background, gridlines and key border
   theme(
-    plot.background = element_blank()
-    ,panel.grid.major = element_blank()
+    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
+    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,panel.background = element_rect(colour = "black")
+    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks.length = unit(0.2, "cm")
+    ,axis.ticks.x=element_blank()
+    ,legend.title=element_blank()
+    ,legend.background = element_blank ()
+    ,legend.key = element_blank ()
     ,legend.position="none"
-    #gets rid of the legend 
+    ,legend.margin= unit(.01, "mm")
+    ,legend.text=element_text(size=13)
     ,axis.text=element_text(size=15)
     ,axis.title=element_text(size=15)
   )
@@ -322,7 +343,7 @@ wilcox.test(naive_VPI.ed,six30_VPI.ed)
 ####Panel E
 ###Serum Anti-Toxin A IgG 
 
-iG<-read.table(file="/Users/Jhansi/Box Sync/Allonginfect/Data_sheets/AntitoxnA_titers.txt", header=T)
+iG<-read.table(file="/Users/Jhansi1/Desktop/Intraspecific_Competition/data/AntitoxnA_titers.txt", header=T)
 ig.2013<-iG[iG$Experiment=="2013", ]
 #pulls out data for 2013 experiment, if I wanted only 2014 and 2015 data I could use Experiment!= ..(is not equal)
 ig.2013$Titer<-(1/ig.2013$Titer)
@@ -333,23 +354,30 @@ ig.2013.c714<-grep("714",ig.2013$Cage, value=F)
 ig.2013.Noc714<-ig.2013[-c(ig.2013.c714), ]
 #removes the cage 714 data (the cage that cleared the infection)
 ig_plot<-ggplot(data=ig.2013.Noc714, aes(x=Treatment_Grp, y=Titer, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
-  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1) +
-  scale_color_manual(values = col_A, limits = c("630_Mock", "Naive_VPI"))  +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.9) +
+  scale_color_manual(values = rep("black",4)) +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.4, color="black") +
   scale_y_log10(breaks= c(100, 1000, 10000, 100000, 1000000), labels = trans_format("log10", math_format(10^.x)), limits = c(100, 1000000)) +
-  theme_bw() +
   ylab(" Serum Anti-Toxin A IgG Titer")+ 
   xlab("Colonization Status")+
   #eliminates background, gridlines and key border
-  theme(plot.background = element_blank()
-        ,panel.grid.major =element_blank()
-        ,panel.grid.minor =element_blank()
-        ,panel.background = element_rect(colour = "black")
-        ,legend.position="none"
-        #gets rid of the legend 
-        ,axis.text=element_text(size=15)
-        ,axis.title=element_text(size=15)
+  theme(
+    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
+    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    ,panel.grid.major.x = element_blank()
+    ,panel.grid.minor = element_blank()
+    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks.length = unit(0.2, "cm")
+    ,axis.ticks.x=element_blank()
+    ,legend.title=element_blank()
+    ,legend.background = element_blank ()
+    ,legend.key = element_blank ()
+    ,legend.position="none"
+    ,legend.margin= unit(.01, "mm")
+    ,legend.text=element_text(size=13)
+    ,axis.text=element_text(size=15)
+    ,axis.title=element_text(size=15)
   )
 e <- ig_plot + geom_hline(aes(yintercept=400), colour = "gray10", size = 1, linetype=2)
 e
@@ -364,33 +392,39 @@ wilcox.test(naive_VPI.ig,six30_VPI.ig)
 ####Panel F
 ### Analysis of Serum Neutralizing Antibodies (vero cell assay) at D40 in the 2013 Experiment 
 
-neut_ab<-read.table(file="/Users/Jhansi/Box Sync/Allonginfect/Data_sheets/Neutralizing_Titer_2013.txt",  header=TRUE)
+neut_ab<-read.table(file="/Users/Jhansi1/Desktop/Intraspecific_Competition/data/Neutralizing_Titer_2013.txt",  header=TRUE)
 neut_ab$Titer<-(1/neut_ab$Avg_NeutralizingTiter)
 neut_ab_cage714<-grep("714",neut_ab$Cage, value=F)
 neut_ab_NO714<-neut_ab[-c(neut_ab_cage714),  ]
 #removes data from cage 714, the cage that cleared
  
 neut_ab.plot<-ggplot(data=neut_ab_NO714, aes(x=Treatment_Grp, y=Titer, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
-  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1) +
-  scale_color_manual(values = col_A, limits = c("630_Mock", "Naive_VPI"))  +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.6) +
+  scale_color_manual(values = rep("black",4)) +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.4, color="black") +
   scale_y_log10(breaks= c(100, 1000, 10000), labels = trans_format("log10", math_format(10^.x)), limits = c(50, 10000)) +
-  theme_bw() +
   ylab(" Serum Neutralizing Antibody Titer")+ 
   xlab("Colonization Status")+
-  #eliminates background, gridlines and key border
-  theme(plot.background = element_blank()
-        ,panel.grid.major = element_blank()
-        ,panel.grid.minor =element_blank()
-        ,panel.background = element_rect(colour = "black")
-        ,legend.position="none"
-        #gets rid of the legend 
-        ,axis.text=element_text(size=15)
-        ,axis.title=element_text(size=15)
-        ,strip.background = element_blank()
-        #removes grey color from back of facet_wrap lable above boxes 
-        ,strip.text.x = element_text(size = 15)
+  theme(
+    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
+    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    ,panel.grid.major.x = element_blank()
+    ,panel.grid.minor = element_blank()
+    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks.length = unit(0.2, "cm")
+    ,axis.ticks.x=element_blank()
+    ,legend.title=element_blank()
+    ,legend.background = element_blank ()
+    ,legend.key = element_blank ()
+    ,legend.position="none"
+    ,legend.margin= unit(.01, "mm")
+    ,legend.text=element_text(size=13)
+    ,axis.text=element_text(size=15)
+    ,axis.title=element_text(size=15)
+    ,strip.background = element_blank()
+    #removes grey color from back of facet_wrap lable above boxes 
+    ,strip.text.x = element_text(size = 15)
   )
 f<- neut_ab.plot + geom_hline(aes(yintercept=80), colour = "gray10", size = 1, linetype=2) + facet_grid(. ~Toxin)
 f
