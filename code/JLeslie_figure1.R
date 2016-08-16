@@ -37,7 +37,6 @@ summaryMED<-function(data=NULL, measurevar, metadata=NULL, na.rm=FALSE, .drop=TR
 library(ggplot2)
 library(grid)
 library(scales)
-library(wesanderson)
 
 ####Panel A
 ###Plotting weights following mock or strain 630 infection
@@ -67,7 +66,7 @@ weight_plot<-ggplot(weight, aes(x=Day, y= Percent_weightD0 , color= factor(Treat
   scale_color_manual(values = cols,  limits = c("mock", "630"),labels=c("mock treated          ", "infected"))  
 a = weight_plot + ylim(85, 120)+
   theme(
-     panel.background = element_rect(fill = "white", color = "grey80", size = 1.5)
+     panel.background = element_rect(fill = "white", color = "grey80", size = 2)
     ,panel.grid.major = element_line(color = "gray90", size = 0.6)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
@@ -119,13 +118,12 @@ cfu2013_treat_No714.plot<-ggplot(cfu2013_treat_No714, aes(x=Day, y= CFU_g , colo
   geom_errorbar(aes(ymin=firstquart.25per, ymax=thirdquart.75per), width=1, size=0.9)+
   geom_line(size=0.9) +
   geom_point (size=3)+
-  scale_x_continuous( limits = c(0, 42))+
   scale_color_manual(values = cols, limits = c("mock", "630"),labels=c("mock infected", "infected")) 
 #theme with white background
 b = cfu2013_treat_No714.plot+ 
   #eliminates background, gridlines and key border
   theme(
-    panel.background = element_rect(fill = "white", color = "grey80", size = 1.5)
+    panel.background = element_rect(fill = "white", color = "grey80", size = 2)
     ,panel.grid.major = element_line(color = "gray90", size = 0.6)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
@@ -135,12 +133,10 @@ b = cfu2013_treat_No714.plot+
     ,legend.background = element_blank ()
     ,legend.key = element_blank ()
     ,legend.position="none"  #if using this as a single figure change "none" to "top" or "bottom" and remove comment from the following 2 lines
-   #,legend.margin= unit(.01, "mm")
-   #,legend.text=element_text(size=13)
-   ,axis.text.y=element_text(size=13)
-   ,axis.title.y=element_text(size=13)
-   ,axis.title.x=element_blank()
-   ,axis.text.x=element_text(size=11)
+    ,axis.text.y=element_text(size=13)
+    ,axis.title.y=element_text(size=13)
+    ,axis.title.x=element_blank()
+    ,axis.text.x=element_text(size=11)
   )
 b1 = b+ labs(y = expression(paste(Log[10], " CFU ", "per Gram Feces")))
 b2 = b1+ geom_hline(aes(yintercept=100), colour = "gray10", size = 0.9, linetype=2)
@@ -160,10 +156,9 @@ toxin_NO714_mock<-toxin_NO714[toxin_NO714$Treatment_1 == "mock",]
 toxin_plot.13<-ggplot(data=toxin_NO714_infected, aes(x=Sample_Day, y=Toxin_Activity, colour= factor(Treatment_1)))+geom_jitter(width = 2, height = 0, size=3, shape=19) + stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 3, color="black", size=.5) +
   geom_jitter(data=toxin_NO714_mock, width = 2, height = 0, size=3, shape=19) +
   scale_y_continuous(breaks= c(2,3,4,5),  limits = c(2, 5), labels = c(" 2 ", " 3 ", " 4 ", " 5 ")) +
-  scale_x_continuous(limits = c(0, 42))+ #thows an error because there are no data at t=0 or t=42
   scale_color_manual(values = cols, limits = c("mock", "630"),labels=c("mock infected", "infected")) +
   theme(
-    panel.background = element_rect(fill = "white", color = "grey80", size = 1.5)
+    panel.background = element_rect(fill = "white", color = "grey80", size = 2)
     ,panel.grid.major = element_line(color = "gray90", size = 0.6)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
@@ -173,21 +168,31 @@ toxin_plot.13<-ggplot(data=toxin_NO714_infected, aes(x=Sample_Day, y=Toxin_Activ
     ,legend.background = element_blank ()
     ,legend.key = element_blank () 
     ,legend.position="none"   #if using this as a single figure change "none" to "top" or "bottom" and remove comment from the following 2 lines
-    #,legend.margin= unit(.01, "mm")
-   #,legend.text=element_text(size=13)
-   ,axis.text.y=element_text(size=13)
-   ,axis.title.y=element_text(size=13)
-   ,axis.title.x=element_text(size=13)
-   ,axis.text.x=element_text(size=11)
+    ,axis.text.y=element_text(size=13)
+    ,axis.title.y=element_text(size=13)
+    ,axis.title.x=element_text(size=13)
+    ,axis.text.x=element_text(size=11)
   )
 c = toxin_plot.13 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=0.9) + labs(x = "Day Post Challenge", y = expression(paste("Toxin Titer ", Log[10])))
 c
 ############Plotting as a multipannel figures 
 library("gridExtra")
+a.1<-textGrob("A", hjust=0, vjust=0, gp = gpar(fontface = 2))
+b.1<-textGrob("B", hjust=0, vjust=0, gp = gpar(fontface = 2))
+c.1<-textGrob("C", hjust=0, vjust=0, gp = gpar(fontface = 2))
 
+#pdf(file="/Users/Jhansi1/Desktop/Intraspecific_Competition/results/Figure1.pdf", width=7, height=12)
 
-pdf(file="/Users/Jhansi1/Desktop/Intraspecific_Competition/results/Figure1.pdf", width=7, height=12)
-grid.arrange(a1,b3,c, layout_matrix = rbind(c(1),c(2), c(3)))
-dev.off()
+lay1 <- rbind( c(1,2,2,2),
+              c(NA,2,2,2),
+              c(NA,2,2,2),
+              c(3,4,4,4),
+              c(NA,4,4,4),
+              c(NA,4,4,4),
+              c(5,6,6,6),
+              c(NA,6,6,6),
+              c(NA,6,6,6))
+grid.arrange(a.1,a1,b.1,b3,c.1,c,layout_matrix = lay1)
+
 
 ##figure was exported into illustrator for further editing

@@ -8,7 +8,6 @@ library(ggplot2)
 library(grid)
 library(scales)
 
-#col_A<-c("630_Mock"="dodgerblue","630_VPI"="purple","Naive_Mock"="grey50", "Naive_VPI"="red1")
 
 col_A<-c("630_Mock"="#5BBCD6","630_VPI"= "#F2AD00","Naive_Mock"="#C7B19C", "Naive_VPI"= "#FF0000")
 #colors used for these figues 
@@ -16,8 +15,10 @@ col_A<-c("630_Mock"="#5BBCD6","630_VPI"= "#F2AD00","Naive_Mock"="#C7B19C", "Naiv
 
 ####Panel A
 #Figure representing the experimental outline made in illustrator 
-
-
+#stwd("~Desktop/Intraspecific_Competition/results")
+#a<-jpeg(filename = "2013Infection_outline_nocleared.wesscols.jpeg", width = 480, height = 480, units = "px", pointsize = 12,
+       # quality = 75, bg = "white")
+a<-textGrob("place experiment outline here")
 ####Panel B
 ###Plotting weights following mock or strain VPI 10463 challenge 
 ###2013 Exeperiment Plots, WT mice only
@@ -46,7 +47,7 @@ weight_df.2013.Noc714<-weight_df.2013[-c(weight_df.2013.c714), ]
 ####Plotting the data
 ###jitter plot 
 weight.harv.plot<-ggplot(weight_df.2013.Noc714, aes(x=Treatment_Grp, y=percent_of_baseline_weight, fill=Treatment_Grp))+
-  geom_point(size=6, shape=21, position=position_jitterdodge(dodge.width=0.9))  +
+  geom_point(size=3.5, shape=21, position=position_jitterdodge(dodge.width=0.9))  +
   scale_fill_manual(values=col_A) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.4, color="black") +
   scale_y_continuous( limits = c(78, 110)) +
@@ -59,16 +60,14 @@ weight.harv.plot<-ggplot(weight_df.2013.Noc714, aes(x=Treatment_Grp, y=percent_o
     ,axis.ticks = element_line(size = 0.6, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
-    ,legend.title=element_blank()
-    ,legend.background = element_blank ()
-    ,legend.key = element_blank ()
+    ,axis.text.x=element_blank()
+    #removes x axis lables because they will be added in manually 
+    ,axis.text=element_text(size=12)
+    ,axis.title=element_text(size=13)
+    ,axis.title.x=element_blank()
     ,legend.position="none"
-    ,legend.margin= unit(.01, "mm")
-    ,legend.text=element_text(size=13)
-    ,axis.text=element_text(size=15)
-    ,axis.title=element_text(size=15)
   )
-b = weight.harv.plot +labs(x = "Colonization Status", y = expression("% Weight from Baseline"))
+b = weight.harv.plot +labs(y = expression("% Weight from Baseline")) 
 b
 
 ##Determing if the differences are sginficantly different
@@ -95,34 +94,28 @@ toxin.2013_NO714<-toxin.2013[-c(toxin.2013_cage714),  ]
 #removes data from cage 714, the cage that cleared
 
 toxin_plot.13<-ggplot(data=toxin.2013_NO714, aes(x=Treatment_Grp, y=Toxin_Activity, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
-  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 1.9) +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 1.8) +
   scale_color_manual(values = rep("black",4))  +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.6, color="black", size=0.5) +
   scale_y_continuous(breaks= c(2,3,4,5,6),  limits = c(2, 6)) +
   theme(
-    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
-    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    panel.background = element_rect(fill = "white", color = "grey75", size = 2)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks = element_line(size = 0.6, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
-    ,legend.title=element_blank()
-    ,legend.background = element_blank ()
-    ,legend.key = element_blank ()
+    ,axis.text.x=element_blank()
+    #removes x axis lables because they will be added in manually 
+    ,axis.text=element_text(size=12)
+    ,axis.title=element_text(size=13)
+    ,axis.title.x=element_blank()
     ,legend.position="none"
-    ,legend.margin= unit(.01, "mm")
-    ,legend.text=element_text(size=13)
-    ,axis.text=element_text(size=15)
-    ,axis.title=element_text(size=15)
   )
-
-c <- toxin_plot.13 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=0.9) + labs(x = "Day Post Challenge", y = expression(paste("Toxin Titer ", Log[10])))
+c <- toxin_plot.13 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=0.9) + labs(y = expression(paste("Toxin Titer ", Log[10])))
 c
-#c <- toxin_plot.13 + geom_hline(aes(yintercept=2.3), color = "black", linetype=2,  size=1) + labs(x = "Colonization Status", y = expression(atop("Toxin Acitvity  ", paste(Log[10], " reciprocal dilution of content"))))
-#This allows for a two part y lable
-
 
 ###Wilcox test
 six30_VPI<-toxin.2013_NO714[toxin.2013_NO714$Treatment_Grp== '630_VPI', ]
@@ -132,8 +125,6 @@ naive_VPI.tox<-naive_VPI$Toxin_Activity
 wilcox.test(naive_VPI.tox,six30_VPI.tox)
 #data:  naive_VPI.tox and six30_VPI.tox
 #W = 24.5, p-value = 0.04581
-
-##figure was exported into illustrator for further editing
 
 
 ####Panel D
@@ -149,164 +140,101 @@ colhist_dataNO714<-colhist_data.exp13[-c(colhist_cage714),  ]
 ##### Ploting colon data from 2013 experiment 
 #edema for 2013 Mice
 co.plot13_edema.dot<-ggplot(colhist_dataNO714, aes(x=Treatment_Grp, y=edema, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
-  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 1) +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 1.1) +
   scale_color_manual(values = rep("black",4))+
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.7, color="black") +
+  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.5, color="black") +
   scale_y_continuous(breaks= c(0, 1, 2, 3, 4),  limits = c(0, 4))+
-  ylab("Edema")+ 
-  xlab("Colonization Status")+
+  xlab(NULL)+
+  ylab("Edema")+
   theme(
-    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
-    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    panel.background = element_rect(fill = "white", color = "grey75", size = 1)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks = element_line(size = 0.4, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
-    ,legend.title=element_blank()
-    ,legend.background = element_blank ()
-    ,legend.key = element_blank ()
+    ,axis.text.x=element_blank()
+    #removes x axis lables because they will be added in manually 
+    ,axis.text=element_text(size=10)
+    ,axis.title=element_text(size=10)
+    ,axis.title.x=element_blank()
     ,legend.position="none"
-    ,legend.margin= unit(.01, "mm")
-    ,legend.text=element_text(size=13)
-    ,axis.text=element_text(size=15)
-    ,axis.title=element_text(size=15)
   )
-co.plot13_edema.dot
-
+d1<-co.plot13_edema.dot
 ##inflammation
 co.plot13_inflammation.dot<-ggplot(colhist_dataNO714, aes(x=Treatment_Grp, y=inflammation, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
-  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1) +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.1) +
   scale_color_manual(values = rep("black",4)) +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.4, color="black") +
+  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.6, color="black") +
   scale_y_continuous(breaks= c(0, 1, 2, 3, 4),  limits = c(0, 4)) +
   ylab("Inflammation")+ 
-  xlab("Colonization Status")+
   theme(
-    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
-    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    panel.background = element_rect(fill = "white", color = "grey75", size = 1)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks = element_line(size = 0.4, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
-    ,legend.title=element_blank()
-    ,legend.background = element_blank ()
-    ,legend.key = element_blank ()
+    ,axis.text.x=element_blank()
+    #removes x axis lables because they will be added in manually 
+    ,axis.text=element_text(size=10)
+    ,axis.title=element_text(size=10)
+    ,axis.title.x=element_blank()
     ,legend.position="none"
-    ,legend.margin= unit(.01, "mm")
-    ,legend.text=element_text(size=13)
-    ,axis.text=element_text(size=15)
-    ,axis.title=element_text(size=15)
   )
-co.plot13_inflammation.dot
-
+d2<-co.plot13_inflammation.dot
 ##epithelial_damage
 co.plot13_epithelial_damage.dot<-ggplot(colhist_dataNO714, aes(x=Treatment_Grp, y=epithelial_damage, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
-  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1) +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.1) +
   scale_color_manual(values = rep("black",4)) +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.4, color="black") +
+  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.5, color="black") +
   scale_y_continuous(breaks= c(0, 1, 2, 3, 4),  limits = c(0, 4)) +
-  ylab("Epithelial Damage")+ 
-  xlab("Colonization Status")+
+  ylab("Epithelial Damage")+
   theme(
-    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
-    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    panel.background = element_rect(fill = "white", color = "grey75", size = 1)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks = element_line(size = 0.4, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
-    ,legend.title=element_blank()
-    ,legend.background = element_blank ()
-    ,legend.key = element_blank ()
+    ,axis.text.x=element_blank()
+    #removes x axis lables because they will be added in manually 
+    ,axis.text=element_text(size=10)
+    ,axis.title=element_text(size=10)
+    ,axis.title.x=element_blank()
     ,legend.position="none"
-    ,legend.margin= unit(.01, "mm")
-    ,legend.text=element_text(size=13)
-    ,axis.text=element_text(size=15)
-    ,axis.title=element_text(size=15)
   )
-co.plot13_epithelial_damage.dot
+d3<-co.plot13_epithelial_damage.dot
 #This plot shows the sumary score for the colon of the 2013 Wildtype mice at time of harvest. 
 co.plot13_sum.dot<-ggplot(colhist_dataNO714, aes(x=Treatment_Grp, y=summary_score, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
-  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.9) +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=3) +
   scale_color_manual(values = rep("black",4)) +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.7, color="black") +
+  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.6, color="black") +
   scale_y_continuous(breaks= c(0, 2, 4, 6, 8, 10, 12),  limits = c(0, 12)) +
   ylab("Summary Score")+ 
-  xlab("Colonization Status")+
   theme(
-    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
-    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    panel.background = element_rect(fill = "white", color = "grey75", size = 1.5)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks = element_line(size = 0.4, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
-    ,legend.title=element_blank()
-    ,legend.background = element_blank ()
-    ,legend.key = element_blank ()
+    ,axis.text.x=element_blank()
+    #removes x axis lables because they will be added in manually 
+    ,axis.text=element_text(size=11)
+    ,axis.title=element_text(size=10)
+    ,axis.title.x=element_blank()
     ,legend.position="none"
-    ,legend.margin= unit(.01, "mm")
-    ,legend.text=element_text(size=13)
-    ,axis.text=element_text(size=15)
-    ,axis.title=element_text(size=15)
   )
-co.plot13_sum.dot
-
-#http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_(ggplot2)
-# Multiple plot function
-#
-# ggplot objects can be passed in ..., or to plotlist (as a list of ggplot objects)
-# - cols:   Number of columns in layout
-# - layout: A matrix specifying the layout. If present, 'cols' is ignored.
-#
-# If the layout is something like matrix(c(1,2,3,3), nrow=2, byrow=TRUE),
-# then plot 1 will go in the upper left, 2 will go in the upper right, and
-# 3 will go all the way across the bottom.
-#
-multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
-  library(grid)
-  
-  # Make a list from the ... arguments and plotlist
-  plots <- c(list(...), plotlist)
-  
-  numPlots = length(plots)
-  
-  # If layout is NULL, then use 'cols' to determine layout
-  if (is.null(layout)) {
-    # Make the panel
-    # ncol: Number of columns of plots
-    # nrow: Number of rows needed, calculated from # of cols
-    layout <- matrix(seq(1, cols * ceiling(numPlots/cols)),
-                     ncol = cols, nrow = ceiling(numPlots/cols))
-  }
-  
-  if (numPlots==1) {
-    print(plots[[1]])
-    
-  } else {
-    # Set up the page
-    grid.newpage()
-    pushViewport(viewport(layout = grid.layout(nrow(layout), ncol(layout))))
-    
-    # Make each plot, in the correct location
-    for (i in 1:numPlots) {
-      # Get the i,j matrix positions of the regions that contain this subplot
-      matchidx <- as.data.frame(which(layout == i, arr.ind = TRUE))
-      
-      print(plots[[i]], vp = viewport(layout.pos.row = matchidx$row,
-                                      layout.pos.col = matchidx$col))
-    }
-  }
-}
-multiplot(co.plot13_edema.dot,co.plot13_inflammation.dot,co.plot13_epithelial_damage.dot,co.plot13_sum.dot, layout= matrix(c(1,2,3,4,4,4), nrow=2, byrow=TRUE))
-##figure was exported into illustrator for further editing
-
+d4<-co.plot13_sum.dot
 ###Wilcox test
 six30_VPI<-colhist_dataNO714[colhist_dataNO714$Treatment_Grp== '630_VPI', ]
 six30_VPI.hist<-six30_VPI$summary_score
@@ -354,30 +282,26 @@ ig.2013.c714<-grep("714",ig.2013$Cage, value=F)
 ig.2013.Noc714<-ig.2013[-c(ig.2013.c714), ]
 #removes the cage 714 data (the cage that cleared the infection)
 ig_plot<-ggplot(data=ig.2013.Noc714, aes(x=Treatment_Grp, y=Titer, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
-  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.9) +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.5) +
   scale_color_manual(values = rep("black",4)) +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.4, color="black") +
   scale_y_log10(breaks= c(100, 1000, 10000, 100000, 1000000), labels = trans_format("log10", math_format(10^.x)), limits = c(100, 1000000)) +
   ylab(" Serum Anti-Toxin A IgG Titer")+ 
-  xlab("Colonization Status")+
-  #eliminates background, gridlines and key border
   theme(
-    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
-    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    panel.background = element_rect(fill = "white", color = "grey75", size = 2)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks = element_line(size = 0.6, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
-    ,legend.title=element_blank()
-    ,legend.background = element_blank ()
-    ,legend.key = element_blank ()
+    ,axis.text.x=element_blank()
+    #removes x axis lables because they will be added in manually 
+    ,axis.text=element_text(size=12)
+    ,axis.title=element_text(size=13)
+    ,axis.title.x=element_blank()
     ,legend.position="none"
-    ,legend.margin= unit(.01, "mm")
-    ,legend.text=element_text(size=13)
-    ,axis.text=element_text(size=15)
-    ,axis.title=element_text(size=15)
   )
 e <- ig_plot + geom_hline(aes(yintercept=400), colour = "gray10", size = 1, linetype=2)
 e
@@ -399,32 +323,59 @@ neut_ab_NO714<-neut_ab[-c(neut_ab_cage714),  ]
 #removes data from cage 714, the cage that cleared
  
 neut_ab.plot<-ggplot(data=neut_ab_NO714, aes(x=Treatment_Grp, y=Titer, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
-  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.6) +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.5) +
   scale_color_manual(values = rep("black",4)) +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.4, color="black") +
   scale_y_log10(breaks= c(100, 1000, 10000), labels = trans_format("log10", math_format(10^.x)), limits = c(50, 10000)) +
   ylab(" Serum Neutralizing Antibody Titer")+ 
-  xlab("Colonization Status")+
   theme(
-    panel.background = element_rect(fill = "white", color = "grey85", size = 2)
-    ,panel.grid.major = element_line(color = "gray85", size = 0.6)
+    panel.background = element_rect(fill = "white", color = "grey75", size = 2)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.6, colour = "grey85")
+    ,axis.ticks = element_line(size = 0.6, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
-    ,legend.title=element_blank()
-    ,legend.background = element_blank ()
-    ,legend.key = element_blank ()
+    ,axis.text.x=element_blank()
+    #removes x axis lables because they will be added in manually 
+    ,axis.text=element_text(size=12)
+    ,axis.title=element_text(size=13)
+    ,axis.title.x=element_blank()
     ,legend.position="none"
-    ,legend.margin= unit(.01, "mm")
-    ,legend.text=element_text(size=13)
-    ,axis.text=element_text(size=15)
-    ,axis.title=element_text(size=15)
     ,strip.background = element_blank()
     #removes grey color from back of facet_wrap lable above boxes 
     ,strip.text.x = element_text(size = 15)
   )
 f<- neut_ab.plot + geom_hline(aes(yintercept=80), colour = "gray10", size = 1, linetype=2) + facet_grid(. ~Toxin)
 f
+
+############Plotting as a multipannel figures 
+library("gridExtra")
+
+a.1<-textGrob("A", hjust=0, vjust=0, gp = gpar(fontface = 2))
+b.1<-textGrob("B", hjust=0, vjust=0, gp = gpar(fontface = 2))
+c.1<-textGrob("C", hjust=0, vjust=0, gp = gpar(fontface = 2))
+d.1<-textGrob("D", hjust=0, vjust=0, gp = gpar(fontface = 2))
+e.1<-textGrob("E", hjust=0, vjust=0, gp = gpar(fontface = 2))
+f.1<-textGrob("F", hjust=0, vjust=0, gp = gpar(fontface = 2))
+
+lay1 <- rbind(c(1,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA),
+              c(NA,3,3,3,3,3,3,NA,4,4,4,4,4,4,4,NA),
+              c(NA,3,3,3,3,3,3,NA,4,4,4,4,4,4,4,NA),
+              c(NA,3,3,3,3,3,3,NA,4,4,4,4,4,4,4,NA),
+              c(NA,3,3,3,3,3,3,NA,4,4,4,4,4,4,4,NA),
+              c(5,NA,NA,NA,NA,NA,NA,6,NA,NA,NA,NA,NA,NA,NA,NA),
+              c(NA,7,7,7,7,7,7,8,8,8,9,9,9,10,10,10),
+              c(NA,7,7,7,7,7,7,8,8,8,9,9,9,10,10,10),
+              c(NA,7,7,7,7,7,7,NA,11,11,11,11,11,11,11,NA),
+              c(NA,7,7,7,7,7,7,NA,11,11,11,11,11,11,11,NA),
+              c(12,NA,NA,NA,NA,NA,NA,13,NA,NA,NA,NA,NA,NA,NA,NA),
+              c(NA,14,14,14,14,14,14,NA,15,15,15,15,15,15,15,NA),
+              c(NA,14,14,14,14,14,14,NA,15,15,15,15,15,15,15,NA),
+              c(NA,14,14,14,14,14,14,NA,15,15,15,15,15,15,15,NA),
+              c(NA,14,14,14,14,14,14,NA,15,15,15,15,15,15,15,NA))
+
+grid.arrange(a.1,b.1,a, b,c.1, d.1,c,d1,d2,d3,d4,e.1, f.1, e,f,layout_matrix = lay1)
+
+##the multipannel figure was saved as a pdf and then opened in  adobe illustrator to redo the labels on the x axis and add in the experiment outline 
