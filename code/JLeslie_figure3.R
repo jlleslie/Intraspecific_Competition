@@ -8,7 +8,7 @@ library(ggplot2)
 library(grid)
 library(scales)
 
-col_B<-c("630_VPI"= "#F2AD00", "Naive_VPI"= "#FF0000")
+col_B<-c("630_VPI"= "#F2AD00", "Naive_VPI"= "#00A08A") 
 #colors used for these figues 
 col_C<-c("RAG"="black", "WT"="grey")
 
