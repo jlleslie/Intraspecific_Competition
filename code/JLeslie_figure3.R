@@ -8,9 +8,9 @@ library(ggplot2)
 library(grid)
 library(scales)
 
-col_B<-c("630_VPI"= "#F2AD00", "Naive_VPI"= "#00A08A") 
+col_B<-c("630_VPI"= "#F2AD00", "Naive_VPI"= "#FF0000") 
+#Alternative teal colo for Niave VP: "#00A08A"
 #colors used for these figues 
-col_C<-c("RAG"="black", "WT"="grey")
 
 shape_A<-c("RAG"=22, "WT"=21)
 #shapes used for these figues
@@ -95,7 +95,7 @@ tox_data.14.15<-rbind(tox_data.2014,tox_data.2015)
 tox_data.14.15a<-tox_data.14.15[tox_data.14.15$Colonization_stat!="cleared", ]
 #remove the samples from mice that cleared in 2014 experiment 
 
-toxin_plot.14.15<-ggplot(data=tox_data.14.15a, aes(x=Treatment_Grp, y=Toxin_Activity, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
+toxin_plot.14.15<-ggplot(tox_data.14.15a, aes(x=Treatment_Grp, y=Toxin_Activity, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.5) +
   scale_color_manual(values = rep("black",4))+
   scale_fill_manual(values = col_B) +

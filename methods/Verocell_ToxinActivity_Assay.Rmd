@@ -2,10 +2,10 @@
 ## Modified from a protocol written by [Cassie Schumacher] (https://www.linkedin.com/in/cassie-schumacher-2542595)
 
 ###Day 1 : Part 1 Preparing the Cells
-
+25
 #### Harvest cells
 1. Preheat media in 37°C water bath
-	* [DMEM] (https://www.thermofisher.com/order/catalog/product/11965092) supplemented with 10% [FBS] (https://www.thermofisher.com/order/catalog/product/10438026) & 1% [Pen/Strep] (https://www.thermofisher.com/order/catalog/product/15140122)
+	* [DMEM](https://www.thermofisher.com/order/catalog/product/11965092) supplemented with 10% [FBS](https://www.thermofisher.com/order/catalog/product/16140071) & 1% [Pen/Strep](https://www.thermofisher.com/order/catalog/product/15140122)
 	* [0.25% Trypsin-EDTA] (https://www.thermofisher.com/order/catalog/product/25200056)
 2. Removed old DMEM from  the T‐75 flask  of [Vero cells] (https://www.google.com/search?q=atcc+vero+cells&oq=ATCC+Vero+cells&aqs=chrome.0.0l5.4030j0j4&sourceid=chrome&ie=UTF-8#q=atcc+ccl-81)
 3. Wash the flask with sterile [PBS](https://www.thermofisher.com/order/catalog/product/10010023), remove.

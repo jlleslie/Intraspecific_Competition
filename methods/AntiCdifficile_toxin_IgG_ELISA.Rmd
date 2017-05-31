@@ -94,7 +94,7 @@ Toxin is stored 3ul at 1ug/ul – so I need 7 aliquots. Add  297 ul of carbonate
  Samples: Day -2, 44 Serum from mice from 2013, 2014, 2015 experiments 
  Number of Plates: 10
  Negative control= coated wells + detection Ab & substrate (8 wells per each plate).  
- Positive control = starting dilution 1/5000 of mouse anti-toxin A IgG monoclonal anitbody  
+ Positive control = starting dilution 1/1200 of mouse anti-toxin A IgG monoclonal anitbody  
  Notes: Dilute the sera to 1:400 (this is what was done on 2/24/13, and seems reasonable based on preliminary work done Nov 2013). Plates are coated with 1ug/mL toxin A from List biological labs. 
 ```
 1.	Wash plate 3x with PBST (PBS + 0.05% Tween20) followed by 3x with PBS
@@ -102,7 +102,7 @@ Toxin is stored 3ul at 1ug/ul – so I need 7 aliquots. Add  297 ul of carbonate
 3.	Meanwhile, dilute sera in blocking buffer 
 	+	Serum was saved in 10uL aliquots (so for 1:400 dilution add 2 ul of sera into 798 uL of blocking buffer)
 	+	This gives you more than enough (need 400ul)
-	+	Add 150uL of this into row A, remove 50uL add to 100uL of blocking buffer in row B – repeat until row G (1: dilutions).
+	+	Add 150uL of this into row A, remove 50uL add to 100uL of blocking buffer in row B – repeat until row G (1:3 dilutions).
 4.	Wash plate 3x with PBST followed by 3x with PBS
 5.	Add 100ul of diluted sera to wells of the plate 
 6.	Incubate 1hr at 37C

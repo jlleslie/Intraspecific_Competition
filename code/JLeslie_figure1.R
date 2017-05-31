@@ -87,6 +87,56 @@ a = weight_plot + ylim(85, 120)+
 a1 = a + labs(y = expression("% Weight from Baseline")) + geom_hline(aes(yintercept=100), colour = "gray10", size = 0.9, linetype=3)
 a1
 
+#Statisctics 
+#Comparing weightloss in mock vs infected mice over the course of the  infection
+
+weight.wilcox.pvals<-c()
+for (i in 1: length(unique(weightNO714$Day))) {
+   j = unique(weightNO714$Day)[i]
+   infect = weightNO714[weightNO714$Day ==j & weightNO714$Treatment_1 =="630",11]
+   mock= weightNO714[weightNO714$Day ==j & weightNO714$Treatment_1 =="mock",11]
+   weight.wilcox.pvals[i] <-  wilcox.test(infect,mock)[3]
+   print(j)
+   print(weight.wilcox.pvals[i])
+}
+
+#note the list weight.wilcox.pvals is a list of p values generated when comparing mock vs infected mice for the lenght of the experiment 
+
+round(p.adjust(weight.wilcox.pvals, method= "BH"),3)
+#Corrected p values by day for weightloss in infected vs mock mice 
+#D0: NaN
+#D1: 0.596
+#D2: 0.679
+#D3: 0.080
+#D4: 0.009 *
+#D5: 0.009 *
+#D6: 0.022 *
+#D7: 0.080
+#D8: 0.623
+#D9: 0.362
+#D10: 0.596
+#D11: 0.596
+#D11: 0.596
+#D12: 0.596
+#D13: 0.596
+#D14: 0.735
+#D16: 0.679
+#D17: 0.868
+#D19: 0.868
+#D20: 0.582
+#D22: 0.679
+#D23: 0.596
+#D25: 0.679 
+#D26: 0.679
+#D28: 0.393 
+#D29: 0.868 
+#D31: 0.436
+#D33: 0.595
+#D34: 0.182
+#D36: 0.595
+#D37: 0.679
+#D40: 0.735
+
 
 ####Panel B 
 ###Plotting levels of colonization over the course of the infection
@@ -138,7 +188,7 @@ b = cfu2013_treat_No714.plot+
     ,axis.title.x=element_blank()
     ,axis.text.x=element_text(size=11)
   )
-b1 = b+ labs(y = expression(paste(Log[10], " CFU ", "per Gram Feces")))
+b1 = b +  labs(y = expression("CFU per gram feces"))
 b2 = b1+ geom_hline(aes(yintercept=100), colour = "gray10", size = 0.9, linetype=2)
 b3 = b2 + scale_y_log10(breaks = trans_breaks("log10", function(x) 10^x),labels = trans_format("log10", math_format(10^.x)))
 b3
@@ -153,7 +203,9 @@ toxin_NO714_infected<-toxin_NO714[toxin_NO714$Treatment_1 == 630,]
 toxin_NO714_mock<-toxin_NO714[toxin_NO714$Treatment_1 == "mock",]
 
 #Plot data
-toxin_plot.13<-ggplot(data=toxin_NO714_infected, aes(x=Sample_Day, y=Toxin_Activity, colour= factor(Treatment_1)))+geom_jitter(width = 2, height = 0, size=3, shape=19) + stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 3, color="black", size=.5) +
+toxin_plot.13<-ggplot(data=toxin_NO714_infected, aes(x=Sample_Day, y=Toxin_Activity, colour= factor(Treatment_1)))+
+  geom_jitter(width = 2, height = 0, size=3, shape=19) + 
+  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 3, color="black", size=.5) +
   geom_jitter(data=toxin_NO714_mock, width = 2, height = 0, size=3, shape=19) +
   scale_y_continuous(breaks= c(2,3,4,5),  limits = c(2, 5), labels = c(" 2 ", " 3 ", " 4 ", " 5 ")) +
   scale_color_manual(values = cols, limits = c("mock", "630"),labels=c("mock infected", "infected")) +
@@ -175,6 +227,23 @@ toxin_plot.13<-ggplot(data=toxin_NO714_infected, aes(x=Sample_Day, y=Toxin_Activ
   )
 c = toxin_plot.13 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=0.9) + labs(x = "Day Post Challenge", y = expression(paste("Toxin Titer ", Log[10])))
 c
+
+
+toxin.wilcox.pvals<-c()
+for (i in 1: length(unique(toxin_NO714$Sample_Day))) {
+  j = unique(toxin_NO714$Sample_Day)[i]
+  infect = toxin_NO714[toxin_NO714$Sample_Day ==j & toxin_NO714$Treatment_1 =="630",11]
+  mock= toxin_NO714[toxin_NO714$Sample_Day ==j & toxin_NO714$Treatment_1 =="mock",11]
+  toxin.wilcox.pvals[i] <-  wilcox.test(infect,mock)[3]
+  print(j)
+  print(toxin.wilcox.pvals[i])
+}
+round(p.adjust(toxin.wilcox.pvals, method= "BH"),5)
+#[1] 0.00009 0.00009 0.00019 0.00019 0.00506 0.00506
+
+pairwise.wilcox.test(toxin_NO714_infected$Toxin_Activity, toxin_NO714_infected$Sample_Day, p.adjust.method = "BH")
+
+
 ############Plotting as a multipannel figures 
 library("gridExtra")
 a.1<-textGrob("A", hjust=0, vjust=0, gp = gpar(fontface = 2))
@@ -196,3 +265,4 @@ grid.arrange(a.1,a1,b.1,b3,c.1,c,layout_matrix = lay1)
 
 
 ##figure was exported into illustrator for further editing
+
