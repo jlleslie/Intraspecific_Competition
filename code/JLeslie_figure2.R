@@ -261,7 +261,7 @@ six30_VPI.inf<-six30_VPI$inflammation
 naive_VPI<-colhist_dataNO714[colhist_dataNO714$Treatment_Grp== 'Naive_VPI', ]
 naive_VPI.inf<-naive_VPI$inflammation
 wilcox.test(naive_VPI.inf,six30_VPI.inf)
--0#data:  naive_VPI.inf and six30_VPI.inf
+#data:  naive_VPI.inf and six30_VPI.inf
 #W = 21, p-value = 0.1745
 
 six30_VPI<-colhist_dataNO714[colhist_dataNO714$Treatment_Grp== '630_VPI', ]
