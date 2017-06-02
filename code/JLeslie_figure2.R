@@ -85,20 +85,24 @@ wilcox.test(weight_2013.630.VPI.1,weight_2013.naive.VPI.1)
 
 ####Panel C
 ###Plotting toxin activity following mock or strain VPI 10463 challenge 
-tox_data<-read.table(file='/Users/Jhansi1/Desktop/Intraspecific_Competition/data/ToxinActivity_Harvest_2013_2014_2015.txt', header=TRUE)
 
+tox_data<-read.table(file='/Users/Jhansi1/Desktop/Intraspecific_Competition/data/ToxinActivity_Harvest_2013_2014_2015.txt', header=TRUE)
+#The lod of this assay is 2.3 but anything that was bellow that LOD was recorded as 0 
 toxin.2013<-tox_data[tox_data$Experiment=="2013", ]
 #pulls out 2013 data 
-toxin.2013_cage714<-grep("714",toxin.2013$Cage, value=F)
-toxin.2013_NO714<-toxin.2013[-c(toxin.2013_cage714),  ]
+toxin.2013_NO714<-toxin.2013[toxin.2013$Cage!="714",  ]
 #removes data from cage 714, the cage that cleared
+fillintoxinlod<-2.3/sqrt(2)
+toxin.2013_NO714$Toxin_Activity[toxin.2013_NO714$Toxin_Activity== "0"] = fillintoxinlod
+#replaces 0 with lod/sqrt2
+
 
 toxin_plot.13<-ggplot(data=toxin.2013_NO714, aes(x=Treatment_Grp, y=Toxin_Activity, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 1.8) +
   scale_color_manual(values = rep("black",4))  +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.6, color="black", size=0.5) +
-  scale_y_continuous(breaks= c(2,3,4,5,6),  limits = c(2, 6)) +
+  scale_y_continuous(breaks= c(2,3,4,5,6),  limits = c(1.5, 6)) +
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 2)
     ,panel.grid.major = element_line(color = "gray80", size = 0.6)
@@ -257,7 +261,7 @@ six30_VPI.inf<-six30_VPI$inflammation
 naive_VPI<-colhist_dataNO714[colhist_dataNO714$Treatment_Grp== 'Naive_VPI', ]
 naive_VPI.inf<-naive_VPI$inflammation
 wilcox.test(naive_VPI.inf,six30_VPI.inf)
-#data:  naive_VPI.inf and six30_VPI.inf
+-0#data:  naive_VPI.inf and six30_VPI.inf
 #W = 21, p-value = 0.1745
 
 six30_VPI<-colhist_dataNO714[colhist_dataNO714$Treatment_Grp== '630_VPI', ]
