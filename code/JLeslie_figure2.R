@@ -278,8 +278,10 @@ wilcox.test(naive_VPI.ed,six30_VPI.ed)
 iG<-read.table(file="/Users/Jhansi1/Desktop/Intraspecific_Competition/data/AntitoxnA_titers.txt", header=T)
 ig.2013<-iG[iG$Experiment=="2013", ]
 #pulls out data for 2013 experiment, if I wanted only 2014 and 2015 data I could use Experiment!= ..(is not equal)
-ig.2013$Titer<-(1/ig.2013$Titer)
-#takes the inverse of the titer 
+#note the LOD was 1/400 and for this data sheet values bellow the LOD were reported as 400
+#replace values that were not dected with fill in LOD to denote that they were not detected
+fillinigglod<-(400)/sqrt(2)
+ig.2013$Titer[ig.2013$Titer=="400"]= fillinigglod
 
 ig.2013$Cage<-as.factor(ig.2013$Cage)
 ig.2013.c714<-grep("714",ig.2013$Cage, value=F)
@@ -316,17 +318,24 @@ naive_VPI.ig<-naive_VPI$Titer
 wilcox.test(naive_VPI.ig,six30_VPI.ig)
 #data:  naive_VPI.ig and six30_VPI.ig
 #W = 0, p-value = 0.008695
-
+median(six30_VPI.ig)
+ #32400
 ####Panel F
 ### Analysis of Serum Neutralizing Antibodies (vero cell assay) at D40 in the 2013 Experiment 
 
 neut_ab<-read.table(file="/Users/Jhansi1/Desktop/Intraspecific_Competition/data/Neutralizing_Titer_2013.txt",  header=TRUE)
-neut_ab$Titer<-(1/neut_ab$Avg_NeutralizingTiter)
+#The LOD for this assay for both toxin A and B was a diltuion of 1/80 or a titer of 80
+#for samples that had no detectable protection they were reported at the LOD 
+#replace with fill in LOD
+
+filliineutldo<-80/sqrt(2)
+neut_ab$Avg_NeutralizingTiter[neut_ab$Avg_NeutralizingTiter=="80"]=filliineutldo
+#replace 
 neut_ab_cage714<-grep("714",neut_ab$Cage, value=F)
 neut_ab_NO714<-neut_ab[-c(neut_ab_cage714),  ]
 #removes data from cage 714, the cage that cleared
  
-neut_ab.plot<-ggplot(data=neut_ab_NO714, aes(x=Treatment_Grp, y=Titer, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
+neut_ab.plot<-ggplot(data=neut_ab_NO714, aes(x=Treatment_Grp, y=Avg_NeutralizingTiter, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.5) +
   scale_color_manual(values = rep("black",4)) +
   scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
@@ -353,6 +362,7 @@ neut_ab.plot<-ggplot(data=neut_ab_NO714, aes(x=Treatment_Grp, y=Titer, fill= fac
   )
 f<- neut_ab.plot + geom_hline(aes(yintercept=80), colour = "gray10", size = 1, linetype=2) + facet_grid(. ~Toxin)
 f
+
 
 ############Plotting as a multipannel figures 
 library("gridExtra")
