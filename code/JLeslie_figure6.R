@@ -1,7 +1,80 @@
 
-## Ploting data from Ratio-Infections
-#WT mice 10dat cef, infected with 100uL of mix of VPI and 630
+## Ploting data from Order  and Ratio-Infections
+##Load the appropirate dependencies 
+library(ggplot2)
+library(grid)
+library(scales)
+library(reshape2)
+## Modified from soure of function: http://www.cookbook-r.com/Graphs/Plotting_means_and_error_bars_(ggplot2)/
+## Gives count, first quartile, median and thrid quartile 
+##   data: a data frame.
+##   measurevar: the name of a column that contains the variable to be summariezed
+##   metadatas: a vector containing names of columns that contain grouping variables
+##   na.rm: a boolean that indicates whether to ignore NA's
 
+summaryMED<-function(data=NULL, measurevar, metadata=NULL, na.rm=FALSE, .drop=TRUE){
+  library(plyr)
+  length2 <- function (x, na.rm=FALSE) {
+    if (na.rm) sum(!is.na(x))
+    else       length(x)
+  }
+  data1<- ddply(data, metadata, .drop=.drop,
+                .fun=function(xx, col){
+                  c(N  = length2(xx[[col]], na.rm=na.rm),
+                    firstquart = (quantile(xx[[col]], na.rm=na.rm)[2]),
+                    median =  median (xx[[col]], na.rm=na.rm),
+                    thridquart = (quantile(xx[[col]], na.rm=na.rm)[4])
+                  )
+                }, 
+                measurevar
+  )
+  data1 <- rename(data1, c("median" = measurevar))
+  data1 <- rename(data1, c("firstquart.25%" = "firstquart.25per"))
+  data1 <- rename(data1, c("thridquart.75%" = "thirdquart.75per"))
+  return(data1)
+}
+
+#A 
+#Can 630 treat a lethal infection? 
+infec<- read.delim(file="/Users/Jhansi1/Desktop/Intraspecific_Competition/data/630_or_ VPI_preinfection_121514.txt", header = T)
+infec<-infec[infec$Day!="2.5",]  #remove data from Day 2.5 
+infec$Percent_baseline_weight<-(infec$Percent_baseline_weight*100)
+#turns values into %
+
+weight<-summaryMED(infec, measurevar="Percent_baseline_weight", metadata=c("Day","Group"), na.rm=TRUE)
+
+weight_plot<-ggplot(weight, aes(x=Day, y= Percent_baseline_weight , color= factor(Group)))+ 
+  geom_errorbar(aes(ymin=firstquart.25per, ymax=thirdquart.75per), width=0.2, size=0.9) +
+  geom_line(size=1) +
+  geom_point(size=2) +
+  scale_y_continuous(limits =c(75,115))
+
+a = weight_plot +
+  theme(
+    panel.background = element_rect(fill = "white", color = "grey80", size = 2)
+    ,panel.grid.major = element_line(color = "gray90", size = 0.6)
+    ,panel.grid.major.x = element_blank()
+    ,panel.grid.minor = element_blank()
+    ,axis.ticks= element_line(size = 0.6, colour = "grey90")
+    ,axis.ticks.length = unit(0.2, "cm")
+    ,legend.title=element_blank()
+    ,legend.background = element_blank ()
+    ,legend.key = element_blank ()
+    ,legend.position="top"
+    ,legend.spacing = unit(.01, "mm")
+    ,legend.text=element_text(size=13)
+    ,axis.text.y=element_text(size=13)
+    ,axis.title.y=element_text(size=13)
+    ,axis.title.x=element_blank()
+    ,axis.text.x=element_text(size=11)
+    
+  )
+a1 =a  + labs(y = expression("% Weight from Baseline")) + geom_hline(aes(yintercept=100), colour = "gray10", size = 0.9, linetype=3)
+a1
+
+
+#B 
+#WT mice 10day cef, infected with 100uL of mix of VPI and 630
 #read in the table of data 
 ratio<-read.table(file="/Users/Jhansi/Box Sync/Allonginfect/Mouse_experiments_data_sheets/Short_term_Ratio_Infections_SPF/All_shortterm_ratio_infection_data.txt", header = T)
 
@@ -77,4 +150,7 @@ segments(x0=wat$num+0.2, y0=c(wat$Med.Weight + wat$Sd.Weight), x1=wat$num-0.2, y
 segments(x0=wat$num+0.2, y0=c(wat$Med.Weight - wat$Sd.Weight), x1=wat$num-0.2, y1= c(wat$Med.Weight -wat$Sd.Weight), lwd=2)
 axis(side = 4,las=1,lwd=4)
 mtext(side = 4, line = 3, '% Weight from Baseline', cex=1.2)
+
+
+
 
