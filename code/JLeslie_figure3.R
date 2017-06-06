@@ -58,7 +58,7 @@ w.plot.1415.jit<-ggplot(weight_df.14.15a, aes(x=Treatment_Grp, y=percent_of_base
     ,axis.title.x=element_blank()
     ,legend.position="none"
   )
-a1 = w.plot.1415.jit+ labs(y = expression("% Weight from Basline"))
+a1 = w.plot.1415.jit+ labs(y = expression("% Weight from Baseline"))
 a1
 
 weight.1415.wt<-weight_df.14.15a[weight_df.14.15a$Genotype=="WT",]
@@ -73,6 +73,10 @@ weight.1415.rag.naive.1<-c(weight.1415.rag.naive$percent_of_baseline_weight)
 weight.1415.rag.630<- weight.1415.rag[weight.1415.rag$Treatment_Grp=="630_VPI",]
 weight.1415.rag.630.1<-c(weight.1415.rag.630$percent_of_baseline_weight)
 
+
+
+#Statisctics 
+#Comparing weight loss in naive vs 630 colonized mice between genotypes
 wilcox.test(weight.1415.wt.naive.1, weight.1415.wt.630.1)
 #  p-value = 5.234e-05
 wilcox.test(weight.1415.rag.naive.1, weight.1415.rag.630.1)
@@ -82,9 +86,18 @@ wilcox.test(weight.1415.wt.naive.1,weight.1415.rag.naive.1)
 wilcox.test(weight.1415.wt.630.1,weight.1415.rag.630.1)
 #W = 36, p-value = 0.4967
 
+weight.pvals<-c(5.234e-05,0.01008,0.8609, 0.4967)
+round(p.adjust(weight.pvals, method= "BH"),5)
+#0.00021 0.02016 0.86090 0.66227
+
+
 ####Panel B
 ###Plotting toxin activity following mock or strain VPI 10463 challenge 
 tox_data<-read.table(file='/Users/Jhansi1/Desktop/Intraspecific_Competition/data/ToxinActivity_Harvest_2013_2014_2015.txt', header=TRUE)
+
+fillintoxinlod<-2.3/sqrt(2)
+tox_data$Toxin_Activity[tox_data$Toxin_Activity== "0"] = fillintoxinlod
+#replaces 0 with lod/sqrt2
 
 tox_data.2014<-tox_data[tox_data$Experiment=="2014", ]
 #pull out 2014 experiment data
@@ -100,7 +113,7 @@ toxin_plot.14.15<-ggplot(tox_data.14.15a, aes(x=Treatment_Grp, y=Toxin_Activity,
   scale_color_manual(values = rep("black",4))+
   scale_fill_manual(values = col_B) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.8, color="black") +
-  scale_y_continuous(breaks= c(2,3,4,5,6,7),  limits = c(2, 7)) +
+  scale_y_continuous(breaks= c(2,3,4,5,6,7),  limits = c(1.5, 7)) +
   xlab(NULL)+
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 1.5)
@@ -120,7 +133,7 @@ toxin_plot.14.15<-ggplot(tox_data.14.15a, aes(x=Treatment_Grp, y=Toxin_Activity,
   )
 b <- toxin_plot.14.15 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=0.9) + labs(y = expression(paste("Toxin Titer ", Log[10])))
 b1<- b +  facet_wrap(~Genotype)
-
+b1
 ###Wilcox test
 toxin_1415rag<-tox_data.14.15a[tox_data.14.15a$Genotype=="RAG",]
 toxin_1415wt<-tox_data.14.15a[tox_data.14.15a$Genotype=="WT",]
@@ -140,6 +153,7 @@ naive_VPI.wt.toxin_1415<-naive_VPI.wt$Toxin_Activity
 wilcox.test(naive_VPI.wt.toxin_1415,six30_VPI.wt.toxin_1415)
 #data:  naive_VPI.wt.toxin_1415 and six30_VPI.wt.toxin_1415
 #W = 139, p-value = 0.0007306
+
 
 ####Panel C
 ###Colon Histopatholgy data for 2014 and 2015 experiments
@@ -279,7 +293,7 @@ naive_VPI.rag<-colhist_1415rag[colhist_1415rag$Treatment_Grp== 'Naive_VPI', ]
 naive_VPI.rag.hist1415<-naive_VPI.rag$summary_score
 wilcox.test(naive_VPI.rag.hist1415,six30_VPI.rag.hist1415)
 #data:  naive_VPI.rag.hist1415 and six30_VPI.rag.hist1415
-#W = 104, p-value = 0.004712
+#W = 110.5, p-value = 0.0107
 
 six30_VPI.wt<-colhist_1415wt[colhist_1415wt$Treatment_Grp== '630_VPI', ]
 six30_VPI.wt.hist1415<-six30_VPI.wt$summary_score
@@ -287,7 +301,7 @@ naive_VPI.wt<-colhist_1415wt[colhist_1415wt$Treatment_Grp== 'Naive_VPI', ]
 naive_VPI.wt.hist1415<-naive_VPI.wt$summary_score
 wilcox.test(naive_VPI.wt.hist1415,six30_VPI.wt.hist1415)
 #data:  naive_VPI.wt.hist1415 and six30_VPI.wt.hist1415
-#W = 160.5, p-value = 0.0003395
+#W = 148.5, p-value = 0.0003011
 
 
 
@@ -312,3 +326,4 @@ lay1 <- rbind(c(1,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA),
               c(NA,NA,9,9,9,9,9,9,9,9,9,9,9,9,NA,NA),
               c(NA,NA,9,9,9,9,9,9,9,9,9,9,9,9,NA,NA))
 grid.arrange(a.1,b.1,a1,b1,c.1,c1,c2,c3,c4,layout_matrix = lay1)
+
