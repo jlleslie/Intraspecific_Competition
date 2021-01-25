@@ -1,4 +1,4 @@
-Mouse	Treatment_1	Treatment_2	Group	D1	D2_Harvest	Percent_baseline_weight	Clinical_Score	CFU_equvalents	TCCFA	TCCFA_E
+Mouse	Treatment_1	Treatment_2	Group	D1	D2_Harvest	Percent_baseline_weight	Clinical_Score	CFU_equvalents_log10	TCCFA	TCCFA_E
 3040	630	nothing	630	25	21.4	85.6	3	0	63000000	60000000
 3093	630	nothing	630	23.7	20.7	87.34	3	0	154000000	171000000
 3095	630	nothing	630	23.5	20.3	86.38	3	0	89000000	142000000

@@ -51,13 +51,13 @@ weight.harv.plot<-ggplot(weight_df.2013.Noc714, aes(x=Treatment_Grp, y=percent_o
   scale_fill_manual(values=col_A) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.4, color="black") +
   scale_y_continuous( limits = c(78, 110)) +
-  geom_hline(aes(yintercept=100), colour = "grey10", size = 0.9, linetype=3) +
+  #geom_hline(aes(yintercept=100), colour = "grey10", size = 0.9, linetype=3) +
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 2)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.6, colour = "grey75")
+    ,axis.ticks = element_line(size = 0.7, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
     ,axis.text.x=element_blank()
@@ -100,15 +100,15 @@ toxin.2013_NO714$Toxin_Activity[toxin.2013_NO714$Toxin_Activity== "0"] = fillint
 toxin_plot.13<-ggplot(data=toxin.2013_NO714, aes(x=Treatment_Grp, y=Toxin_Activity, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 1.8) +
   scale_color_manual(values = rep("black",4))  +
-  scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
+  scale_fill_manual(values = col_A, limits = c("630_Mock","Naive_Mock", "630_VPI", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.6, color="black", size=0.5) +
   scale_y_continuous(breaks= c(2,3,4,5,6),  limits = c(1.5, 6)) +
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 2)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.6, colour = "grey75")
+    ,axis.ticks = element_line(size = 0.7, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
     ,axis.text.x=element_blank()
@@ -146,14 +146,14 @@ colhist_dataNO714<-colhist_data.exp13[-c(colhist_cage714),  ]
 co.plot13_edema.dot<-ggplot(colhist_dataNO714, aes(x=Treatment_Grp, y=edema, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 1.1) +
   scale_color_manual(values = rep("black",4))+
-  scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.5, color="black") +
+  scale_fill_manual(values = col_A, limits = c("630_Mock","Naive_Mock", "630_VPI", "Naive_VPI")) +
+  #stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.1, color="black") +
   scale_y_continuous(breaks= c(0, 1, 2, 3, 4),  limits = c(0, 4))+
   xlab(NULL)+
   ylab("Edema")+
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 1)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
     ,axis.ticks = element_line(size = 0.4, colour = "grey75")
@@ -170,14 +170,14 @@ d1<-co.plot13_edema.dot
 ##inflammation
 co.plot13_inflammation.dot<-ggplot(colhist_dataNO714, aes(x=Treatment_Grp, y=inflammation, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.1) +
-  scale_color_manual(values = rep("black",4)) +
-  scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.6, color="black") +
+  scale_color_manual(values = rep("black",4))+
+  scale_fill_manual(values = col_A, limits = c("630_Mock","Naive_Mock", "630_VPI", "Naive_VPI")) +
+  #stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.1, color="black") +
   scale_y_continuous(breaks= c(0, 1, 2, 3, 4),  limits = c(0, 4)) +
   ylab("Inflammation")+ 
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 1)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
     ,axis.ticks = element_line(size = 0.4, colour = "grey75")
@@ -194,14 +194,14 @@ d2<-co.plot13_inflammation.dot
 ##epithelial_damage
 co.plot13_epithelial_damage.dot<-ggplot(colhist_dataNO714, aes(x=Treatment_Grp, y=epithelial_damage, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.1) +
-  scale_color_manual(values = rep("black",4)) +
-  scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.5, color="black") +
+  scale_color_manual(values = rep("black",4))+
+  scale_fill_manual(values = col_A, limits = c("630_Mock","Naive_Mock", "630_VPI", "Naive_VPI")) +
+ # stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.1, color="black") +
   scale_y_continuous(breaks= c(0, 1, 2, 3, 4),  limits = c(0, 4)) +
   ylab("Epithelial Damage")+
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 1)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
     ,axis.ticks = element_line(size = 0.4, colour = "grey75")
@@ -219,13 +219,13 @@ d3<-co.plot13_epithelial_damage.dot
 co.plot13_sum.dot<-ggplot(colhist_dataNO714, aes(x=Treatment_Grp, y=summary_score, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize=3) +
   scale_color_manual(values = rep("black",4)) +
-  scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.6, color="black") +
+  scale_fill_manual(values = col_A, limits = c("630_Mock","Naive_Mock", "630_VPI", "Naive_VPI")) +
+  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.5, color="black") +
   scale_y_continuous(breaks= c(0, 2, 4, 6, 8, 10, 12),  limits = c(0, 12)) +
   ylab("Summary Score")+ 
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 1.5)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
     ,axis.ticks = element_line(size = 0.4, colour = "grey75")
@@ -290,16 +290,16 @@ ig.2013.Noc714<-ig.2013[-c(ig.2013.c714), ]
 ig_plot<-ggplot(data=ig.2013.Noc714, aes(x=Treatment_Grp, y=Titer, fill= factor(Treatment_Grp), colour= factor(Treatment_Grp)))+
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.5) +
   scale_color_manual(values = rep("black",4)) +
-  scale_fill_manual(values = col_A, limits = c("630_Mock", "Naive_VPI")) +
+  scale_fill_manual(values = col_A, limits = c("630_Mock","Naive_Mock", "630_VPI", "Naive_VPI")) +
   stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.4, color="black") +
   scale_y_log10(breaks= c(100, 1000, 10000, 100000, 1000000), labels = trans_format("log10", math_format(10^.x)), limits = c(100, 1000000)) +
   ylab(" Serum Anti-Toxin A IgG Titer")+ 
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 2)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.6, colour = "grey75")
+    ,axis.ticks = element_line(size = 0.7, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
     ,axis.text.x=element_blank()
@@ -344,10 +344,10 @@ neut_ab.plot<-ggplot(data=neut_ab_NO714, aes(x=Treatment_Grp, y=Avg_Neutralizing
   ylab(" Serum Neutralizing Antibody Titer")+ 
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 2)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.6, colour = "grey75")
+    ,axis.ticks = element_line(size = 0.7, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
     ,axis.text.x=element_blank()
@@ -367,29 +367,29 @@ f
 ############Plotting as a multipannel figures 
 library("gridExtra")
 
-a.1<-textGrob("A", hjust=0, vjust=0, gp = gpar(fontface = 2))
-b.1<-textGrob("B", hjust=0, vjust=0, gp = gpar(fontface = 2))
-c.1<-textGrob("C", hjust=0, vjust=0, gp = gpar(fontface = 2))
-d.1<-textGrob("D", hjust=0, vjust=0, gp = gpar(fontface = 2))
-e.1<-textGrob("E", hjust=0, vjust=0, gp = gpar(fontface = 2))
-f.1<-textGrob("F", hjust=0, vjust=0, gp = gpar(fontface = 2))
+#a.1<-textGrob("A", hjust=0, vjust=0, gp = gpar(fontface = 2))
+#b.1<-textGrob("B", hjust=0, vjust=0, gp = gpar(fontface = 2))
+#c.1<-textGrob("C", hjust=0, vjust=0, gp = gpar(fontface = 2))
+#d.1<-textGrob("D", hjust=0, vjust=0, gp = gpar(fontface = 2))
+#e.1<-textGrob("E", hjust=0, vjust=0, gp = gpar(fontface = 2))
+#f.1<-textGrob("F", hjust=0, vjust=0, gp = gpar(fontface = 2))
 
-lay1 <- rbind(c(1,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA),
+lay1 <- rbind(c(NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA),
               c(NA,3,3,3,3,3,3,NA,4,4,4,4,4,4,4,NA),
               c(NA,3,3,3,3,3,3,NA,4,4,4,4,4,4,4,NA),
               c(NA,3,3,3,3,3,3,NA,4,4,4,4,4,4,4,NA),
               c(NA,3,3,3,3,3,3,NA,4,4,4,4,4,4,4,NA),
-              c(5,NA,NA,NA,NA,NA,NA,6,NA,NA,NA,NA,NA,NA,NA,NA),
+              c(NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA),
               c(NA,7,7,7,7,7,7,8,8,8,9,9,9,10,10,10),
               c(NA,7,7,7,7,7,7,8,8,8,9,9,9,10,10,10),
               c(NA,7,7,7,7,7,7,NA,11,11,11,11,11,11,11,NA),
               c(NA,7,7,7,7,7,7,NA,11,11,11,11,11,11,11,NA),
-              c(12,NA,NA,NA,NA,NA,NA,13,NA,NA,NA,NA,NA,NA,NA,NA),
+              c(NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA),
               c(NA,14,14,14,14,14,14,NA,15,15,15,15,15,15,15,NA),
               c(NA,14,14,14,14,14,14,NA,15,15,15,15,15,15,15,NA),
               c(NA,14,14,14,14,14,14,NA,15,15,15,15,15,15,15,NA),
               c(NA,14,14,14,14,14,14,NA,15,15,15,15,15,15,15,NA))
 
-grid.arrange(a.1,b.1,a, b,c.1, d.1,c,d1,d2,d3,d4,e.1, f.1, e,f,layout_matrix = lay1)
+grid.arrange(a, b,c,d1,d2,d3,d4, e,f,layout_matrix = lay1)
 
 ##the multipannel figure was saved as a pdf and then opened in  adobe illustrator to redo the labels on the x axis and add in the experiment outline 

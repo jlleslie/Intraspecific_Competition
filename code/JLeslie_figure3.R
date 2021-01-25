@@ -42,13 +42,13 @@ w.plot.1415.jit<-ggplot(weight_df.14.15a, aes(x=Treatment_Grp, y=percent_of_base
   scale_fill_manual(values = col_B)  +
   scale_shape_manual(values = shape_A)+
   scale_y_continuous(limits = c(80, 115))+
-  geom_hline(aes(yintercept = 100), colour = "gray10", size = 1, linetype=3) +
+  #geom_hline(aes(yintercept = 100), colour = "gray10", size = 1, linetype=3) +
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 1.5)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.6, colour = "grey75")
+    ,axis.ticks = element_line(size = 0.7, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
     ,axis.text.x=element_blank()
@@ -117,10 +117,10 @@ toxin_plot.14.15<-ggplot(tox_data.14.15a, aes(x=Treatment_Grp, y=Toxin_Activity,
   xlab(NULL)+
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 1.5)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.6, colour = "grey75")
+    ,axis.ticks = element_line(size = 0.7, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
     ,axis.text.x=element_blank()
@@ -174,7 +174,7 @@ colhist_df.14.15a<-colhist_df.14.15[colhist_df.14.15$Colonization_stat!="cleared
 #edema 
 co.plot_edema.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=edema, fill=Treatment_Grp, colour=Treatment_Grp)) +
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 1.5) +
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.85, color="black") +
+  #stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.85, color="black") +
   scale_color_manual(values = rep("black",4))+
   scale_fill_manual(values = col_B, limits = c("630_Mock", "Naive_VPI")) +
   scale_y_continuous(breaks= c(0, 1, 2, 3, 4),  limits = c(0, 4))+
@@ -182,7 +182,7 @@ co.plot_edema.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=edema, fill=
   ylab("Edema")+ 
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 1)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
     ,axis.ticks = element_line(size = 0.4, colour = "grey75")
@@ -204,13 +204,13 @@ co.plot_inflammation.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=infla
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.5) +
   scale_color_manual(values = rep("black",4))+
   scale_fill_manual(values = col_B, limits = c("630_Mock", "Naive_VPI")) +
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.85, color="black") +
+  #stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.85, color="black") +
   scale_y_continuous(breaks= c(0, 1, 2, 3, 4),  limits = c(0, 4)) +
   xlab(NULL)+
   ylab("Inflammation")+ 
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 1)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
     ,axis.ticks = element_line(size = 0.4, colour = "grey75")
@@ -232,13 +232,13 @@ co.plot_epithelial_damage.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=
   geom_dotplot(binaxis = "y", stackdir = "center", dotsize=1.5) +
   scale_color_manual(values = rep("black",4))+
   scale_fill_manual(values = col_B, limits = c("630_Mock", "Naive_VPI")) +
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.85, color="black") +
+  #stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.85, color="black") +
   scale_y_continuous(breaks= c(0, 1, 2, 3, 4),  limits = c(0, 4)) +
   xlab(NULL)+
   ylab("Epithelial Damage")+ 
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 1)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
     ,axis.ticks = element_line(size = 0.4, colour = "grey75")
@@ -266,10 +266,10 @@ co.plot_sum.dot<-ggplot(colhist_df.14.15a, aes(x=Treatment_Grp, y=summary_score,
   ylab("Summary Score")+ 
   theme(
     panel.background = element_rect(fill = "white", color = "grey75", size = 1.5)
-    ,panel.grid.major = element_line(color = "gray80", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray80", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks = element_line(size = 0.4, colour = "grey75")
+    ,axis.ticks = element_line(size = 0.7, colour = "grey75")
     ,axis.ticks.length = unit(0.2, "cm")
     ,axis.ticks.x=element_blank()
     ,axis.text.x=element_blank()
@@ -309,21 +309,21 @@ wilcox.test(naive_VPI.wt.hist1415,six30_VPI.wt.hist1415)
 ############Plotting as a multipannel figures 
 library("gridExtra")
 
-a.1<-textGrob("A", hjust=0, vjust=0, gp = gpar(fontface = 2))
-b.1<-textGrob("B", hjust=0, vjust=0, gp = gpar(fontface = 2))
-c.1<-textGrob("C", hjust=0, vjust=0, gp = gpar(fontface = 2))
+#a.1<-textGrob("A", hjust=0, vjust=0, gp = gpar(fontface = 2))
+#b.1<-textGrob("B", hjust=0, vjust=0, gp = gpar(fontface = 2))
+#c.1<-textGrob("C", hjust=0, vjust=0, gp = gpar(fontface = 2))
 
-lay1 <- rbind(c(1,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA),
-              c(NA,3,3,3,3,3,3,NA,4,4,4,4,4,4,4,NA),
-              c(NA,3,3,3,3,3,3,NA,4,4,4,4,4,4,4,NA),
-              c(NA,3,3,3,3,3,3,NA,4,4,4,4,4,4,4,NA),
-              c(NA,3,3,3,3,3,3,NA,4,4,4,4,4,4,4,NA),
-              c(5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA),
-              c(NA,6,6,6,6,6,7,7,7,7,7,8,8,8,8,8),
-              c(NA,6,6,6,6,6,7,7,7,7,7,8,8,8,8,8),
-              c(NA,6,6,6,6,6,7,7,7,7,7,8,8,8,8,8),
-              c(NA,NA,9,9,9,9,9,9,9,9,9,9,9,9,NA,NA),
-              c(NA,NA,9,9,9,9,9,9,9,9,9,9,9,9,NA,NA),
-              c(NA,NA,9,9,9,9,9,9,9,9,9,9,9,9,NA,NA))
-grid.arrange(a.1,b.1,a1,b1,c.1,c1,c2,c3,c4,layout_matrix = lay1)
+lay1 <- rbind(c(NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA),
+              c(NA,1,1,1,1,1,1,NA,2,2,2,2,2,2,2,NA),
+              c(NA,1,1,1,1,1,1,NA,2,2,2,2,2,2,2,NA),
+              c(NA,1,1,1,1,1,1,NA,2,2,2,2,2,2,2,NA),
+              c(NA,1,1,1,1,1,1,NA,2,2,2,2,2,2,2,NA),
+              c(NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA),
+              c(NA,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5),
+              c(NA,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5),
+              c(NA,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5),
+              c(NA,NA,6,6,6,6,6,6,6,6,6,6,6,6,NA,NA),
+              c(NA,NA,6,6,6,6,6,6,6,6,6,6,6,6,NA,NA),
+              c(NA,NA,6,6,6,6,6,6,6,6,6,6,6,6,NA,NA))
+grid.arrange(a1,b1,c1,c2,c3,c4,layout_matrix = lay1)
 

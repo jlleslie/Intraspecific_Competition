@@ -43,13 +43,14 @@ library(vegan)
 ####Panel A
 ###Plotting weights following mock or strain 630 infection
 ###2013 Exeperiment Plots, WT mice only
-
-weighttime_data<-read.table(file='/Users/Jhansi1/Desktop/Intraspecific_Competition/data/Weights_2013_630Infection.txt', header=TRUE)
+setwd("/Users/Jhansi1/Desktop/Intraspecific_Competition/data")
+weighttime_data<-read.csv(file="Weights_2013_630Infection.txt",sep ="\t",header=TRUE)
 #read in the data table 
 
 weighttime_data$Cage<-as.factor(weighttime_data$Cage)
 weightcage714<-grep("714",weighttime_data$Cage, value=F)
 weightNO714<-weighttime_data[-c(weightcage714), ]
+weightNOD43
 #removed cage 714 as this cage cleared the infection and was not used for subsequent analysis 
 
 weight<-summaryMED(weightNO714, measurevar="Percent_weightD0", metadata=c("Treatment_1","Day"), na.rm=TRUE)
@@ -69,10 +70,10 @@ weight_plot<-ggplot(weight, aes(x=Day, y= Percent_weightD0 , color= factor(Treat
 a = weight_plot + ylim(85, 120)+
   theme(
      panel.background = element_rect(fill = "white", color = "grey80", size = 2)
-    ,panel.grid.major = element_line(color = "gray90", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray90", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks= element_line(size = 0.6, colour = "grey90")
+    ,axis.ticks= element_line(size = 0.7, colour = "grey90")
     ,axis.ticks.length = unit(0.2, "cm")
     ,legend.title=element_blank()
     ,legend.background = element_blank ()
@@ -82,11 +83,10 @@ a = weight_plot + ylim(85, 120)+
     ,legend.text=element_text(size=13)
     ,axis.text.y=element_text(size=13)
     ,axis.title.y=element_text(size=13)
-    ,axis.title.x=element_blank()
     ,axis.text.x=element_text(size=11)
     
   )
-a1 = a + labs(y = expression("% Weight from Baseline")) + geom_hline(aes(yintercept=100), colour = "gray10", size = 0.9, linetype=3)
+a1 = a + labs(y = expression("% Weight from Baseline"), x = expression("Day Post Challenge")) + geom_hline(aes(yintercept=100), colour = "gray10", size = 0.9, linetype=3)
 a1
 
 #Statisctics 
@@ -175,10 +175,10 @@ b = cfu2013.plot+
   #eliminates background, gridlines and key border
   theme(
     panel.background = element_rect(fill = "white", color = "grey80", size = 2)
-    ,panel.grid.major = element_line(color = "gray90", size = 0.6)
+    ,panel.grid.major = element_line(color = "gray90", size = 0.4)
     ,panel.grid.major.x = element_blank()
     ,panel.grid.minor = element_blank()
-    ,axis.ticks= element_line(size = 0.6, colour = "grey90")
+    ,axis.ticks= element_line(size = 0.7, colour = "grey90")
     ,axis.ticks.length = unit(0.2, "cm")
     ,legend.title=element_blank()
     ,legend.background = element_blank ()
@@ -186,10 +186,9 @@ b = cfu2013.plot+
     ,legend.position="none"  #if using this as a single figure change "none" to "top" or "bottom" and remove comment from the following 2 lines
     ,axis.text.y=element_text(size=13)
     ,axis.title.y=element_text(size=13)
-    ,axis.title.x=element_blank()
     ,axis.text.x=element_text(size=11)
   )
-b1 = b +  labs(y = expression("CFU per gram feces"))
+b1 = b +  labs(y = expression("CFU per gram feces"), x= expression("Day Post Challenge"))
 b2 = b1+ geom_hline(aes(yintercept=100), colour = "gray10", size = 0.9, linetype=2)
 b3 = b2 + scale_y_log10(breaks = trans_breaks("log10", function(x) 10^x),labels = trans_format("log10", math_format(10^.x)))
 b3
@@ -214,75 +213,9 @@ pairwise.wilcox.test(cfu_exp2013.infect$CFU_g, cfu_exp2013.infect$Day, p.adjust.
 #37 0.00291 0.04453 0.02909 0.45617 0.55730 0.43246 0.38503 0.38503 0.55730 1.00000 0.51505 -      
 #40 0.00078 0.00358 0.00078 0.92623 0.79608 0.97813 0.94735 0.97273 0.82443 0.43246 1.00000 0.27768#
 #P value adjustment method: BH 
-
-
-#####Panel C 
-### Analysis of Toxin Actvity (vero cell assay) over the course of the infection. 
-toxin<-read.table(file="/Users/Jhansi1/Desktop/Intraspecific_Competition/data/2013_ToxinActivity_overtime.txt",  header=TRUE)
-#The data was inputed such that anything that was less than the LOD of 2.3 was given a value of 0 
-# In this assay some samples were just at the LOD so to discriminate between the samples that were detected vs those that were below the LOD
-# I will use a fill in value of LOD/sqrt(2)
-
-toxinfillinLOD<-2.3/sqrt(2)
-toxin$Toxin_Activity[toxin$Toxin_Activity=="0"]=toxinfillinLOD
-
-toxin_cage714<-grep("714",toxin$Cage, value=F)
-toxin_NO714<-toxin[-c(toxin_cage714),  ]
-#removes data from cage 714, the cage that cleared
-toxin_NO714_infected<-toxin_NO714[toxin_NO714$Treatment_1 == 630,]
-toxin_NO714_mock<-toxin_NO714[toxin_NO714$Treatment_1 == "mock",]
-
-#Plot data
-toxin_plot.13<-ggplot(data=toxin_NO714_infected, aes(x=Day, y=Toxin_Activity, colour= factor(Treatment_1)))+
-  geom_jitter(width = 2, height = 0, size=3, shape=19) + 
-  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 3, color="black", size=.5) +
-  geom_jitter(data=toxin_NO714_mock, width = 2, height = 0, size=3, shape=19) +
-  scale_y_continuous(breaks= c(2,3,4,5),  limits = c(1.6, 5), labels = c(" 2 ", " 3 ", " 4 ", " 5 ")) +
-  scale_color_manual(values = cols, limits = c("mock", "630"),labels=c("mock infected", "infected")) +
-  theme(
-    panel.background = element_rect(fill = "white", color = "grey80", size = 2)
-    ,panel.grid.major = element_line(color = "gray90", size = 0.6)
-    ,panel.grid.major.x = element_blank()
-    ,panel.grid.minor = element_blank()
-    ,axis.ticks= element_line(size = 0.6, colour = "grey90")
-    ,axis.ticks.length = unit(0.2, "cm")
-    ,legend.title=element_blank()
-    ,legend.background = element_blank ()
-    ,legend.key = element_blank () 
-    ,legend.position="none"   #if using this as a single figure change "none" to "top" or "bottom" and remove comment from the following 2 lines
-    ,axis.text.y=element_text(size=13)
-    ,axis.title.y=element_text(size=13)
-    ,axis.title.x=element_text(size=13)
-    ,axis.text.x=element_text(size=11)
-  )
-c = toxin_plot.13 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=0.9) + labs(x = "Day Post Challenge", y = expression(paste("Toxin Titer ", Log[10])))
-c
-
-
-toxin.wilcox.pvals<-c()
-for (i in 1: length(unique(toxin_NO714$Day))) {
-  j = unique(toxin_NO714$Sample_Day)[i]
-  infect = toxin_NO714[toxin_NO714$Day ==j & toxin_NO714$Treatment_1 =="630",11]
-  mock= toxin_NO714[toxin_NO714$Day ==j & toxin_NO714$Treatment_1 =="mock",11]
-  toxin.wilcox.pvals[i] <-  wilcox.test(infect,mock)[3]
-  print(j)
-  print(toxin.wilcox.pvals[i])
-}
-round(p.adjust(toxin.wilcox.pvals, method= "BH"),5)
-#[1] 0.00009 0.00009 0.00019 0.00019 0.00506 0.00506
-infected_toxin<-toxin_NO714_infected[toxin_NO714_infected$Treatment_1=="630", ]
-pairwise.wilcox.test(infected_toxin$Toxin_Activity, infected_toxin$Day, p.adjust.method = "BH")
-    #2     9     14    23    33   
-  #9 0.949 -     -     -     -    
- #14 0.114 0.114 -     -     -    
- #23 0.816 0.816 0.239 -     -    
- #33 0.021 0.021 0.239 0.046 -    
- #41 0.021 0.021 0.159 0.030 0.816
- #P value adjustment method: BH 
-
-####Panel B 
+####Panel C
 ##Ploting change in C. difficile OTU abundance and diversity over time
-shared<-read.table(file='/Users/Jhansi/Box Sync/AdaptiveImmunity_Clearance_Cdiff/16S/2013_WT_longtermexp.0.03.subsample.0.03.filter.shared', header=TRUE, row.names= 2)#reads in a subsampled file that is the output of phylotype comands  and remove the first column that tells you at which level it has been classifed to and the 3rd column that tells you the number of otus 
+shared<-read.table(file='2013_WT_longtermexp.0.03.subsample.0.03.filter.shared', header=TRUE, row.names= 2)#reads in a subsampled file that is the output of phylotype comands  and remove the first column that tells you at which level it has been classifed to and the 3rd column that tells you the number of otus 
 
 shared$label <- NULL
 shared$numOtus <- NULL
@@ -319,11 +252,6 @@ infect.div$Day<-as.numeric(infect.div$Day)
 # Otu0004	= 	Bacteria(100);Firmicutes(100);Clostridia(100);Clostridiales(100);Peptostreptococcaceae(100);Peptostreptococcaceae_unclassified(100);
 #I blasted it and it came up with 98% idenity to C difficile 630 
 #I want to plot the realtive abundace of this OTU
-shared<-read.table(file='/Users/Jhansi/Box Sync/AdaptiveImmunity_Clearance_Cdiff/16S/2013_WT_longtermexp.0.03.subsample.0.03.filter.shared', header=TRUE, row.names= 2)#reads in a subsampled file that is the output of phylotype comands  and remove the first column that tells you at which level it has been classifed to and the 3rd column that tells you the number of otus 
-shared$label=NULL
-shared$numOtus=NULL
-shared<-shared[-151,]
-#removed sample 7123D00p2  which was sequenced 2x
 
 shared$Total.seqs=apply(shared[,1:347], 1, sum)
 shared$RelAbund.OTU4Cdiff= (shared[,4]/shared$Total.seqs*100)
@@ -366,12 +294,12 @@ div.cdiffplot<-ggplot(div.Otu4abund) +
   geom_boxplot(aes(x=Day, y=shannon*10, fill= factor(Treatment_1), group=Day)) +
   scale_fill_manual(values="black")+
   scale_y_continuous(sec.axis = sec_axis(~. /10)) 
-d = div.cdiffplot +theme(
+c = div.cdiffplot +theme(
   panel.background = element_rect(fill = "white", color = "grey80", size = 2)
-  ,panel.grid.major = element_line(color = "gray90", size = 0.6)
+  ,panel.grid.major = element_line(color = "gray90", size = 0.4)
   ,panel.grid.major.x = element_blank()
   ,panel.grid.minor = element_blank()
-  ,axis.ticks= element_line(size = 0.6, colour = "grey90")
+  ,axis.ticks= element_line(size = 0.7, colour = "grey90")
   ,axis.ticks.length = unit(0.2, "cm")
   ,legend.title=element_blank()
   ,legend.background = element_blank ()
@@ -383,7 +311,73 @@ d = div.cdiffplot +theme(
   ,axis.text.x=element_text(size=11)
 )
 
+c=c + labs(y = expression(paste("Relative Abundance OTU 4 ", italic("(C. difficile)"))), x= expression("Day Post Challenge"))
+c
+
+#####Panel D
+### Analysis of Toxin Actvity (vero cell assay) over the course of the infection. 
+toxin<-read.table(file="/Users/Jhansi1/Desktop/Intraspecific_Competition/data/2013_ToxinActivity_overtime.txt",  header=TRUE)
+#The data was inputed such that anything that was less than the LOD of 2.3 was given a value of 0 
+# In this assay some samples were just at the LOD so to discriminate between the samples that were detected vs those that were below the LOD
+# I will use a fill in value of LOD/sqrt(2)
+
+toxinfillinLOD<-2.3/sqrt(2)
+toxin$Toxin_Activity[toxin$Toxin_Activity=="0"]=toxinfillinLOD
+
+toxin_cage714<-grep("714",toxin$Cage, value=F)
+toxin_NO714<-toxin[-c(toxin_cage714),  ]
+#removes data from cage 714, the cage that cleared
+toxin_NO714_infected<-toxin_NO714[toxin_NO714$Treatment_1 == 630,]
+toxin_NO714_mock<-toxin_NO714[toxin_NO714$Treatment_1 == "mock",]
+
+#Plot data
+toxin_plot.13<-ggplot(data=toxin_NO714_infected, aes(x=factor(Day), y=Toxin_Activity, colour= factor(Treatment_1)))+
+  geom_violin()+
+  #geom_jitter(width = 2, height = 0, size=3, shape=19) + 
+  #stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 3, color="black", size=.5) +
+  #geom_jitter(data=toxin_NO714_mock, width = 2, height = 0, size=3, shape=19) +
+  scale_y_continuous(breaks= c(2,3,4,5),  limits = c(1.6, 5), labels = c(" 2 ", " 3 ", " 4 ", " 5 ")) +
+  scale_color_manual(values = cols, limits = c("mock", "630"),labels=c("mock infected", "infected")) +
+  theme(
+    panel.background = element_rect(fill = "white", color = "grey80", size = 2)
+    ,panel.grid.major = element_line(color = "gray90", size = 0.4)
+    ,panel.grid.major.x = element_blank()
+    ,panel.grid.minor = element_blank()
+    ,axis.ticks= element_line(size = 0.7, colour = "grey90")
+    ,axis.ticks.length = unit(0.2, "cm")
+    ,legend.title=element_blank()
+    ,legend.background = element_blank ()
+    ,legend.key = element_blank () 
+    ,legend.position="none"   #if using this as a single figure change "none" to "top" or "bottom" and remove comment from the following 2 lines
+    ,axis.text.y=element_text(size=13)
+    ,axis.title.y=element_text(size=13)
+    ,axis.title.x=element_text(size=13)
+    ,axis.text.x=element_text(size=11)
+  )
+d= toxin_plot.13 + geom_hline(aes(yintercept=2.3), colour = "gray10", linetype=2,  size=0.9) + labs(x = "Day Post Challenge", y = expression(paste("Toxin Titer ", Log[10],  "of Recpriocal Dilution")))
 d
+
+toxin.wilcox.pvals<-c()
+for (i in 1: length(unique(toxin_NO714$Day))) {
+  j = unique(toxin_NO714$Sample_Day)[i]
+  infect = toxin_NO714[toxin_NO714$Day ==j & toxin_NO714$Treatment_1 =="630",11]
+  mock= toxin_NO714[toxin_NO714$Day ==j & toxin_NO714$Treatment_1 =="mock",11]
+  toxin.wilcox.pvals[i] <-  wilcox.test(infect,mock)[3]
+  print(j)
+  print(toxin.wilcox.pvals[i])
+}
+round(p.adjust(toxin.wilcox.pvals, method= "BH"),5)
+#[1] 0.00009 0.00009 0.00019 0.00019 0.00506 0.00506
+infected_toxin<-toxin_NO714_infected[toxin_NO714_infected$Treatment_1=="630", ]
+pairwise.wilcox.test(infected_toxin$Toxin_Activity, infected_toxin$Day, p.adjust.method = "BH")
+    #2     9     14    23    33   
+  #9 0.949 -     -     -     -    
+ #14 0.114 0.114 -     -     -    
+ #23 0.816 0.816 0.239 -     -    
+ #33 0.021 0.021 0.239 0.046 -    
+ #41 0.021 0.021 0.159 0.030 0.816
+ #P value adjustment method: BH 
+
 
 ############Plotting as a multipannel figures 
 library("gridExtra")
